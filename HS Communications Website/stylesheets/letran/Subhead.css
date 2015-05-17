@@ -1,0 +1,130 @@
+﻿.sectiontitle {border-left: 4px solid #1E3271 !important;}
+#subheader {background: linear-gradient(#14214A, #1E3271) !important;
+color: #eee !important;
+box-shadow: 10px 10px 10px rgb(140, 140, 135) !important;
+ border-top: 1px solid #4e71c9 !important;
+}
+.slide {	margin: 0 !important;	padding: 0 !important;	border-top: solid 4px #1E3271 !important;}
+.btn-slide {	background:#010080 url('../../images/plus.png') no-repeat !important;
+}
+
+.buttonn {
+    border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  background-color: #008CBA;
+  border-color: #007095;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out; 
+}
+
+
+ul.latest-posts {
+	margin-bottom: -15px;
+	overflow: hidden;
+	padding-left: 2px;
+}
+ul.latest-posts li {
+	padding: 0;
+	background: none;
+	font-family: 'PTSansRegular';
+	font-style: normal;
+	font-size: 14px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	border-top: 1px dashed #454545;
+}
+ul.latest-posts li a {
+	color: #4d4d4d;
+}
+ul.latest-posts li a:hover {
+	color: #d3573e;
+}
+ul.latest-posts li:first-child {
+	padding: 0;
+	border: none;
+}
+ul.latest-posts li span.date {
+	float: left;
+	font-family: 'CharisSILItalic';
+	padding-right: 15px;
+	padding-top: 2px;
+	text-align: center;
+	color: #3d3d3d;
+	font-style: normal;
+}
+ul.latest-posts li em.day {
+	font-size: 25px;
+	font-style: normal;
+}
+ul.latest-posts li em.month {
+	font-size: 13px;
+	text-transform: uppercase;
+	display: block;
+	line-height: 8px;
+	margin-top: 1px;
+	font-style: normal;
+}
+
+#footer { background: #151515 !important; color: #666 !important; padding: 30px 0 !important; margin-top: 36px !important;border-top:#9D9E9E 4px solid !important; }
+
+ .subtitle {
+            font-family: verdana; font-size: 12px;   color: #0033CC;
+        }
+        .text {
+           color: rgb(0, 0, 0);
+            font-family: verdana; font-size: 10px;
+        }
+
+        .con {
+           color: rgb(153, 0, 0); font-family: 'Book Antiqua';font-size: 13px;margin-top: 500px;
+        }
+        .con1 {
+            font-family: 'Book Antiqua';
+            font-size: 11px;
+        }
+        .str {
+            color: rgb(0, 0, 153);
+        }
+
+        .colhead {
+         color: rgb(153, 0, 0); 
+         font-family: 'Book Antiqua'; 
+         font-size: 24px;
+         font-style: normal;
+          text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .colhead1 {
+           font-family: 'Book Antiqua'; font-size: 18px; color: rgb(0, 0, 153); text-transform: none; white-space: normal; word-spacing: 0px;background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .colp {
+           color: rgb(0, 0, 0); 
+           font-family: 'Book Antiqua';
+            font-size: 14px; 
+             text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; 
+             display: inline !important; float: none; background-color: rgba(255, 255, 255, 0.8);
+
+        }
+
+        .font {
+            font-family: 'Book Antiqua';
+        }
+       

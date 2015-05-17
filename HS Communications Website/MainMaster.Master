@@ -1,110 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="HS_Communications_Website.MainMaster" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-
-    <meta charset="UTF-8" />
-<title>Letran Bataan</title>
- 
-<link rel="shortcut icon" type="image/x-icon" href="style/images/favicon.png" />
-<link rel="stylesheet" type="text/css" href="style/style.css" media="all" />
-<link rel="stylesheet" type="text/css" href="style/color/blue.css" media="all" />
-<link rel="stylesheet" type="text/css" media="screen" href="style/css/prettyPhoto.css"  />
-<link rel="stylesheet" type="text/css" href="style/type/museo.css" media="all" />
-<link rel="stylesheet" type="text/css" href="style/type/ptsans.css" media="all" />
-<link rel="stylesheet" type="text/css" href="style/type/charis.css" media="all" />
-    <link href="style/letran.css" rel="stylesheet" />
-<!--[if IE 7]>
-<link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
-<![endif]-->
-<!--[if IE 8]>
-<link rel="stylesheet" type="text/css" href="style/css/ie8.css" media="all" />
-<![endif]-->
-<!--[if IE 9]>
-<link rel="stylesheet" type="text/css" href="style/css/ie9.css" media="all" />
-<![endif]-->
-<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
-<script type="text/javascript" src="js/ddsmoothmenu.js"></script>
-<script type="text/javascript" src="js/transify.js"></script>
-<script type="text/javascript" src="js/jquery.aw-showcase.js"></script>
-<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
-<script type="text/javascript" src="js/carousel.js"></script>
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="js/jquery.superbgimage.min.js"></script>
-<script type="text/javascript" src="js/jquery.slickforms.js"></script>
-
-<script type="text/javascript">
-    jQuery(document).ready(function ($) {
-        $('.forms').dcSlickForms();
-    });
-</script>
-    
-    <script>
-        ; (function ($) {
-            $(function () {
-                $('#my-button').bind('click', function (e) {
-                    e.preventDefault();
-                    $('#popup').bPopup({
-                        fadeSpeed: 'slow', //can be a string ('slow'/'fast') or int
-                        followSpeed: 1500, //can be a string ('slow'/'fast') or int
-                        modalColor: 'darkBlue',
-                        appendTo: "form"
-                    });
-                   });
-            });
-        })(jQuery);
-    </script>
-
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-</head>
-<body>
-   
-    <div id="thumbs"><%--
-<a href="style/images/art/bg1.jpg">1</a>
-<a href="style/images/art/bg2.jpg">2</a>
-<a href="style/images/art/bg3.jpg">3</a>
-<a href="style/images/art/bg4.jpg">4</a>
-<a href="style/images/art/bg5.jpg">5</a>
-<a href="style/images/art/bg6.jpg">6</a>--%>
-        <a href="images/bgbg/BGtest.jpg">1</a>
-         <%-- <a href="images/bgbg/BG1.jpg">2</a>
-          <a href="images/bgbg/BG2.jpg">3</a>
-        <a href="style/images/art/bg4.jpg">4</a>
-        <a href="style/images/art/bg6.jpg">5</a>--%>
-   
-</div>
-<div id="superbgimage">
-	<div class="scanlines"></div>
-</div>
-    <div id="wrapper">
-    <div id="header">
-    <div class="logo opacity" ><a href="Default.aspx">
-       <img src="images/nameonly1.png" width="100%"/></a></div>
-        <div style="position: absolute; left: 54%;top: 40%; ">
-            <img src="images/eCommunication.png" width="300px" />
-            
-        </div>
-    <div class="social">
-         <a href="#" class="button blue" style="font-size: 20px;width: 80px; height: 20px;text-align: center" id="my-button">Login</a>
-       
-      <%--<ul>
-        <li><a href="#"><img src="style/images/icon-rss.png" alt="RSS" /></a></li>
-        <li><a href="#"><img src="style/images/icon-facebook.png" alt="Facebook" /></a></li>
-        <li><a href="#"><img src="style/images/icon-twitter.png" alt="Twitter" /></a></li>
-        <li><a href="#"><img src="style/images/icon-googleplus.png" alt="Google+" /></a></li>
-        <li><a href="#"><img src="style/images/icon-dribble.png" alt="Dribble" /></a></li>
-        <li><a href="#"><img src="style/images/icon-flickr.png" alt="Flickr" /></a></li>
-        <li><a href="#"><img src="style/images/icon-tumblr.png" alt="Tumblr" /></a></li>
-      </ul>--%>
-    </div>
-  </div>
-  <div class="clear"></div>
-  <!-- Begin Menu -->
-  <div id="menu" class="menu opacity">
-    <ul>
+  <%--  <ul>
       <li><a href="Default.aspx">Home</a></li>
       <li><a>The Colegio</a>
         <ul>
@@ -120,22 +16,315 @@
       </li>
       <li><a href="Calendar.aspx">School Calendar</a></li>
     <li><a href="ActivateAccount.aspx">Activate Account</a></li>
-    </ul>
-    <br style="clear: left" />
-  </div>
-  <!-- End Menu --> 
-  
+    </ul>--%>
 
-    <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<html class="no-js" lang="en">
+
+<head id="Head1" runat="server">
+    <title>Letran Bataan</title>
     
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta property="fb:admins" content="553594333" />
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/homepage.css">
+    <!-- homepage stylesheet -->
+    <link rel="stylesheet" href="stylesheets/skins/teal.css">
+    <!-- skin color -->
+    <link rel="stylesheet" href="stylesheets/responsive.css">
+    <!-- IE Fix for HTML5 Tags -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    
+  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+    <style>
+        a.header1
+        {
+            font-size: 60px !important;
+            font-family: 'Old English Text MT';
+            color: #dddddd !important;
+        }
+
+        a.header2
+        {
+            font-size: 60px !important;
+            font-family: 'Old English Text MT';
+            color: #dddddd !important;
+        }
+
+        a.letran
+        {
+            font-size: 43px !important;
+            font-family: 'Old English Text MT';
+            color: #dddddd !important;
+        }
+
+        a.bataan
+        {
+            font-size: 30px !important;
+            font-family: Arial;
+            color: #dddddd !important;
+        }
+
+        b.footer2
+        {
+            font-size: 20px !important;
+            font-family: Arial;
+        }
+
+        ul.about
+        {
+            top: -2px !important;
+            margin-left: 60px !important;
+        }
+
+        html, body
+        {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
         
+        html
+        {
+            height: 100% !important;
+        }
+
+        body
+        {
+            min-height: 100% !important;
+        }
+        a.ff {
+         font-family: 'Yanone Kaffeesatz' !important; color: #270a9f !important;font-size: 20px !important;
+        }
+        a.about {
+              font-family: 'Yanone Kaffeesatz' !important; color: #270a9f !important;font-size: 18px !important;
+        }
+        .ff {
+          <%--  z-index: 99 !important;--%>
+        }
+        .bgbg1 {
+            background-image: url('<%= Page.ResolveUrl("~/images/masterpage/menuBack.png") %>');border-radius: 10px;background-size: cover;
+        }
+        .bgbg {
+            background-color: white;border-radius: 10px;
+        }
+        .bgrow {
+            background-image: url('<%= Page.ResolveUrl("~/images/masterpage/bannerPic.png")%>'); background-repeat: no-repeat;background-size: cover;
+        }
+       
+       
+    </style>
+    <script src="Foundation/js/vendor/jquery.js"></script>
+    <script src="javascripts/bpop.js"></script>
+     <script>
+         ; (function ($) {
+             $(function () {
+                 $('#my-button').bind('click', function (e) {
+                     e.preventDefault();
+                     $('#popup').bPopup({
+                         fadeSpeed: 'slow', //can be a string ('slow'/'fast') or int
+                         followSpeed: 1500, //can be a string ('slow'/'fast') or int
+                         modalColor: 'darkBlue',
+                         appendTo: "form"
+                     });
+                 });
+             });
+         })(jQuery);
+    </script>
+
+</head>
+<body>
+    <form id="form2" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div></div>
+        <!-- HIDDEN PANEL 
+================================================== 
+        <div id="panel">
+            <div class="row">
+                <div class="twelve columns">
+                    <div class="infotext">
+                        Login here
+		
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="slide">
+            <a href="#" class="btn-slide"></a>
+        </p>-->
+        <!-- HEADER
+================================================== -->
+        <div class="bgrow">
+            <div class="row" style="width: 1200px; min-height: 90px">
+         
+                <div class="four columns">
+                    <a href="<%= Page.ResolveUrl("~/Home.aspx") %>">
+                        <span>
+                            <img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />
+                        </span>
+                    
+                    </a>
+
+                </div>
+                <div class="eight columns noleftmarg">
+                  <nav id="nav-wrap">
+                      
+                       <a href="#" class="buttonn" style="font-size: 15px;font-weight: 500;left: 80%" id="my-button">Login</a>
+                        <%--<ul class="nav-bar sf-menu bgbg">
+
+                                <li class="current">
+                                    <a href="<%= Page.ResolveUrl("~/Home.aspx") %>" class="ff">HOME</a>
+                                </li>
+
+                                <li>
+                                    <a class="ff">&nbsp;THE COLEGIO</a>
+                                    <ul>
+                                        <li><a>About Us</a>
+                                            <ul class="about">
+                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/History.aspx") %>">History</a>
+                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Philosophy.aspx") %>">Dominican Philosophy of Education</a>
+                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Mission.aspx") %>">Mission, Vision and Creed</a>
+                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Objectives.aspx") %>">Objectives</a>
+                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/CoreValues.aspx") %>">Core Values</a>
+                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/InstitutionalStrategies.aspx") %>">Institutional Strategies</a>
+                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Symbols.aspx") %>">Symbols</a>
+                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Saints.aspx") %>">Saints</a>
+                                            </ul>
+                                        </li>
+                                         <li><a href="<%= Page.ResolveUrl("~/Colegio/Administrators.aspx") %>">Administrators</a></li>
+                                        <li><a>Departments</a>
+                                            <ul class="about">
+                                               
+                                             <li><a href="<%= Page.ResolveUrl("~/Colegio/Departments/Library.aspx") %>">Library and Media Services</a> </li>
+                                                    <li>  <span aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Coming Soon"><a href="#">Research</a></span> </li>
+                                                <li> <span aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Coming Soon"><a href="#">Registrar</a></span> </li>
+                                                     <li> <span aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Coming Soon"><a href="#">CCD</a></span> </li>
+                                                  <li> <span aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Coming Soon"><a href="#">OSACA</a></span> </li>
+                                            </ul>
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="<%= Page.ResolveUrl("~/Admissions/ProcedureRequirements.aspx") %>" class="ff">ADMISSIONS</a>
+                                    <ul>
+                                        <li><a href="<%= Page.ResolveUrl("~/Admissions/ProcedureRequirements.aspx") %>">Admission Procedure & Requirements</a></li>
+                                        <li><a href="<%= Page.ResolveUrl("~/Admissions/Schedules.aspx") %>">Schedule of Examination & Fees</a></li>
+                                          <li><a href="<%= Page.ResolveUrl("~/College/Scholarship.aspx") %>">Scholarships</a></li>
+                                        <li><a href="<%= Page.ResolveUrl("~/Admissions/Online.aspx") %>">Online Admission Application</a></li>
+                                         <li><a href="<%= Page.ResolveUrl("~/Admissions/Results.aspx") %>">Entrance Exam Result</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a class="ff">ACADEMICS</a>
+                                    <ul>
+                                        <li><a>College</a>
+                                               <ul class="about">
+                                                <li><a href="<%= Page.ResolveUrl("~/College/DegreePrograms.aspx") %>">Degree Programs</a>
+                                                <li><a href="<%= Page.ResolveUrl("~/College/Faculty.aspx") %>">Faculty</a>
+                                            </ul>
+                                        </li>
+                                            <li><a href="<%= Page.ResolveUrl("~/HighSchool/Home.aspx") %>">High School</a>
+                                                <ul class="about">
+                                              <li><a href="<%= Page.ResolveUrl("~/HighSchool/Home.aspx") %>">Home</a></li>
+                                        <li><a href="<%= Page.ResolveUrl("~/HighSchool/FamilyCouncil.aspx") %>">Family Council</a></li>
+                                            </ul>
+                                            </li>
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <a class="ff" href="<%= Page.ResolveUrl("~/Colegio/Alumni/Home.aspx") %>">ALUMNI</a>
+                                  
+                                </li>
+
+                            </ul>--%>
+
+                        </nav>
+                    </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
 
-    </div>
-        <div id="popup" >
+
+        <!-- FOOOTER 
+        ================================================== -->
+        <div id="footer">
+            <footer class="row">
+                <div class="twelve columns">
+                    <p class="back-top floatright">
+                        <a href="#top"><span></span></a>
+                    </p>
+                    <div class="four columns">
+                        <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>
+                        Dominican Avenue, Abucay, Bataan
+                        <p> </p>
+                    </div>
+
+
+                    <div class="two columns">
+                        <br />
+                        <h1>Online Services</h1>
+                      <a href="http://My.letranbataan.edu.ph" target="_blank">Student Portal</a>
+                        <br />
+                        <a href="http://workforce.letranbataan.edu.ph" target="_blank">Employee Portal</a>
+                    </div>
+
+                    <div class="two columns">
+
+                        <br />
+                        <h1>Contact Us</h1>
+                        (047) 237-9370
+                        <br />
+                        (047) 237-9432
+                        <br />
+                        09159252021
+                 
+                       
+                    </div>
+                    <div class="two columns">
+                        <br />
+                        <h1>Keep in touch</h1>
+                        <p>
+                            <asp:ImageButton ID="fbBtn" runat="server" ImageUrl="~/images/socialpack/fb.png" OnClientClick="window.open('https://www.facebook.com/csjlbataan')" />
+                            &nbsp;&nbsp;
+                          <asp:ImageButton ID="twitBtn" runat="server" ImageUrl="~/images/socialpack/twit.png" OnClientClick="window.open('https://twitter.com/LetranBataan')" />
+                        </p>
+                    </div>
+                    <div class="one columns">
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div class="copyright">
+            <div class="row">
+                <div class="six columns">
+                    &copy;<span class="small"> 2014 Letran Bataan</span>
+                </div>
+                <div class="six columns">
+                    <span class="small floatright">Letran ITC</span>
+                </div>
+            </div>
+        </div>
+        
+          <div id="popup" >
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <asp:Label ID="errorLbl" runat="server" Text="" ></asp:Label>
@@ -147,15 +336,12 @@
            </asp:UpdatePanel>
              </div>
     </form>
-    
-  <div id="copyright" class="opacity">
-    <p>© 2014 Letran Bataan. All Right Reserved.</p>
-  </div>
+
+    <script>
+        $(document).foundation();
+    </script>
+
     </div>
-    
-    
-    
-<script src="js/bpop.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
-   </body>
+
+</body>
 </html>

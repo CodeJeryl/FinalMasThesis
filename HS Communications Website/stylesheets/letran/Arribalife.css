@@ -1,0 +1,243 @@
+﻿
+body{
+	margin: 0;
+	width: 1366px;
+    height: 768px;
+	padding: 0;
+}
+
+p{
+	margin: 0 0 0 0;	
+}
+
+p, ul{
+	font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size-adjust:0.488;
+	font-weight:200;
+	font-style:normal;
+}
+
+img{
+	border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    z-index: 1;
+    left: 233px;
+    top: 206px;
+    position: absolute;
+    height: 40px;
+    width: 131px;
+}
+
+h1, #pixels{
+	font-family:"Museo 900", Verdana, serif;
+	font-size-adjust:0.40;
+	font-weight:700;
+	font-style:normal;
+}
+
+h2{
+	font-family:"Beau Sans Pro Book", Verdana, sans-serif;
+	font-size-adjust:0.531;
+	font-weight:500;
+	font-style:normal;
+}
+
+#header h1, #pixels{
+	color: #48941A;
+}
+
+.float-left{
+	float: left;	
+	margin: 0 0 0 20px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+
+
+
+
+#familyBG{
+	background: url(/images/ExploreImages/1.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 768px;
+	padding: 100px 0 0 0;	
+    background-size: cover;
+}
+
+#familyBG .bg1{
+	background: url(/images/ExploreImages/div1.png) 50% 0 no-repeat;
+    height: 768px;
+    width: 1370px;
+    background-size: cover;
+
+}
+
+#family1{
+    background:url(/images/ExploreImages/2.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 768px;
+	padding: 100px 0 0 0;	
+    background-size: cover;
+
+}
+
+#family1 .bg2{
+	background: url(/images/ExploreImages/div2.png) 50% 0 no-repeat;
+    height: 768px;
+    width: 1370px;
+    background-size: cover;
+
+}
+
+#family2{
+    background:url(/images/ExploreImages/3.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 768px;
+	padding: 100px 0 0 0;	
+    background-size: cover;
+
+}
+
+#family2 .bg3{
+	background: url(/images/ExploreImages/div3.png) 50% 0 no-repeat;
+    height: 768px;
+    width: 1370px;
+    background-size: cover;
+
+}
+
+#family3{
+    background:url(/images/ExploreImages/4.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 768px;
+	padding: 100px 0 0 0;	
+    background-size: cover;
+
+}
+
+#family3 .bg4{
+	background: url(/images/ExploreImages/div4.png) 50% 0 no-repeat;
+    height: 768px;
+    width: 1370px;
+    background-size: cover;
+
+}
+
+#family4{
+    background:url(/images/ExploreImages/5.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 768px;
+	padding: 100px 0 0 0;	
+    background-size: cover;
+
+}
+
+#family4 .bg5{
+	background: url(/images/ExploreImages/div5.png) 50% 0 no-repeat;
+    height: 768px;
+    width: 1370px;
+    background-size: cover;
+
+}
+
+#family5{
+    background:url(/images/ExploreImages/6.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 768px;
+	padding: 100px 0 0 0;	
+    background-size: cover;
+
+}
+
+#family5 .bg6{
+	background: url(/images/ExploreImages/div6.png) 50% 0 no-repeat;
+    height: 768px;
+    width: 1370px;
+    background-size: cover;
+
+}
+
+#family6{
+    background:url(/images/ExploreImages/8.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 768px;
+	padding: 100px 0 0 0;	
+    background-size: cover;
+
+}
+
+#family6 .bg7{
+	background: url(/images/ExploreImages/div8.png) 50% 0 no-repeat;
+    height: 768px;
+    width: 1370px;
+    background-size: cover;
+
+}
+
+#family7{
+    background:url(/images/ExploreImages/7.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 768px;
+	padding: 100px 0 0 0;	
+    background-size: cover;
+
+}
+
+    #family7 .bg8 {
+        background: url(/images/ExploreImages/div7.png) 50% 0 no-repeat;
+        height: 768px;
+        width: 1370px;
+        background-size: cover;
+    }
+
+#family8 {
+    background: url(/images/ExploreImages/9.jpg) 50% 0 no-repeat fixed;
+    color: black;
+    height: 768px;
+    padding: 100px 0 0 0;
+    background-size: cover;
+
+}
+
+        #family8 .bg9 {
+        background: url(/images/ExploreImages/div9.png) 50% 0 no-repeat;
+        height: 768px;
+        width: 1370px;
+        background-size: cover;
+    }
+
+        #family9 {
+    background: url(/images/ExploreImages/10.jpg) 50% 0 no-repeat fixed;
+    color: black;
+    height: 768px;
+    padding: 100px 0 0 0;
+    background-size: cover;
+
+}
+
+            #family9 .bg10 {
+                background: url(/images/ExploreImages/div10.png) 50% 0 no-repeat;
+                height: 768px;
+                width: 1370px;
+                background-size: cover;
+            }
+
+.center { margin: 0 auto; }
+.content{ margin: 0 auto; width: 960px; }
+.clear { clear: both; }
+a.lpanel { float: left; color: #e1e1e1; font-size: 12px; font-family:"Wellfleet"; text-decoration: none; margin: 7px 11px; }
+a.rpanel { float: right; color: #e1e1e1;  font-size: 12px; font-family:"Wellfleet"; text-decoration: none; margin: 7px 11px; }
+
+a.lpanel:hover{ color: #fff; }
+a.rpanel:hover{ color: #fff; }
+
