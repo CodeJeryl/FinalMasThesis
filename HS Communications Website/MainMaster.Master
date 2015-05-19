@@ -29,12 +29,16 @@
     
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-
+    <link href="stylesheets/letran/menu.css" rel="stylesheet" />
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta property="fb:admins" content="553594333" />
-
+    <link href="stylesheets/css/sm-core-css.css" rel="stylesheet" />
+    <link href="stylesheets/css/sm-blue/sm-blue.css" rel="stylesheet" />
+    <link href="stylesheets/css/sm-simple/sm-simple.css" rel="stylesheet" />
+    <link href="stylesheets/css/sm-mint/sm-mint.css" rel="stylesheet" />
+    <link href="stylesheets/css/sm-clean/sm-clean.css" rel="stylesheet" />
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/homepage.css">
     <!-- homepage stylesheet -->
@@ -45,9 +49,11 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-    
+         <script src="Foundation/js/vendor/jquery.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+
     <style>
+        
         a.header1
         {
             font-size: 60px !important;
@@ -121,10 +127,8 @@
         .bgrow {
             background-image: url('<%= Page.ResolveUrl("~/images/masterpage/bannerPic.png")%>'); background-repeat: no-repeat;background-size: cover;
         }
-       
-       
     </style>
-    <script src="Foundation/js/vendor/jquery.js"></script>
+  
     <script src="javascripts/bpop.js"></script>
      <script>
          ; (function ($) {
@@ -177,86 +181,31 @@
 
                 </div>
                 <div class="eight columns noleftmarg">
-                  <nav id="nav-wrap">
-                      
+                 
                        <a href="#" class="buttonn" style="font-size: 15px;font-weight: 500;left: 80%" id="my-button">Login</a>
-                        <%--<ul class="nav-bar sf-menu bgbg">
-
-                                <li class="current">
-                                    <a href="<%= Page.ResolveUrl("~/Home.aspx") %>" class="ff">HOME</a>
-                                </li>
-
-                                <li>
-                                    <a class="ff">&nbsp;THE COLEGIO</a>
-                                    <ul>
-                                        <li><a>About Us</a>
-                                            <ul class="about">
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/History.aspx") %>">History</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Philosophy.aspx") %>">Dominican Philosophy of Education</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Mission.aspx") %>">Mission, Vision and Creed</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Objectives.aspx") %>">Objectives</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/CoreValues.aspx") %>">Core Values</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/InstitutionalStrategies.aspx") %>">Institutional Strategies</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Symbols.aspx") %>">Symbols</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Saints.aspx") %>">Saints</a>
-                                            </ul>
-                                        </li>
-                                         <li><a href="<%= Page.ResolveUrl("~/Colegio/Administrators.aspx") %>">Administrators</a></li>
-                                        <li><a>Departments</a>
-                                            <ul class="about">
-                                               
-                                             <li><a href="<%= Page.ResolveUrl("~/Colegio/Departments/Library.aspx") %>">Library and Media Services</a> </li>
-                                                    <li>  <span aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Coming Soon"><a href="#">Research</a></span> </li>
-                                                <li> <span aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Coming Soon"><a href="#">Registrar</a></span> </li>
-                                                     <li> <span aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Coming Soon"><a href="#">CCD</a></span> </li>
-                                                  <li> <span aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Coming Soon"><a href="#">OSACA</a></span> </li>
-                                            </ul>
-                                        </li>
-                                       
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="<%= Page.ResolveUrl("~/Admissions/ProcedureRequirements.aspx") %>" class="ff">ADMISSIONS</a>
-                                    <ul>
-                                        <li><a href="<%= Page.ResolveUrl("~/Admissions/ProcedureRequirements.aspx") %>">Admission Procedure & Requirements</a></li>
-                                        <li><a href="<%= Page.ResolveUrl("~/Admissions/Schedules.aspx") %>">Schedule of Examination & Fees</a></li>
-                                          <li><a href="<%= Page.ResolveUrl("~/College/Scholarship.aspx") %>">Scholarships</a></li>
-                                        <li><a href="<%= Page.ResolveUrl("~/Admissions/Online.aspx") %>">Online Admission Application</a></li>
-                                         <li><a href="<%= Page.ResolveUrl("~/Admissions/Results.aspx") %>">Entrance Exam Result</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a class="ff">ACADEMICS</a>
-                                    <ul>
-                                        <li><a>College</a>
-                                               <ul class="about">
-                                                <li><a href="<%= Page.ResolveUrl("~/College/DegreePrograms.aspx") %>">Degree Programs</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/College/Faculty.aspx") %>">Faculty</a>
-                                            </ul>
-                                        </li>
-                                            <li><a href="<%= Page.ResolveUrl("~/HighSchool/Home.aspx") %>">High School</a>
-                                                <ul class="about">
-                                              <li><a href="<%= Page.ResolveUrl("~/HighSchool/Home.aspx") %>">Home</a></li>
-                                        <li><a href="<%= Page.ResolveUrl("~/HighSchool/FamilyCouncil.aspx") %>">Family Council</a></li>
-                                            </ul>
-                                            </li>
-                                    </ul>
-                                </li>
-
-
-                                <li>
-                                    <a class="ff" href="<%= Page.ResolveUrl("~/Colegio/Alumni/Home.aspx") %>">ALUMNI</a>
-                                  
-                                </li>
-
-                            </ul>--%>
-
-                        </nav>
+                      
                     </div>
             </div>
         </div>
+        <ul id="main-menu" class="sm sm-blue">
+  <li><a href="Default.aspx">Home</a></li>
+      <li><a>The Colegio</a>
+        <ul>
+        	<li><a href="<%= Page.ResolveUrl("~/History.aspx") %>">History</a></li>
+      	  <li><a href="<%= Page.ResolveUrl("~/Philosophy.aspx") %>">Dominican Philosophy of Education</a></li>
+            <li><a href="<%= Page.ResolveUrl("~/Mission.aspx") %>">Mission, Vision and Creed</a></li>
+      	  <li><a href="<%= Page.ResolveUrl("~/Objectives.aspx") %>">Objectives</a></li>
+            <li><a href="<%= Page.ResolveUrl("~/CoreValues.aspx") %>">Core Values</a></li>
+      	  <li><a href="<%= Page.ResolveUrl("~/InstitutionalStrategies.aspx") %>">Institutional Strategies</a></li>
+            <li><a href="<%= Page.ResolveUrl("~/Symbols.aspx") %>">Symbols</a></li>
+            <li><a href="<%= Page.ResolveUrl("~/Saints.aspx") %>">Saints</a></li>
+        </ul>
+      </li>
+      <li><a href="Calendar.aspx">School Calendar</a></li>
+    <li><a href="ActivateAccount.aspx">Activate Account</a></li>
+</ul>
+      
+
         <div class="clear">
         </div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -336,12 +285,14 @@
            </asp:UpdatePanel>
              </div>
     </form>
+     <script src="javascripts/jquery.flexnav.min.js"></script>
 
     <script>
         $(document).foundation();
-    </script>
+       </script>
 
     </div>
-
+ 
+  <script src="javascripts/jquery.smartmenus.js"></script>
 </body>
 </html>

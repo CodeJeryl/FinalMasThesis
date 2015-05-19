@@ -399,6 +399,7 @@
     <Content Include="javascripts\jquery.min.js" />
     <Content Include="javascripts\jquery.nivo.slider.pack.js" />
     <Content Include="javascripts\jquery.prettyPhoto.js" />
+    <Content Include="javascripts\jquery.smartmenus.js" />
     <Content Include="javascripts\jquery.tweet.js" />
     <Content Include="javascripts\modernizr.foundation.js" />
     <Content Include="javascripts\responsivemenu.js" />
@@ -421,6 +422,16 @@
     <Content Include="Portal\Schedule.aspx" />
     <Content Include="Saints.aspx" />
     <Content Include="stylesheets\blog.css" />
+    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\current-item-bg.png" />
+    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\main-item-hover-bg.png" />
+    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\main-menu-bg.png" />
+    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\sub-item-hover-bg.png" />
+    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\vertical-main-item-bg.png" />
+    <Content Include="stylesheets\css\sm-blue\sm-blue.css" />
+    <Content Include="stylesheets\css\sm-clean\sm-clean.css" />
+    <Content Include="stylesheets\css\sm-core-css.css" />
+    <Content Include="stylesheets\css\sm-mint\sm-mint.css" />
+    <Content Include="stylesheets\css\sm-simple\sm-simple.css" />
     <Content Include="stylesheets\filters.svg" />
     <Content Include="stylesheets\fonts\Bitter OFL SIL Font License 1.1.txt" />
     <Content Include="stylesheets\fonts\Bitter-Bold-webfont.svg" />
