@@ -61,6 +61,16 @@
     <Reference Include="Telerik.ReportViewer.WebForms, Version=7.0.13.220, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Colegio\AboutUs\CoreValues.aspx" />
+    <Content Include="Colegio\AboutUs\History.aspx" />
+    <Content Include="Colegio\AboutUs\InstitutionalStrategies.aspx" />
+    <Content Include="Colegio\AboutUs\Mission.aspx" />
+    <Content Include="Colegio\AboutUs\Note AboutUS.html" />
+    <Content Include="Colegio\AboutUs\Objectives.aspx" />
+    <Content Include="Colegio\AboutUs\Philosophy.aspx" />
+    <Content Include="Colegio\AboutUs\Saints.aspx" />
+    <Content Include="Colegio\AboutUs\Symbols.aspx" />
+    <Content Include="Colegio\AboutUs\Symbols2.aspx" />
     <Content Include="ActivateAccount.aspx" />
     <Content Include="Admin\AddGrades.aspx" />
     <Content Include="Admin\AddStudents.aspx" />
@@ -422,16 +432,6 @@
     <Content Include="Portal\Schedule.aspx" />
     <Content Include="Saints.aspx" />
     <Content Include="stylesheets\blog.css" />
-    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\current-item-bg.png" />
-    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\main-item-hover-bg.png" />
-    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\main-menu-bg.png" />
-    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\sub-item-hover-bg.png" />
-    <Content Include="stylesheets\css\sm-blue\css-gradients-fallback\vertical-main-item-bg.png" />
-    <Content Include="stylesheets\css\sm-blue\sm-blue.css" />
-    <Content Include="stylesheets\css\sm-clean\sm-clean.css" />
-    <Content Include="stylesheets\css\sm-core-css.css" />
-    <Content Include="stylesheets\css\sm-mint\sm-mint.css" />
-    <Content Include="stylesheets\css\sm-simple\sm-simple.css" />
     <Content Include="stylesheets\filters.svg" />
     <Content Include="stylesheets\fonts\Bitter OFL SIL Font License 1.1.txt" />
     <Content Include="stylesheets\fonts\Bitter-Bold-webfont.svg" />
@@ -618,6 +618,69 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Colegio\AboutUs\CoreValues.aspx.cs">
+      <DependentUpon>CoreValues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\CoreValues.aspx.designer.cs">
+      <DependentUpon>CoreValues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\InstitutionalStrategies.aspx.cs">
+      <DependentUpon>InstitutionalStrategies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\InstitutionalStrategies.aspx.designer.cs">
+      <DependentUpon>InstitutionalStrategies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Mission.aspx.cs">
+      <DependentUpon>Mission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Mission.aspx.designer.cs">
+      <DependentUpon>Mission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Objectives.aspx.cs">
+      <DependentUpon>Objectives.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Objectives.aspx.designer.cs">
+      <DependentUpon>Objectives.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Philosophy.aspx.cs">
+      <DependentUpon>Philosophy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Philosophy.aspx.designer.cs">
+      <DependentUpon>Philosophy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Saints.aspx.cs">
+      <DependentUpon>Saints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Saints.aspx.designer.cs">
+      <DependentUpon>Saints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Symbols.aspx.cs">
+      <DependentUpon>Symbols.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Symbols.aspx.designer.cs">
+      <DependentUpon>Symbols.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Symbols2.aspx.cs">
+      <DependentUpon>Symbols2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegio\AboutUs\Symbols2.aspx.designer.cs">
+      <DependentUpon>Symbols2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ActivateAccount.aspx.cs">
       <DependentUpon>ActivateAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

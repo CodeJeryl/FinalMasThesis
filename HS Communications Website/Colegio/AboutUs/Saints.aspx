@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Saints.aspx.cs" Inherits="LetranWebsite2014.Colegio.AboutUs.Saints" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../../MainMaster.Master" AutoEventWireup="true" CodeBehind="Saints.aspx.cs" Inherits="LetranWebsite2014.Colegio.AboutUs.Saints" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../stylesheets/skins/teal.css" rel="stylesheet" />
     <link href="../../stylesheets/letran/Subhead.css" rel="stylesheet" />

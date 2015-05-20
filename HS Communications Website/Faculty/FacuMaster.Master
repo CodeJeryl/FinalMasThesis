@@ -1,109 +1,286 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FacuMaster.master.cs" Inherits="HS_Communications_Website.Faculty.FacuMaster" %>
 
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<html class="no-js" lang="en">
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-   <meta charset="UTF-8">
     <title>Letran Bataan</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../style/images/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="../style/style.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="../style/color/blue.css" media="all" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../style/css/prettyPhoto.css" />
-    <link rel="stylesheet" type="text/css" href="../style/type/museo.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="../style/type/ptsans.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="../style/type/charis.css" media="all" />
-    <link href="../../style/letran.css" rel="stylesheet" />
-    <!--[if IE 7]>
-<link rel="stylesheet" type="text/css" href="../style/css/ie7.css" media="all" />
-<![endif]-->
-    <!--[if IE 8]>
-<link rel="stylesheet" type="text/css" href="../style/css/ie8.css" media="all" />
-<![endif]-->
-    <!--[if IE 9]>
-<link rel="stylesheet" type="text/css" href="../style/css/ie9.css" media="all" />
-<![endif]-->
 
-    <script type="text/javascript" src="../js/jquery-1.6.2.min.js"></script>
-    <script type="text/javascript" src="../js/ddsmoothmenu.js"></script>
-    <script type="text/javascript" src="../js/transify.js"></script>
-    <script type="text/javascript" src="../js/jquery.prettyPhoto.js"></script>
-    <script type="text/javascript" src="../js/jquery.superbgimage.min.js"></script>
-    <script type="text/javascript" src="../js/jquery.slickforms.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $('.forms').dcSlickForms();
-        });
-</script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link href="../stylesheets/letran/menu.css" rel="stylesheet" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="fb:admins" content="553594333" />
+
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/homepage.css">
+    <link href="../stylesheets/letran/Subhead.css" rel="stylesheet" />
+    <!-- homepage stylesheet -->
+    <link rel="stylesheet" href="../stylesheets/skins/teal.css">
+    <!-- skin color -->
+    <link rel="stylesheet" href="../stylesheets/responsive.css">
+    <!-- IE Fix for HTML5 Tags -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+    <script src="../Foundation/js/vendor/jquery.js"></script>
+    <script src="../Foundation/js/foundation.min.js"></script>
+    <script src="../Foundation/js/foundation/foundation.topbar.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+
+    <style>
+        
+        a.header1
+        {
+            font-size: 60px !important;
+            font-family: 'Old English Text MT';
+            color: #dddddd !important;
+        }
+
+        a.header2
+        {
+            font-size: 60px !important;
+            font-family: 'Old English Text MT';
+            color: #dddddd !important;
+        }
+
+        a.letran
+        {
+            font-size: 43px !important;
+            font-family: 'Old English Text MT';
+            color: #dddddd !important;
+        }
+
+        a.bataan
+        {
+            font-size: 30px !important;
+            font-family: Arial;
+            color: #dddddd !important;
+        }
+
+        b.footer2
+        {
+            font-size: 20px !important;
+            font-family: Arial;
+        }
+
+        ul.about
+        {
+            top: -2px !important;
+            margin-left: 60px !important;
+        }
+
+        html, body
+        {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        html
+        {
+            height: 100% !important;
+        }
+
+        body
+        {
+            min-height: 100% !important;
+        }
+        a.ff {
+         font-family: 'Yanone Kaffeesatz' !important; color: #270a9f !important;font-size: 20px !important;
+        }
+        a.about {
+              font-family: 'Yanone Kaffeesatz' !important; color: #270a9f !important;font-size: 18px !important;
+        }
+        .ff {
+          <%--  z-index: 99 !important;--%>
+        }
+        .bgbg1 {
+            background-image: url('<%= Page.ResolveUrl("../images/masterpage/menuBack.png") %>');border-radius: 10px;background-size: cover;
+        }
+        .bgbg {
+            background-color: white;border-radius: 10px;
+        }
+        .bgrow {
+            background-image: url('<%= Page.ResolveUrl("../images/masterpage/bannerPic.png")%>'); background-repeat: no-repeat;background-size: cover;
+        }
+        .contain-to-grid .top-bar {
+    max-width: 60rem !important;
+    }
+
+      
+    </style>
+
 </head>
 <body>
-       <div id="thumbs"> <a href="../images/bgbg/BGtest.jpg">1</a>
- <%--         <a href="../images/bgbg/BG1.jpg">2</a>
-          <a href="../images/bgbg/BG2.jpg">3</a>
-        <a href="../style/images/art/bg4.jpg">4</a>
-        <a href="../style/images/art/bg6.jpg">5</a>--%>
-</div>
-<div id="superbgimage">
-	<div class="scanlines"></div>
-</div>
 
- <div id="wrapper">
-     <div id="header">
-             <div class="logo opacity" ><a href="Default.aspx">
-       <img src="../images/nameonly1.png" width="100%"/></a></div>
-        <div style="position: absolute; left: 54%;top: 40%; ">
-            <img src="../images/eCommunication.png" width="350px" />
-            
-        </div>
-            <div class="social">
-                <ul>
-                   
-                    <li><a href="https://www.facebook.com/csjlbataan">
-                        <img src="../style/images/icon-facebook.png" alt="Facebook" /></a></li>
-                    <li><a href="https://twitter.com/LetranBataan">
-                        <img src="../style/images/icon-twitter.png" alt="Twitter" /></a></li>
-                    </ul>
+
+    <form id="form2" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div></div>
+        <!-- HIDDEN PANEL 
+================================================== 
+        <div id="panel">
+            <div class="row">
+                <div class="twelve columns">
+                    <div class="infotext">
+                        Login here
+		
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="clear"></div>
-        <!-- Begin Menu -->
-     <form id="form1" runat="server">
-        <div id="menu" class="menu opacity">
-            <ul>
-      <li><a href="Fhomepage.aspx">Announcement</a>
-          <ul>
-              <li><a href="Fhomepage.aspx">Messages</a></li>
-              <li><a href="#">Letters</a></li>
-          </ul>
-      </li>
-     <li><a href="Grades.aspx">Grades</a>
-      </li>
-     <li><a href="fullwidth.html">Change Password</a>
-       </li>
-    
-   <li> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>
-    
-    </ul>
-            <br style="clear: left" />
+        <p class="slide">
+            <a href="#" class="btn-slide"></a>
+        </p>-->
+        <!-- HEADER
+================================================== -->
+        <div class="bgrow">
+            <div class="row" style="width: 1200px; min-height: 90px">
+
+                <div class="four columns">
+                    <a href="<%= Page.ResolveUrl("~/Home.aspx") %>">
+                        <span>
+                            <img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />
+                        </span>
+                        </a>
+                    </div>
+                <div class="eight columns noleftmarg">
+
+                  
+                </div>
+            </div>
         </div>
-        <!-- End Menu -->
-    
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+
+        <div class="row" style="width: 100% !important">
+
+            <div style="width: 100% !important">
+                <div class="contain-to-grid">
+                    <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+                        <ul class="title-area">
+                            <li class="name">
+                                <%-- <span style="position: fixed; top: 3px;left: 5px">  </span> --%>
+                                    
+                            </li>
+                            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                        </ul>
+                        <section class="top-bar-section">
+                            <!-- Right Nav Section -->
+                            <ul>
+                                 
+                                <li class="has-dropdown">
+                                   <a href="Fhomepage.aspx">Announcement</a>
+                                    <ul class="dropdown">
+
+                                       <li><a href="Fhomepage.aspx">Messages</a></li>
+                                      <li><a href="Letters.aspx">Letters</a></li>
+                                    </ul>
+                                </li>
+                              
+                             <li><a href="Grades.aspx">Grades</a></li>
+                                
+      <li><a href="ChangePassword.aspx">Change Password</a>
+       </li>
+                              
+      <li>
+          <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>
+
+                            </ul>
+
+                            <!-- Left Nav Section -->
+                            <%--   <ul class="left">
+                                    <li><a href="#">Left Nav Button</a></li>
+                                </ul>--%>
+                        </section>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
         
+        <div class="clear">
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
+
+
+        <!-- FOOOTER 
+        ================================================== -->
+        <div id="footer">
+            <footer class="row">
+                <div class="twelve columns">
+                    <p class="back-top floatright">
+                        <a href="#top"><span></span></a>
+                    </p>
+                    <div class="four columns">
+                        <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>
+                        Dominican Avenue, Abucay, Bataan
+                        <p></p>
+                    </div>
+
+
+                    <div class="two columns">
+                        <br />
+                        <h1>Online Services</h1>
+                        <a href="http://My.letranbataan.edu.ph" target="_blank">Student Portal</a>
+                        <br />
+                        <a href="http://workforce.letranbataan.edu.ph" target="_blank">Employee Portal</a>
+                    </div>
+
+                    <div class="two columns">
+
+                        <br />
+                        <h1>Contact Us</h1>
+                        (047) 237-9370
+                        <br />
+                        (047) 237-9432
+                        <br />
+                        09159252021
+                 
+                       
+                    </div>
+                    <div class="two columns">
+                        <br />
+                        <h1>Keep in touch</h1>
+                        <p>
+                            <asp:ImageButton ID="fbBtn" runat="server" ImageUrl="~/images/socialpack/fb.png" OnClientClick="window.open('https://www.facebook.com/csjlbataan')" />
+                            &nbsp;&nbsp;
+                          <asp:ImageButton ID="twitBtn" runat="server" ImageUrl="~/images/socialpack/twit.png" OnClientClick="window.open('https://twitter.com/LetranBataan')" />
+                        </p>
+                    </div>
+                    <div class="one columns">
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div class="copyright">
+            <div class="row">
+                <div class="six columns">
+                    &copy;<span class="small"> 2014 Letran Bataan</span>
+                </div>
+                <div class="six columns">
+                    <span class="small floatright">Letran ITC</span>
+                </div>
+            </div>
+        </div>
+
+       </form>
+
+    <script>
+        $(document).foundation();
+    </script>
+
     </div>
-    </form>
-    
-    
-  <div id="copyright" class="opacity">
-    <p>© 2014 Letran Bataan. All Right Reserved.</p>
-  </div>
-    </div>
-    
-      <script type="text/javascript" src="../js/scripts.js"></script>
+ 
 </body>
 </html>

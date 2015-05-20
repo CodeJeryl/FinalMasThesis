@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Symbols.aspx.cs" Inherits="LetranWebsite2014.Colegio.AboutUs.Symbols" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../../MainMaster.Master" AutoEventWireup="true" CodeBehind="Symbols.aspx.cs" Inherits="LetranWebsite2014.Colegio.AboutUs.Symbols" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .newStyle1 {
