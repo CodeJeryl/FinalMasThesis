@@ -100,16 +100,16 @@
               font-family: 'Yanone Kaffeesatz' !important; color: #270a9f !important;font-size: 18px !important;
         }
         .ff {
-          <%--  z-index: 99 !important;--%>
+          
         }
         .bgbg1 {
-            background-image: url('<%= Page.ResolveUrl("../images/masterpage/menuBack.png") %>');border-radius: 10px;background-size: cover;
+            background-image: url('<%# Page.ResolveUrl("../images/masterpage/menuBack.png") %>');border-radius: 10px;background-size: cover;
         }
         .bgbg {
             background-color: white;border-radius: 10px;
         }
         .bgrow {
-            background-image: url('<%= Page.ResolveUrl("../images/masterpage/bannerPic.png")%>'); background-repeat: no-repeat;background-size: cover;
+            background-image: url('<%# Page.ResolveUrl("../images/masterpage/bannerPic.png")%>'); background-repeat: no-repeat;background-size: cover;
         }
         .contain-to-grid .top-bar {
     max-width: 85rem !important;
@@ -183,6 +183,7 @@
                                     <ul class="dropdown">
                                         <li><a href="Upload.aspx">Memo/Class Schedule</a></li>
                 <li><a href="AddStudents.aspx">Upload New Students</a></li>
+                                            <li><a href="ManageGrades.aspx">Grades</a></li>
                                     </ul>
                                 </li>
                                 
@@ -193,8 +194,16 @@
               <li><a href="SendMessage.aspx">Send Message</a></li>
                                     </ul>
                                 </li>
+                                
+                                  <li class="has-dropdown">
+                                   <a>Reports</a>
+                                    <ul class="dropdown">
+                                         <li><a href="PrintClass.aspx">Print Class List</a></li>
+              <li><a href="PrintStudent.aspx">Print Contact List</a></li>
+                                    </ul>
+                                </li>
                               
-                            <li><a href="ManageGrades.aspx">Grades</a></li>
+                        
                                 
                                   <li class="has-dropdown">
                                   <a href="ManageAccnt.aspx">Manage Accounts</a>

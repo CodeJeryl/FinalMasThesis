@@ -11,7 +11,7 @@ namespace HS_Communications_Website.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.Header.DataBind();
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)

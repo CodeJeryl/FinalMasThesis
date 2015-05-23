@@ -48,7 +48,7 @@
                <asp:ListItem Value="Principal">Principal</asp:ListItem>
                </asp:DropDownList>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-          <asp:CheckBox ID="CheckBox1" runat="server" /> Check this if Admin Account
+          <asp:CheckBox ID="CheckBox1" runat="server" Visible="False" /><%-- Check this if Admin Account--%>
                 <span style="margin: 60%">
                <asp:Button ID="Button1" runat="server" Text="Add Faculty" CssClass="buttonn" OnClick="Button1_Click"/>
                 </span>
