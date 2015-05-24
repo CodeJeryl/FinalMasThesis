@@ -2,16 +2,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="container" class="opacity">
-            <div class="full-width">
-           
-                    <h2>Manage Grades</h2>
+    <div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+    <!-- MAIN CONTENT-->
+	
                 <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                    <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                 
-               
+               <div class="ten columns centered">
+                      <div class="sectiontitle">
+			<h4><strong class="colhead">Manage Grades</strong></h4>
+		</div>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [d1], [d2], [d3], [d4] FROM [SMTR]"></asp:SqlDataSource>
 
                 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
@@ -78,12 +84,12 @@
                                 <asp:Label ID="d4Label" runat="server" Text='<%# Eval("d4") %>' />
                             </td>
                             <td>
-                                <asp:DropDownList ID="DropDownList1" runat="server">
+                             <span style="float: left">   <asp:DropDownList ID="DropDownList1" runat="server" > 
                                      <asp:ListItem Value="d1">First Quarter</asp:ListItem>
                                      <asp:ListItem Value="d2">Second Quarter</asp:ListItem>
                                     <asp:ListItem Value="d3">Third Quarter</asp:ListItem>
                                     <asp:ListItem Value="d4">Fourth Quarter</asp:ListItem>
-                                </asp:DropDownList>
+                                </asp:DropDownList></span> &nbsp;&nbsp;&nbsp;&nbsp;
                                 <asp:Button ID="enableBtn" runat="server" Text="Enable"  CssClass="buttonn" CommandName="enable"/>
                                 <asp:Button ID="disableBtn" runat="server" Text="Disable" CssClass="buttonn" CommandName="disable"/>
                             </td>
@@ -128,10 +134,14 @@
                         </tr>
                     </SelectedItemTemplate>
                     </asp:ListView>
-                
-                
-                
-                    <h2> List of Subjects </h2>
+                </div>
+                </div>
+                     <div class="row">
+               <div class="ten columns centered">
+                      <div class="sectiontitle">
+			<h4><strong class="colhead">List of Subjects</strong></h4>
+		</div>
+              
                     
                       <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [Sectno], [Subcode], [GR-YR] AS column1, [fullname] FROM [subjectsView] ORDER BY [GR-YR]">
                       
@@ -236,15 +246,25 @@
                             </tr>
                         </SelectedItemTemplate>
                     </asp:ListView>
-                    
+                    	</div>
+              
+                         </div>
+          
+	<!-- end main content-->
 
+	<!--
+	<div class="four columns">
+      
+	</div> -->
 
-             
-                <div class="clear"></div>
-            </div>
-            <!-- End Full Width -->
-
-            <div class="clear"></div>
-            
-        </div>
+<div class="hr">
+</div>
+    
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="../javascripts/formvalidation.js"></script>
+<script src="../javascripts/jquery.cycle.js"></script>
+<script src="../javascripts/app.js"></script>
+<script src="../javascripts/scrolltotop.js"></script>
 </asp:Content>

@@ -206,7 +206,7 @@
                         
                                 
                                   <li class="has-dropdown">
-                                  <a href="ManageAccnt.aspx">Manage Accounts</a>
+                                  <a>Manage Accounts</a>
                                     <ul class="dropdown">
                                       <li><a href="Profile.aspx">Edit Student Profile</a></li>
               <li><a href="AssignT.aspx">Assign Subject Teacher</a></li>

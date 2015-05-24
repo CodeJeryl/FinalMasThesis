@@ -5,20 +5,24 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
- <div id="container" class="opacity">
-            <div class="full-width">
-           
-                    <h2>Dashboard</h2>
-                
-                  
+<div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+    <!-- MAIN CONTENT-->
+	<div class="twelve columns">
+	    <div class="sectiontitle">
+			<h4><strong class="colhead">Dashboard</strong></h4>
+		</div>
           <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
                   </h2></asp:Panel>
                   <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
         
                 
-                <div class="one-half">
-           <h1 style="color: black"> Town Feeder</h1>
+                <div class="six columns">
+          <strong class="colhead">Town Feeder</strong>
                 <asp:Chart ID="Chart1" runat="server">
                     <Series>
                         <asp:Series Name="Series1" ChartArea="ChartArea1"  ChartType="Bar" ></asp:Series>
@@ -34,8 +38,8 @@
                 </div>
                 
 
-                      <div class="one-half last">
-                            <h1 style="color: black"> School Feeder</h1>
+                      <div class="six columns">
+                           <strong class="colhead">School Feeder</strong>
                 <asp:Chart ID="Chart2" runat="server">
                     <Series>
                         <asp:Series Name="Series1" ChartArea="ChartArea1"  ChartType="Bar" ></asp:Series>
@@ -52,11 +56,24 @@
 
                       </div>
                 
-                <div class="clear"></div>
-            </div>
-            <!-- End Full Width -->
+          
+                </div>
+        
+	</div><!-- end main content-->
 
-            <div class="clear"></div>
-            
-        </div>
+	<!--
+	<div class="four columns">
+      
+	</div> -->
+
+<div class="hr">
+</div>
+    
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="../javascripts/formvalidation.js"></script>
+<script src="../javascripts/jquery.cycle.js"></script>
+<script src="../javascripts/app.js"></script>
+<script src="../javascripts/scrolltotop.js"></script>
 </asp:Content>

@@ -612,6 +612,7 @@
     <Content Include="template\stylesheets\skins\yellow.css" />
     <Content Include="template\stylesheets\style.css" />
     <Content Include="template\stylesheets\websymbols\websymbols-regular-webfont.svg" />
+    <Content Include="template\templateee.html" />
     <Content Include="template\typography.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

@@ -2,18 +2,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
- <div id="container" class="opacity">
-            <div class="full-width">
-           
-                  
-          <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
+ <div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+    <!-- MAIN CONTENT-->
+	<div class="twelve columns">
+	    <div class="sectiontitle">
+			<h4><strong class="colhead">Inbox</strong></h4>
+		</div>
+     <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
                   </h2></asp:Panel>
                   <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
         
-                <h2>Inbox</h2>
-                <br/>
+             
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [msgId], [studno], [senderName], [subject], [date], [status] FROM [personalMsgTbl] WHERE ([admin] = @admin) ORDER BY [status] DESC">
                     <SelectParameters>
                         <asp:Parameter DefaultValue="false" Name="admin" Type="Boolean" />
@@ -86,8 +90,8 @@
                                 <asp:Label ID="statusLabel" runat="server" Text='<%# Eval("status") %>' />
                             </td>
                             <td>
-                                <asp:Button ID="Button1" runat="server" Text="Read" CommandName="read" />
-                                <asp:Button ID="Button2" runat="server" Text="Delete" CommandName="del" OnClientClick="javascript:return confirm('Delete Message?');"/>
+                                <asp:Button ID="Button1" runat="server" Text="Read" CommandName="read" CssClass="buttonn"/>
+                                <asp:Button ID="Button2" runat="server" Text="Delete" CommandName="del" CssClass="buttonn" OnClientClick="javascript:return confirm('Delete Message?');"/>
                             </td>
                         </tr>
                     </ItemTemplate>
@@ -131,11 +135,24 @@
                     </SelectedItemTemplate>
                     </asp:ListView>
              
-                <div class="clear"></div>
-            </div>
-            <!-- End Full Width -->
+           
+                </div>
+        
+	</div><!-- end main content-->
 
-            <div class="clear"></div>
-            
-        </div>
+	<!--
+	<div class="four columns">
+      
+	</div> -->
+
+<div class="hr">
+</div>
+    
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="../javascripts/formvalidation.js"></script>
+<script src="../javascripts/jquery.cycle.js"></script>
+<script src="../javascripts/app.js"></script>
+<script src="../javascripts/scrolltotop.js"></script>
 </asp:Content>

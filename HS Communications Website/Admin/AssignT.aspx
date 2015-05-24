@@ -2,13 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <div id="container" class="opacity">
-            <div class="full-width">
-           
-                    <h2>Assign Subject Teachers</h2>
-                 </div>
-            <!-- End Full Width -->
-          <div class="one-fourth">
+    <div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+    <!-- MAIN CONTENT-->
+	<div class="twelve columns">
+	    <div class="sectiontitle">
+			<h4><strong class="colhead">Assign Subject Teachers</strong></h4>
+		</div>
+        <div class="colp">
+            
+            <div class="three columns" style="position: fixed">
               <asp:ListView ID="ListView1" runat="server" DataKeyNames="fCode" DataSourceID="SqlDataSource1">
                   <AlternatingItemTemplate>
                       <tr style="background-color:#FFF8DC;">
@@ -95,14 +101,15 @@
               </asp:ListView>
 
               <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [fCode], [fullname] FROM [FacTbl] ORDER BY [fCode]"></asp:SqlDataSource>
-          </div>
           
-          <div class="three-fourth last">
+           &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+            <asp:Button ID="UpdateButton" runat="server" Text="Update Table" CssClass="buttonn" OnClick="UpdateButton_Click" />
+</div>
+          
+          <div class="nine columns">
               
               <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
                  Assigning Faculty Successful!</h2></asp:Panel>
-
-              <asp:Button ID="UpdateButton" runat="server" Text="Update Table" CssClass="buttonn" OnClick="UpdateButton_Click" />
 
               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="SID" DataSourceID="SqlDataSource2" OnRowDataBound="GridView1_RowDataBound">
                   <Columns>
@@ -312,12 +319,26 @@
 
           </div>
                     
-                <div class="clear"></div>
-           
+              
+                </div>
+        
+	</div><!-- end main content-->
 
-            <div class="clear"></div>
-            
-        </div>
+	<!--
+	<div class="four columns">
+      
+	</div> -->
+</div>
+<div class="hr">
+</div>
+    
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="../javascripts/formvalidation.js"></script>
+<script src="../javascripts/jquery.cycle.js"></script>
+<script src="../javascripts/app.js"></script>
+<script src="../javascripts/scrolltotop.js"></script>
     
 
 </asp:Content>
