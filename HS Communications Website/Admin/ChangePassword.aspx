@@ -30,7 +30,7 @@
                
                 
                 <span style="margin: 60%"> <asp:Button ID="Button1" runat="server" Text="Change Password" CssClass="buttonn" OnClick="Button1_Click" ValidationGroup="qw"/></span>
-                <div class="clear"></div>
+           
             
                 </div>
         

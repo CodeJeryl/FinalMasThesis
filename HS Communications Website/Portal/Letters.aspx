@@ -3,11 +3,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-        <div id="container" class="opacity">
-            <div class="full-width">
-           
-                    <h2>Letters and Memos</h2>
-
+     <div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+    <!-- MAIN CONTENT-->
+	<div class="twelve columns">
+	    <div class="sectiontitle">
+			<h4><strong class="colhead">Letters and Memos</strong></h4>
+		</div>
+       
                  <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
                   Download Successful!</h2></asp:Panel>
                   <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
@@ -126,14 +132,23 @@
                 
                 
                 
-                
-                
+              
 
-                <div class="clear"></div>
-            </div>
-            <!-- End Full Width -->
+	</div><!-- end main content-->
 
-            <div class="clear"></div>
-            
-        </div>
+	<!--
+	<div class="four columns">
+      
+	</div> -->
+</div>
+<div class="hr">
+</div>
+    
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="../javascripts/formvalidation.js"></script>
+<script src="../javascripts/jquery.cycle.js"></script>
+<script src="../javascripts/app.js"></script>
+<script src="../javascripts/scrolltotop.js"></script>
 </asp:Content>

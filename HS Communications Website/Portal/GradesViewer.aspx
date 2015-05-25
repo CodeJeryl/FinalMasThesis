@@ -2,14 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       <div id="container" class="opacity">
-            <div class="full-width">
-           
-                    <h2>    Grades Viewer</h2>
-                
-                <br/>
-                
-                SY: 2014 - 2015
+<div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+    <!-- MAIN CONTENT-->
+	<div class="twelve columns">
+	    <div class="sectiontitle">
+			<h4><strong class="colhead">Grades Viewer</strong></h4>
+		</div>
+       
                      <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                 <br />
@@ -202,14 +205,21 @@
                  
                 
 
+	</div><!-- end main content-->
 
-                <div class="clear"></div>
-                
-
-            </div>
-            <!-- End Full Width -->
-
-            <div class="clear"></div>
-            
-        </div>
+	<!--
+	<div class="four columns">
+      
+	</div> -->
+</div>
+<div class="hr">
+</div>
+    
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="../javascripts/formvalidation.js"></script>
+<script src="../javascripts/jquery.cycle.js"></script>
+<script src="../javascripts/app.js"></script>
+<script src="../javascripts/scrolltotop.js"></script>
 </asp:Content>

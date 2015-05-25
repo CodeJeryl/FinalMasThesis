@@ -45,9 +45,6 @@ namespace HS_Communications_Website.Portal
                 TextBox1.Text = "";
                 TextBox2.Text = "";
 
-                ListView1.DataBind();
-
-
             }
             catch (Exception ex)
             {
@@ -92,10 +89,8 @@ namespace HS_Communications_Website.Portal
                     qw.ExecuteNonQuery();
                     ErrorPanel.Visible = true;
                     ErrorLabel.Text = "Message successfully Deleted!";
-                    //   SyllaUploadListview.DataBind();
-                    ListView1.DataBind();
-                    //  dataload();
-
+                  
+                  
                 }
             }
             catch (Exception er)

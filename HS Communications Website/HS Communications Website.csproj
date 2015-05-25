@@ -424,6 +424,7 @@
     <Content Include="Portal\ChangePassword.aspx" />
     <Content Include="Portal\ContactUs.aspx" />
     <Content Include="Portal\GradesViewer.aspx" />
+    <Content Include="Portal\Inbox.aspx" />
     <Content Include="Portal\Letters.aspx" />
     <Content Include="Portal\Message.aspx" />
     <Content Include="Portal\Phomepage.aspx" />
@@ -945,6 +946,13 @@
     </Compile>
     <Compile Include="Portal\GradesViewer.aspx.designer.cs">
       <DependentUpon>GradesViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Portal\Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portal\Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
     </Compile>
     <Compile Include="Portal\Letters.aspx.cs">
       <DependentUpon>Letters.aspx</DependentUpon>
