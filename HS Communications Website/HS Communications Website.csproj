@@ -61,6 +61,7 @@
     <Reference Include="Telerik.ReportViewer.WebForms, Version=7.0.13.220, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AddAdviser.aspx" />
     <Content Include="Colegio\AboutUs\CoreValues.aspx" />
     <Content Include="Colegio\AboutUs\History.aspx" />
     <Content Include="Colegio\AboutUs\InstitutionalStrategies.aspx" />
@@ -92,7 +93,6 @@
       <DependentUpon>HSdB.mdf</DependentUpon>
     </Content>
     <Content Include="Calendar.aspx" />
-    <Content Include="CoreValues.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Faculty\AddGrades.aspx" />
     <Content Include="Faculty\ChangePassword.aspx" />
@@ -126,7 +126,6 @@
     <Content Include="Foundation\js\vendor\jquery.js" />
     <Content Include="Foundation\js\vendor\modernizr.js" />
     <Content Include="Foundation\js\vendor\placeholder.js" />
-    <Content Include="History.aspx" />
     <Content Include="images\12.jpg" />
     <Content Include="images\13.jpg" />
     <Content Include="images\14.JPG" />
@@ -134,17 +133,8 @@
     <Content Include="images\16.JPG" />
     <Content Include="images\17.jpg" />
     <Content Include="images\18.jpg" />
-    <Content Include="images\Alumni\1.jpg" />
-    <Content Include="images\Alumni\2.jpg" />
-    <Content Include="images\Alumni\3.jpg" />
-    <Content Include="images\Alumni\4.jpg" />
-    <Content Include="images\Alumni\5.jpg" />
-    <Content Include="images\Alumni\6.jpg" />
-    <Content Include="images\Alumni\alumniBanner.jpg" />
     <Content Include="images\arrows-ffffff.png" />
     <Content Include="images\arrows.png" />
-    <Content Include="images\bg.png" />
-    <Content Include="images\bgimg.jpg" />
     <Content Include="images\blackcircle.png" />
     <Content Include="images\boxedshadow.png" />
     <Content Include="images\bullets.png" />
@@ -186,26 +176,6 @@
     <Content Include="images\Courses\PSYCH.jpg" />
     <Content Include="images\div.png" />
     <Content Include="images\dots.gif" />
-    <Content Include="images\ExploreImages\1.jpg" />
-    <Content Include="images\ExploreImages\10.jpg" />
-    <Content Include="images\ExploreImages\2.jpg" />
-    <Content Include="images\ExploreImages\3.jpg" />
-    <Content Include="images\ExploreImages\4.jpg" />
-    <Content Include="images\ExploreImages\5.jpg" />
-    <Content Include="images\ExploreImages\6.jpg" />
-    <Content Include="images\ExploreImages\7.jpg" />
-    <Content Include="images\ExploreImages\8.jpg" />
-    <Content Include="images\ExploreImages\9.jpg" />
-    <Content Include="images\ExploreImages\div1.png" />
-    <Content Include="images\ExploreImages\div10.png" />
-    <Content Include="images\ExploreImages\div2.png" />
-    <Content Include="images\ExploreImages\div3.png" />
-    <Content Include="images\ExploreImages\div4.png" />
-    <Content Include="images\ExploreImages\div5.png" />
-    <Content Include="images\ExploreImages\div6.png" />
-    <Content Include="images\ExploreImages\div7.png" />
-    <Content Include="images\ExploreImages\div8.png" />
-    <Content Include="images\ExploreImages\div9.png" />
     <Content Include="images\Gallery\Events\1.JPG" />
     <Content Include="images\Gallery\Events\2.JPG" />
     <Content Include="images\Gallery\Events\3.JPG" />
@@ -328,11 +298,6 @@
     <Content Include="images\prettyPhoto\light_square\default_thumbnail.gif" />
     <Content Include="images\prettyPhoto\light_square\loader.gif" />
     <Content Include="images\prettyPhoto\light_square\sprite.png" />
-    <Content Include="images\Radio\afternoon.jpg" />
-    <Content Include="images\Radio\arribalita.jpg" />
-    <Content Include="images\Radio\Dj1.png" />
-    <Content Include="images\Radio\kainknights.jpg" />
-    <Content Include="images\Radio\listen.jpg" />
     <Content Include="images\search.png" />
     <Content Include="images\settings.png" />
     <Content Include="images\socialpack\deviantart.png" />
@@ -388,7 +353,6 @@
     <Content Include="img\loading.gif" />
     <Content Include="img\next.png" />
     <Content Include="img\prev.png" />
-    <Content Include="InstitutionalStrategies.aspx" />
     <Content Include="javascripts\app.js" />
     <Content Include="javascripts\Arribalife\Def.js" />
     <Content Include="javascripts\Arribalife\jquery.localscroll-1.2.7-min.js" />
@@ -418,9 +382,6 @@
     <Content Include="javascripts\superfish.js" />
     <Content Include="javascripts\twitterusername.js" />
     <Content Include="Mail\Send.html" />
-    <Content Include="Mission.aspx" />
-    <Content Include="Objectives.aspx" />
-    <Content Include="Philosophy.aspx" />
     <Content Include="Portal\ChangePassword.aspx" />
     <Content Include="Portal\ContactUs.aspx" />
     <Content Include="Portal\GradesViewer.aspx" />
@@ -431,7 +392,6 @@
     <Content Include="Portal\Profile.aspx" />
     <Content Include="Portal\ReplyMessage.aspx" />
     <Content Include="Portal\Schedule.aspx" />
-    <Content Include="Saints.aspx" />
     <Content Include="stylesheets\blog.css" />
     <Content Include="stylesheets\filters.svg" />
     <Content Include="stylesheets\fonts\Bitter OFL SIL Font License 1.1.txt" />
@@ -461,7 +421,6 @@
     <Content Include="stylesheets\skins\yellow.css" />
     <Content Include="stylesheets\style.css" />
     <Content Include="stylesheets\websymbols\websymbols-regular-webfont.svg" />
-    <Content Include="Symbols.aspx" />
     <Content Include="template\about.html" />
     <Content Include="template\blogpage1.html" />
     <Content Include="template\blogpage2.html" />
@@ -620,6 +579,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AddAdviser.aspx.cs">
+      <DependentUpon>AddAdviser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddAdviser.aspx.designer.cs">
+      <DependentUpon>AddAdviser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Colegio\AboutUs\CoreValues.aspx.cs">
       <DependentUpon>CoreValues.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -821,13 +787,6 @@
     <Compile Include="Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CoreValues.aspx.cs">
-      <DependentUpon>CoreValues.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CoreValues.aspx.designer.cs">
-      <DependentUpon>CoreValues.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -884,47 +843,12 @@
     <Compile Include="Faculty\Message.aspx.designer.cs">
       <DependentUpon>Message.aspx</DependentUpon>
     </Compile>
-    <Compile Include="History.aspx.cs">
-      <DependentUpon>History.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="History.aspx.designer.cs">
-      <DependentUpon>History.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="InstitutionalStrategies.aspx.cs">
-      <DependentUpon>InstitutionalStrategies.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="InstitutionalStrategies.aspx.designer.cs">
-      <DependentUpon>InstitutionalStrategies.aspx</DependentUpon>
-    </Compile>
     <Compile Include="MainMaster.Master.cs">
       <DependentUpon>MainMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MainMaster.Master.designer.cs">
       <DependentUpon>MainMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Mission.aspx.cs">
-      <DependentUpon>Mission.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mission.aspx.designer.cs">
-      <DependentUpon>Mission.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Objectives.aspx.cs">
-      <DependentUpon>Objectives.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Objectives.aspx.designer.cs">
-      <DependentUpon>Objectives.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Philosophy.aspx.cs">
-      <DependentUpon>Philosophy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Philosophy.aspx.designer.cs">
-      <DependentUpon>Philosophy.aspx</DependentUpon>
     </Compile>
     <Compile Include="Portal\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
@@ -1004,20 +928,6 @@
       <DependentUpon>Schedule.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Saints.aspx.cs">
-      <DependentUpon>Saints.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Saints.aspx.designer.cs">
-      <DependentUpon>Saints.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Symbols.aspx.cs">
-      <DependentUpon>Symbols.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Symbols.aspx.designer.cs">
-      <DependentUpon>Symbols.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MainMaster.Master" />

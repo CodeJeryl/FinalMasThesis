@@ -15,7 +15,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="fb:admins" content="553594333" />
+
 
     <link rel="stylesheet" href="../stylesheets/style.css">
     <link rel="stylesheet" href="../stylesheets/homepage.css">
@@ -178,9 +178,9 @@
                             <ul>
                                  
                                 <li class="has-dropdown">
-                                   <a href="Phomepage.aspx">Announcement</a>
+                                   <a>Announcements</a>
                                     <ul class="dropdown">
-
+                                        <li> <a href="Phomepage.aspx">Announcements</a></li> 
                                        <li><a href="Phomepage.aspx">Messages</a></li>
                                       <li><a href="Letters.aspx">Letters</a></li>
                                     </ul>

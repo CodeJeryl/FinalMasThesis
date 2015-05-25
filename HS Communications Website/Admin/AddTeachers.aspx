@@ -16,7 +16,7 @@
                   <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                 
-     <div class="six columns">
+     <div class="six columns centered">
          <div class="sectiontitle">
 			<h4><strong class="colhead">Register Faculty Member</strong></h4>
 		</div>
@@ -49,24 +49,7 @@
                 </span>
           </div>
      
-     <div class="six columns">
-         <div class="sectiontitle">
-			<h4><strong class="colhead">Assign Advisers to Section</strong></h4>
-		</div>
-          
-        Section: <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sectno" DataValueField="Sectno"></asp:DropDownList>
-             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [Sectno], [GR-YR] AS column1 FROM [Section] ORDER BY [GR-YR]"></asp:SqlDataSource>
-      
-         Adviser Name: 
-             <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource2" DataTextField="fullname" DataValueField="fCode">
-             </asp:DropDownList>
-             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [fCode], [fullname] FROM [FacTbl] ORDER BY [fullname]"></asp:SqlDataSource>
-               <br/><br/>
-         <span style="margin: 70%">
-               <asp:Button ID="AdviserBtn" runat="server" Text="Assign Adviser" CssClass="buttonn" OnClick="AdviserBtn_Click"/>
-                </span>
-     </div>
-          
+   
                 </div>
         
 	<!-- end main content-->

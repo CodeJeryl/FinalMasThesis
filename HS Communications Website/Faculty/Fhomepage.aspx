@@ -2,14 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  
- <div id="container" class="opacity">
-            <div class="full-width">
-              <%--  <div class="one-third">
-                    <img src="../style/images/art/about.jpg" alt="" /></div>
-                <div class="two-third last">--%>
-                    <h2>Announcement
-                </h2>
+  <div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+    <!-- MAIN CONTENT-->
+	<div class="twelve columns">
+	    <div class="sectiontitle">
+			<h4><strong class="colhead">Announcement</strong></h4>
+		</div>
+       
                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
 
@@ -121,12 +124,23 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
                 
+        
 
-                <div class="clear"></div>
-            </div>
-            <!-- End Full Width -->
+	</div><!-- end main content-->
 
-            <div class="clear"></div>
-            
-        </div>
+	<!--
+	<div class="four columns">
+      
+	</div> -->
+</div>
+<div class="hr">
+</div>
+    
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="../javascripts/formvalidation.js"></script>
+<script src="../javascripts/jquery.cycle.js"></script>
+<script src="../javascripts/app.js"></script>
+<script src="../javascripts/scrolltotop.js"></script>
 </asp:Content>
