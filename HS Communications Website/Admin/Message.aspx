@@ -2,44 +2,58 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <div id="container" class="opacity">
-            <div class="full-width">
-           
-
-                    <h2>Message</h2>
-                   <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
+   <div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+<div class="row">
+    <!-- MAIN CONTENT-->
+	<div class="twelve columns" style="color: black">
+	    <div class="sectiontitle">
+			<h4><strong class="colhead">Message</strong></h4>
+		</div>
+       
+        <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
                    Message Successfully Sent!</h2></asp:Panel>
                 
                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                 <br />
-                    <p style="font-size: 17px"> From: <asp:Label ID="fromLbl" runat="server" Text="Label"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        Date: <asp:Label ID="dateLbl" runat="server" Text="Label"></asp:Label>
-                    </p> <br />
+                    <p style="font-size: 17px"> From: <asp:Label ID="fromLbl" runat="server" Text="Label"></asp:Label>
+                        
+                      <span style="left: 70%;position: absolute"> Date and Time: <asp:Label ID="dateLbl" runat="server" Text="Label" ></asp:Label></span>  
+                    </p> 
                     <br />
-                <h2>Title: <asp:Label ID="titleLbl" runat="server" Text="Label"></asp:Label></h2>
-                <br />
-                    <br />
-
-                    <p style="background-color: white"> <asp:Label ID="bodyLbl" runat="server" Text="Label" Font-Size="Larger"></asp:Label></p> <br/>
-
+                <h4>Title:   <asp:Label ID="titleLbl" runat="server" Text="Label"></asp:Label></h4>
+           <br />
+                <h5>Message:</h5>
+                <div style="background-color: #d7d7d7; padding: 15px">    <p > <asp:Label ID="bodyLbl" runat="server" Text="Label" Font-Size="Larger"></asp:Label></p> 
+                </div> 
+                <br/>
+                <br/>
+              
                 
-                <br/>
-                <br/>
-                <br/>
-                
-                Reply: <asp:TextBox ID="repTxtbox" runat="server" TextMode="MultiLine"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" Text="Send Reply" CssClass="buttonn" OnClick="Button1_Click"/>
-                <br /><br/>
+                Reply: <asp:TextBox ID="repTxtbox" runat="server" TextMode="MultiLine" Height="140px"></asp:TextBox> <br />
+          <span style="left:87%; position: relative">     <asp:Button ID="Button1" runat="server" Text="Send Reply" CssClass="buttonn" OnClick="Button1_Click"/></span> 
+             
 
-                <a href="AdminHomepage.aspx">Go back to Inbox</a>
-               
-                <div class="clear"></div>
-            </div>
-            <!-- End Full Width -->
+             <h5> <a href="Inbox.aspx">Go back to Inbox</a></h5>  
+              
+	</div><!-- end main content-->
 
-            <div class="clear"></div>
-            
-        </div>
-
+	<!--
+	<div class="four columns">
+      
+	</div> -->
+</div>
+<div class="hr">
+</div>
+    
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="../javascripts/formvalidation.js"></script>
+<script src="../javascripts/jquery.cycle.js"></script>
+<script src="../javascripts/app.js"></script>
+<script src="../javascripts/scrolltotop.js"></script>
 </asp:Content>

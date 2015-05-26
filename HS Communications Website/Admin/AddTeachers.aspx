@@ -10,17 +10,17 @@
 <div class="row">
     <!-- MAIN CONTENT-->
       
-            
+              <div class="twelve columns ">
                 <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                   <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                 
-     <div class="six columns centered">
+   
          <div class="sectiontitle">
 			<h4><strong class="colhead">Register Faculty Member</strong></h4>
 		</div>
-         
+           <div class="six columns centered">
     <%-- <asp:UpdatePanel ID="UpdatePanel1" runat="server">
          <ContentTemplate>
            <p>Send to: <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
@@ -50,7 +50,7 @@
           </div>
      
    
-                </div>
+                </div>    </div>
         
 	<!-- end main content-->
 

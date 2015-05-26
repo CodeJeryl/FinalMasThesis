@@ -48,7 +48,7 @@
             Subject: <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required Field." ControlToValidate="TextBox1" ValidationGroup="s"></asp:RequiredFieldValidator>
              <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> 
             Message:  <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required Field." ControlToValidate="TextBox2" ValidationGroup="s"></asp:RequiredFieldValidator>
-             <asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine"></asp:TextBox>
+             <asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine" Height="150px"></asp:TextBox>
             
         <span style="padding-left: 300px">    <asp:Button ID="sendMsgBtn" runat="server" Text="Send Message" CssClass="buttonn" OnClick="sendMsgBtn_Click" ValidationGroup="s" /></span>
               

@@ -100,6 +100,8 @@
     <Content Include="Faculty\Grades.aspx" />
     <Content Include="Faculty\Letters.aspx" />
     <Content Include="Faculty\Message.aspx" />
+    <Content Include="Faculty\printClass.aspx" />
+    <Content Include="Faculty\printStudent.aspx" />
     <Content Include="Foundation\css\foundation.css" />
     <Content Include="Foundation\css\foundation.min.css" />
     <Content Include="Foundation\css\normalize.css" />
@@ -842,6 +844,20 @@
     </Compile>
     <Compile Include="Faculty\Message.aspx.designer.cs">
       <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\printClass.aspx.cs">
+      <DependentUpon>printClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\printClass.aspx.designer.cs">
+      <DependentUpon>printClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty\printStudent.aspx.cs">
+      <DependentUpon>printStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faculty\printStudent.aspx.designer.cs">
+      <DependentUpon>printStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainMaster.Master.cs">
       <DependentUpon>MainMaster.Master</DependentUpon>

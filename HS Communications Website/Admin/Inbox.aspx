@@ -18,7 +18,7 @@
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
         
              
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [msgId], [studno], [senderName], [subject], [date], [status] FROM [personalMsgTbl] WHERE ([admin] = @admin) ORDER BY [status] DESC">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [msgId], [studno], [senderName], [subject], [date], [status] FROM [personalMsgTbl] WHERE ([admin] = @admin) ORDER BY [date] DESC">
                     <SelectParameters>
                         <asp:Parameter DefaultValue="false" Name="admin" Type="Boolean" />
                     </SelectParameters>

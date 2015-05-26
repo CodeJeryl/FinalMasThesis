@@ -8,7 +8,7 @@
 ================================================== -->
 <div class="row">
     <!-- MAIN CONTENT-->
-      
+           <div class="twelve columns">
             
                 <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
@@ -16,11 +16,11 @@
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                 
    
-     <div class="six columns centered">
+
          <div class="sectiontitle">
 			<h4><strong class="colhead">Assign Advisers to Section</strong></h4>
 		</div>
-          
+               <div class="six columns centered">
         Section: <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sectno" DataValueField="Sectno"></asp:DropDownList>
              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [Sectno], [GR-YR] AS column1 FROM [Section] ORDER BY [GR-YR]"></asp:SqlDataSource>
       
@@ -32,7 +32,7 @@
          <span style="margin: 70%">
                <asp:Button ID="AdviserBtn" runat="server" Text="Assign Adviser" CssClass="buttonn" OnClick="AdviserBtn_Click"/>
                 </span>
-     </div>
+     </div> </div>
           
                 </div>
         

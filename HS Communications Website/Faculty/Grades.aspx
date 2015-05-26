@@ -8,7 +8,7 @@
 ================================================== -->
 <div class="row">
     <!-- MAIN CONTENT-->
-	<div class="eight columns centered">
+	<div class="twelve columns">
 	    <div class="sectiontitle">
 			<h4><strong class="colhead">Grades</strong></h4>
 		</div>
@@ -23,6 +23,7 @@
                             <asp:SessionParameter DefaultValue="0" Name="fCode" SessionField="fcode" Type="Int32" />
                         </SelectParameters>
                     </asp:SqlDataSource>
+        <div class="eight columns centered">
                     <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
                        
                         <EditItemTemplate>
@@ -88,10 +89,10 @@
                                     <td runat="server">
                                         <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                                             <tr runat="server" style="background-color: #FFFBD6;color: #333333;">
-                                                <th runat="server">Section</th>
-                                                <th runat="server">Sub Code</th>
-                                                <th runat="server">Year</th>
-                                                <th runat="server">Control</th>
+                                                <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Section</th>
+                                                <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Sub Code</th>
+                                                <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Year</th>
+                                                <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Control</th>
                                             </tr>
                                             <tr id="itemPlaceholder" runat="server">
                                             </tr>
@@ -118,7 +119,7 @@
                         </SelectedItemTemplate>
                     </asp:ListView>
                     
-                
+                </div>
 
 	</div><!-- end main content-->
 

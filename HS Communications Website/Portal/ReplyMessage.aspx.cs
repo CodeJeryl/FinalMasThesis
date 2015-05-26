@@ -72,7 +72,7 @@ namespace HS_Communications_Website.Portal
                 SqlCommand ins =
                     new SqlCommand(
                         "Insert into personalMsgTbl values('" + Session["studno"] + "','" + Session["name"].ToString() + "','" +
-                         titl + "','" + repTxtbox.Text + "','" + DateTime.Now.ToShortDateString() + "','false','Unread')", con);
+                         titl + "','" + repTxtbox.Text + "','" + DateTime.Now.ToShortDateString() + "','false','Unread','" + Session["parent"] + "')", con);
                 ins.ExecuteNonQuery();
 
                 con.Close();

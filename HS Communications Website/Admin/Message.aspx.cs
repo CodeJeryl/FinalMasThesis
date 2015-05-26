@@ -14,7 +14,8 @@ namespace HS_Communications_Website.Admin
 
         string conss =
           ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
-   
+
+        Boolean parent;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -39,7 +40,7 @@ namespace HS_Communications_Website.Admin
                         bodyLbl.Text = er.GetString(4).Replace(Environment.NewLine, "<br/>");
                         fromLbl.Text = er.GetString(2);
                         dateLbl.Text = er.GetDateTime(5).ToString();
-                        
+                        parent = er.GetBoolean(8);
                     }
                     else
                     {
@@ -74,7 +75,7 @@ namespace HS_Communications_Website.Admin
                 SqlCommand ins =
                     new SqlCommand(
                         "Insert into personalMsgTbl values('" + Session["studid"] + "','" + Session["name"].ToString() + "','" +
-                         titl + "','" + repTxtbox.Text + "','" + DateTime.Now.ToShortDateString() + "','true','Unread')", con);
+                         titl + "','" + repTxtbox.Text + "','" + DateTime.Now.ToShortDateString() + "','true','Unread','"+ parent +"')", con);
                 ins.ExecuteNonQuery();
 
                 con.Close();

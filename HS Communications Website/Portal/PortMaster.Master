@@ -178,10 +178,9 @@
                             <ul>
                                  
                                 <li class="has-dropdown">
-                                   <a>Announcements</a>
+                                   <a href="Phomepage.aspx">Announcements</a>
                                     <ul class="dropdown">
-                                        <li> <a href="Phomepage.aspx">Announcements</a></li> 
-                                       <li><a href="Phomepage.aspx">Messages</a></li>
+                                       <li><a href="Inbox.aspx">Messages</a></li>
                                       <li><a href="Letters.aspx">Letters</a></li>
                                     </ul>
                                 </li>

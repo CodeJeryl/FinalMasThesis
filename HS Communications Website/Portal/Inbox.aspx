@@ -13,12 +13,15 @@
             <div class="sectiontitle">
                 <h4><strong class="colhead">Inbox</strong></h4>
             </div>
+                  <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"></asp:Panel>
+                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
+                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
 
-
-          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [msgId], [senderName], [subject], [date], [status] FROM [personalMsgTbl] WHERE (([studno] = @studno) AND ([admin] = @admin)) ORDER BY [date] DESC">
+          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [msgId], [senderName], [subject], [date], [status] FROM [personalMsgTbl] WHERE (([studno] = @studno) AND ([admin] = @admin) AND ([parent] = @parent) ) ORDER BY [date] DESC">
                 <SelectParameters>
                     <asp:SessionParameter Name="studno" SessionField="studno" Type="Int32" />
                     <asp:Parameter DefaultValue="true" Name="admin" Type="Boolean" />
+                      <asp:SessionParameter DefaultValue="false" Name="parent" SessionField="parent" Type="Boolean" />
                 </SelectParameters>
             </asp:SqlDataSource>
             <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">

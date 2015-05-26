@@ -22,7 +22,7 @@
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                 
 
-           <h2>Change Password</h2>
+        
                     <p>Old password: <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required Field." ControlToValidate="oldpassTxtbox" ForeColor="Red" ValidationGroup="qw"></asp:RequiredFieldValidator>  <asp:TextBox ID="oldpassTxtbox" runat="server" TextMode="Password"></asp:TextBox> </p> 
                   <p>New password: <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required Field" ControlToValidate="new1pass" ForeColor="Red" ValidationGroup="qw"></asp:RequiredFieldValidator> <asp:TextBox ID="new1pass" runat="server" TextMode="Password"></asp:TextBox></p>
                   

@@ -15,7 +15,7 @@
        
                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
-
+        <div class="eight columns centered">
               <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
                   
                   <EditItemTemplate>
@@ -71,6 +71,9 @@
                           <td>
                               <asp:Label ID="userlvlLabel" runat="server" Text='<%# Eval("userlvl") %>' />
                           </td>
+                            <td>
+                              <asp:Label ID="Label1" runat="server" Text='<%# Eval("date", "{0:d}") %>' />
+                          </td>
                            <td>
                                <asp:Button ID="Button1" runat="server" Text="Read Now" CssClass="buttonn" CommandName="readd"/>
                           </td>
@@ -85,6 +88,7 @@
                                           <th id="Th1" runat="server">title</th>
                                           <th id="Th2" runat="server">sender</th>
                                           <th id="Th3" runat="server">userlvl</th>
+                                           <th id="Th5" runat="server">date</th>
                                           <th id="Th4" runat="server">Option</th>
                                       </tr>
                                       <tr id="itemPlaceholder" runat="server">
@@ -117,8 +121,8 @@
                       </tr>
                   </SelectedItemTemplate>
                 </asp:ListView>
-
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [MsgId],[title], [sender], [userlvl] FROM [msgTbl] WHERE [section] = @section">
+        </div>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [MsgId],[title], [sender], [userlvl],[date] FROM [msgTbl] WHERE [section] = @section ORDER BY [date] DESC">
                     <SelectParameters>
                      <asp:SessionParameter DefaultValue="faculty" Name="section" SessionField="section" Type="String" />
                     </SelectParameters>

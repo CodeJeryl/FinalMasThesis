@@ -48,7 +48,7 @@
                     <p>School Address: 
                         <asp:TextBox ID="schoolAddTxtbox" runat="server"></asp:TextBox></p>
                 </div>
-        </asp:Panel>
+  
                  <div class="six columns">
                      <p>House No., Street<asp:TextBox ID="houseAddTxtbox" runat="server"></asp:TextBox></p>
                  </div>
@@ -67,6 +67,7 @@
             <p>Province
                 <asp:TextBox ID="provinceAddTxtbox" runat="server"></asp:TextBox></p>
         </div>
+                      </asp:Panel>
         <div class="four columns">
             <p>Date of Birth: (MM/DD/YYYY)
                 <asp:TextBox ID="dob" runat="server"></asp:TextBox>

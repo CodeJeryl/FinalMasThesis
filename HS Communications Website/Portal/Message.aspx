@@ -8,27 +8,31 @@
 ================================================== -->
 <div class="row">
     <!-- MAIN CONTENT-->
-	<div class="twelve columns">
+	<div class="twelve columns" style="color: black">
 	    <div class="sectiontitle">
 			<h4><strong class="colhead">Message</strong></h4>
 		</div>
        
                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
-                <br />
-                    <p style="font-size: 17px"> From: <asp:Label ID="fromLbl" runat="server" Text="Label"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        Date: <asp:Label ID="dateLbl" runat="server" Text="Label"></asp:Label>
+            
+                    <p style="font-size: 17px"> From: <asp:Label ID="fromLbl" runat="server" Text="Label"></asp:Label>
+                           <span style="left: 70%;position: absolute"> Date: <asp:Label ID="dateLbl" runat="server" Text="Label"></asp:Label></span>  
                     </p> <br />
-                    <br />
-                <h2>Title: <asp:Label ID="titleLbl" runat="server" Text="Label"></asp:Label></h2>
+                  
+                <h4>Title: <asp:Label ID="titleLbl" runat="server" Text="Label"></asp:Label></h4>
                 <br />
-                    <br />
+                   
 
-                    <p style="background-color: white"> <asp:Label ID="bodyLbl" runat="server" Text="Label" Font-Size="Larger"></asp:Label></p> <br/>
+              <h5>Message:</h5>
+                <div style="background-color: #d7d7d7; padding: 15px">    <p >
+                  <asp:Label ID="bodyLbl" runat="server" Text="Label" Font-Size="Larger"></asp:Label>
+                                                                          </p> </div>
+                    <br/>
                 
                 <br/>
                 
-                <a href="Phomepage.aspx">Go back to Announcement Inbox</a>
+               <h5><a href="Phomepage.aspx">Go back to Announcement Inbox</a></h5> 
                
           
 	</div><!-- end main content-->

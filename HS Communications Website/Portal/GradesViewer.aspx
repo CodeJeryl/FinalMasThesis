@@ -23,6 +23,7 @@
                                 <asp:SessionParameter DefaultValue="0" Name="Studno" SessionField="studno" Type="Int32" />
                             </SelectParameters>
                     </asp:SqlDataSource>
+        	<div class="ten columns centered">
                         <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCreated="ListView1_ItemCreated">
                             
                             <EditItemTemplate>
@@ -116,13 +117,13 @@
                                     <td>
                                         <asp:Label ID="UnitsLabel" runat="server" Text='<%# Eval("Units") %>' />
                                     </td>
-                                    <td >
+                                    <td  style="background-color: #ffdc70">
                                         <asp:Label ID="firstLabel" runat="server" Text='<%# Eval("first") %>'  />
                                     </td>
                                     <td >
                                         <asp:Label ID="secondLabel" runat="server" Text='<%# Eval("second") %>' />
                                     </td>
-                                    <td >
+                                    <td  style="background-color: #ffdc70">
                                         <asp:Label ID="thirdLabel" runat="server" Text='<%# Eval("third") %>' />
                                     </td>
                                      <td >
@@ -148,12 +149,12 @@
                                         <td runat="server">
                                             <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                                                 <tr runat="server" style="background-color: #FFFBD6;color: #333333;">
-                                                    <th runat="server">Subcode</th>
-                                                    <th runat="server">Units</th>
-                                                    <th runat="server">first</th>
-                                                    <th runat="server">second</th>
-                                                    <th runat="server">third</th>
-                                                    <th runat="server">fourth</th>
+                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Subcode</th>
+                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Units</th>
+                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">First Quarter</th>
+                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Second Quarted</th>
+                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Third Quarted</th>
+                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Fourth Quarter</th>
                                                   
                                                 </tr>
                                                 <tr id="itemPlaceholder" runat="server">
@@ -201,7 +202,7 @@
                                 </tr>
                             </SelectedItemTemplate>
                         </asp:ListView>
-                    
+                    </div>
                  
                 
 

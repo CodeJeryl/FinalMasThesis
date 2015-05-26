@@ -14,12 +14,12 @@
                    <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
                     <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
                 
-               <div class="ten columns centered">
+               <div class="twelve columns">
                       <div class="sectiontitle">
 			<h4><strong class="colhead">Manage Grades</strong></h4>
 		</div>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [d1], [d2], [d3], [d4] FROM [SMTR]"></asp:SqlDataSource>
-
+                       <div class="ten columns centered">
                 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
                    
                     <EditItemTemplate>
@@ -135,9 +135,9 @@
                     </SelectedItemTemplate>
                     </asp:ListView>
                 </div>
-                </div>
+                </div> </div>
                      <div class="row">
-               <div class="ten columns centered">
+               <div class="twelve columns centered">
                       <div class="sectiontitle">
 			<h4><strong class="colhead">List of Subjects</strong></h4>
 		</div>
@@ -147,7 +147,7 @@
                       
                     </asp:SqlDataSource>
 
-                    
+                       <div class="nine columns centered">
                     <asp:ListView ID="ListView2" runat="server" DataSourceID="SqlDataSource2" OnItemCommand="ListView2_ItemCommand">
                        
                         <EditItemTemplate>
@@ -216,11 +216,11 @@
                                     <td id="Td1" runat="server">
                                         <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                                             <tr id="Tr2" runat="server" style="background-color: #FFFBD6;color: #333333;">
-                                                <th id="Th1" runat="server">Section</th>
-                                                <th id="Th2" runat="server">Sub Code</th>
-                                                <th id="Th3" runat="server">Year</th>
-                                                <th id="Th5" runat="server">Name of Teacher</th>
-                                                <th id="Th4" runat="server">Control</th>
+                                                <th id="Th1" runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Section</th>
+                                                <th id="Th2" runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Sub Code</th>
+                                                <th id="Th3" runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Year</th>
+                                                <th id="Th5" runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Name of Teacher</th>
+                                                <th id="Th4" runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Control</th>
                                             </tr>
                                             <tr id="itemPlaceholder" runat="server">
                                             </tr>
@@ -247,7 +247,7 @@
                         </SelectedItemTemplate>
                     </asp:ListView>
                     	</div>
-              
+              	</div>
                          </div>
           
 	<!-- end main content-->

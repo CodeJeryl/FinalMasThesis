@@ -35,7 +35,7 @@ namespace HS_Communications_Website.Portal
                 SqlCommand ins =
                     new SqlCommand(
                         "Insert into personalMsgTbl values('" + Session["studno"] + "','" + Session["name"] + "','" +
-                        TextBox1.Text + "','" + TextBox2.Text + "','" + DateTime.Now + "','0','Unread')", con);
+                        TextBox1.Text + "','" + TextBox2.Text + "','" + DateTime.Now + "','0','Unread','" + Session["parent"] + "')", con);
                 ins.ExecuteNonQuery();
 
                 con.Close();
@@ -55,55 +55,6 @@ namespace HS_Communications_Website.Portal
             }
         }
 
-        protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
-        {
-
-            SqlConnection con = new SqlConnection(conString);
-
-            try
-            {
-                HiddenField hid = (HiddenField) (e.Item.FindControl("HiddenField1"));
-
-                if (e.CommandName == "read")
-                {
-                    con.Close();
-                    con.Open();
-
-                    SqlCommand qw =
-                        new SqlCommand("update personalMsgtbl set status = 'read' where msgID = '" + hid.Value + "'",
-                                       con);
-                    qw.ExecuteNonQuery();
-
-                    con.Close();
-                    Session["msgid"] = hid.Value;
-                    Response.Redirect("ReplyMessage.aspx");
-
-                }
-
-                if (e.CommandName == "del")
-                {
-                    con.Close();
-                    con.Open();
-
-                    SqlCommand qw = new SqlCommand("delete from personalMsgTbl where ID = '" + hid.Value + "'", con);
-                    qw.ExecuteNonQuery();
-                    ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "Message successfully Deleted!";
-                  
-                  
-                }
-            }
-            catch (Exception er)
-            {
-                ErrorPanel.Visible = true;
-                ErrorLabel.Text = er.Message;
-                //   throw;
-            }
-            finally
-            {
-                con.Close();
-                con.Dispose();
-            }
-        }
+       
     }
 }
