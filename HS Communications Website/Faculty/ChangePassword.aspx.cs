@@ -19,6 +19,8 @@ namespace HS_Communications_Website.Faculty
         {
             try
             {
+                Panel1.Visible = false;
+                ErrorPanel.Visible = false;
 
                 var constring =
                    System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
@@ -28,7 +30,7 @@ namespace HS_Communications_Website.Faculty
                 SqlConnection con1 = new SqlConnection(conss);
                 con1.Close();
                 con1.Open();
-                SqlCommand check = new SqlCommand("Select * from useraccounts where username = '" + Session["username"].ToString() + "' and password = '" + oldpassTxtbox.Text + "'", con1);
+                SqlCommand check = new SqlCommand("Select * from factbl where fCode = '" + Session["fcode"].ToString() + "' and password = '" + oldpassTxtbox.Text + "'", con1);
                 SqlDataReader er = check.ExecuteReader();
 
                 if (er.Read())
@@ -37,7 +39,7 @@ namespace HS_Communications_Website.Faculty
                     con.Close();
                     con.Open();
 
-                    SqlCommand change = new SqlCommand("Update userAccounts set password = '" + new1pass.Text + "' where userName = '" + Session["username"] + "'", con);
+                    SqlCommand change = new SqlCommand("Update factbl set password = '" + new1pass.Text + "' where fCode = '" + Session["fcode"] + "'", con);
                     change.ExecuteNonQuery();
 
                     Panel1.Visible = true;

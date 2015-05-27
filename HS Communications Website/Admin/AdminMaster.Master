@@ -210,7 +210,7 @@
                                     <ul class="dropdown">
                                       <li><a href="Profile.aspx">Edit Student Profile</a></li>
               <li><a href="AssignT.aspx">Assign Subject Teacher</a></li>
-              <li><a href="AddAdviser.aspx">Assign Adviser to Section</a></li>
+<%--              <li><a href="AddAdviser.aspx">Assign Adviser to Section</a></li>--%>
                
                 <li><a href="AddTeachers.aspx">Add Teachers</a></li>
                 <li><a href="ManageAccnt.aspx">Enable/Disable Accounts</a></li>

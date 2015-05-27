@@ -180,7 +180,7 @@
                                 <li class="has-dropdown">
                                    <a href="Phomepage.aspx">Announcements</a>
                                     <ul class="dropdown">
-                                       <li><a href="Inbox.aspx">Messages</a></li>
+                                       <li><a href="Inbox.aspx">Inbox</a></li>
                                       <li><a href="Letters.aspx">Letters</a></li>
                                     </ul>
                                 </li>

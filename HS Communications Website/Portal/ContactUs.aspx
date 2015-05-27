@@ -12,17 +12,17 @@
 	   
        
         
-                 <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h4 style="text-align: center">
+                 <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
                    Message Successfully Sent! We will reply ASAP. Check your Inbox regularly. Thank you!</h4></asp:Panel>
-                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
         
         <div class="six columns">
          <div class="sectiontitle">
 			<h4><strong class="colhead">Contact Us</strong></h4>
 		</div>
             <div style="font-size: large">
-            <strong style="color: black">COLEGIO DE SAN JUAN DE LETRAN</strong> <br/>
+            <strong style="color: black;">COLEGIO DE SAN JUAN DE LETRAN</strong> <br/>
             HIGH SCHOOL DEPARTMENT<br/><br/>
             <strong>Address:</strong> Dominican Avenue, Abucay, Bataan 2114</div>
             

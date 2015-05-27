@@ -13,8 +13,8 @@
 			<h4><strong class="colhead">Announcement</strong></h4>
 		</div>
        
-                 <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                 <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box" Visible="False" ><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
         <div class="nine columns centered">
               <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
                   

@@ -21,7 +21,7 @@ namespace HS_Communications_Website
 
             var strcon = ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
             string conString = strcon.ConnectionString;
-
+            ErrorPanel.Visible = false;
 
             SqlConnection conek = new SqlConnection(conString);
             SqlConnection conek1 = new SqlConnection(conString);
@@ -146,6 +146,7 @@ namespace HS_Communications_Website
                     }
                     else
                     {
+                    ErrorPanel.Visible = true;
                         errorLbl.Text = "Incorrect Username/Password or Account not yet activated";
                     }
                 }

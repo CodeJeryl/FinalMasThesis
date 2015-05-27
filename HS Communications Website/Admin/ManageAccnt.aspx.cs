@@ -15,7 +15,8 @@ namespace HS_Communications_Website.Admin
         {
 
         }
-
+    
+        string conString = ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
         protected void Button1_Click(object sender, EventArgs e)
         {
             try
@@ -24,10 +25,7 @@ namespace HS_Communications_Website.Admin
            
             Panel1.Visible = false;
             ErrorPanel.Visible = false;
-            var strcon = ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
-            string conString = strcon.ConnectionString;
-
-
+            
             SqlConnection con = new SqlConnection(conString);
 
             con.Close();
@@ -42,12 +40,39 @@ namespace HS_Communications_Website.Admin
 
             Label1.Text = DropDownList1.SelectedItem +" account is successfully "+ DropDownList2.SelectedItem;
             Panel1.Visible = true;
+                statusLbl.Text = "";
             }
             catch (Exception er)
             {
                 ErrorPanel.Visible = true;
                 ErrorLabel.Text = er.Message;
             }
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conString);
+
+            con.Close();
+            con.Open();
+
+
+            SqlCommand sel = new SqlCommand("Select fcode,disabled from factbl where fcode = '" + DropDownList1.SelectedValue + "'", con);
+            SqlDataReader rd = sel.ExecuteReader();
+            string stat;
+            if(rd.Read())
+            {
+                if(rd.GetBoolean(1))
+                {
+                    stat = "Disabled";
+                   }
+                else
+                {
+                    stat = "Enabled";
+                }
+                statusLbl.Text = DropDownList1.SelectedItem + " status is " + stat +".";
+            }
+
         }
     }
 }

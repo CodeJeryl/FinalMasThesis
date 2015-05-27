@@ -13,8 +13,8 @@
 			<h4><strong class="colhead">Grades Viewer</strong></h4>
 		</div>
        
-                     <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                     <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box" Visible="False" ><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
                 <br />
                 
 
@@ -152,8 +152,8 @@
                                                     <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Subcode</th>
                                                     <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Units</th>
                                                     <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">First Quarter</th>
-                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Second Quarted</th>
-                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Third Quarted</th>
+                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Second Quarter</th>
+                                                    <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Third Quarter</th>
                                                     <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Fourth Quarter</th>
                                                   
                                                 </tr>

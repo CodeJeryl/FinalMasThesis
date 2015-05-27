@@ -14,17 +14,17 @@
 			<h4><strong class="colhead">Letters and Memos</strong></h4>
 		</div>
        
-                 <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
-                  Download Successful!</h2></asp:Panel>
-                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                 <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
+                  Download Successful!</h4></asp:Panel>
+                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
                 
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [id], [title], [date], [uploader] FROM [uploadedFiles] WHERE ([uploadtype] = @uploadtype) ORDER BY [date] DESC">
                     <SelectParameters>
                         <asp:Parameter DefaultValue="Memo" Name="uploadtype" Type="String" />
                     </SelectParameters>
                     </asp:SqlDataSource>
-        <div class="nine columns centered">
+        <div class="eight columns centered">
                 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
                 
                     <EditItemTemplate>
@@ -80,7 +80,7 @@
                                 <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' />
                             </td>
                             <td>
-                                <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date") %>' />
+                                <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date", "{0:d}") %>' />
                             </td>
                             <td>
                                 <asp:Label ID="uploaderLabel" runat="server" Text='<%# Eval("uploader") %>' />

@@ -14,10 +14,10 @@
 		</div>
        
         <div class="three columns">
-                  <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
-                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                  <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
+                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
                 
               
                     <p> Upload Category: <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
@@ -106,9 +106,12 @@
                             <td>
                                 <asp:Label ID="uploaderLabel" runat="server" Text='<%# Eval("uploader") %>' />
                             </td>
-                            <td>
-                                <asp:Button ID="dowBtn" runat="server" Text="Download" CssClass="buttonn" CommandName="down"  />
-                                <asp:Button ID="delBtn" runat="server" Text="Delete" CssClass="buttonn" CommandName="del" OnClientClick="javascript:return confirm('Are you sure you want to Delete?');"/>
+                              <td>
+                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("section") %>' />
+                            </td>
+                            <td style="width: 120px">
+                                <asp:Button ID="dowBtn" runat="server" Text="Download" CssClass="buttonn" CommandName="down"  Width="100px"/>
+                                <asp:Button ID="delBtn" runat="server" Text="Delete" CssClass="buttonn" CommandName="del" Width="100px" OnClientClick="javascript:return confirm('Are you sure you want to Delete?');"/>
                             </td>
                         </tr>
                     </ItemTemplate>
@@ -122,7 +125,8 @@
                                             <th runat="server">Title</th>
                                             <th runat="server">Upload Date</th>
                                             <th runat="server">Uploader</th>
-                                            <th>Controls</th>
+                                            <th id="Th1" runat="server">Section</th>
+                                            <th style="width: 120px">Controls</th>
                                         </tr>
                                         <tr id="itemPlaceholder" runat="server">
                                         </tr>
@@ -154,7 +158,7 @@
                         </tr>
                     </SelectedItemTemplate>
                     </asp:ListView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [id], [uploadtype], [title], [date], [uploader] FROM [uploadedFiles] ORDER BY [date] DESC"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [id], [uploadtype], [title], [date], [uploader], [section] FROM [uploadedFiles] ORDER BY [date] DESC"></asp:SqlDataSource>
         </div>
 	</div><!-- end main content-->
 

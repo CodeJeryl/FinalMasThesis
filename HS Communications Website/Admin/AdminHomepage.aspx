@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
 <div class="hr">
-</div>
+    u</div>
 <!-- CONTENT 
 ================================================== -->
 <div class="row">
@@ -15,10 +15,10 @@
 	    <div class="sectiontitle">
 			<h4><strong class="colhead">Dashboard</strong></h4>
 		</div>
-          <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
-                  </h2></asp:Panel>
-                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+          <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
+                  </h4></asp:Panel>
+                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="false"><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
         
                 
                 <div class="six columns">

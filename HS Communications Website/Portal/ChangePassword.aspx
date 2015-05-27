@@ -15,14 +15,13 @@
         <div class="six columns centered">
             
             
-                <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
-                  Password Successfully Changed.</h2></asp:Panel>
-                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
+                  Password Successfully Changed.</h4></asp:Panel>
+                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
                 
 
-           <h2>Change Password</h2>
-                    <p>Old password: <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required Field." ControlToValidate="oldpassTxtbox" ForeColor="Red" ValidationGroup="qw"></asp:RequiredFieldValidator>  <asp:TextBox ID="oldpassTxtbox" runat="server" TextMode="Password"></asp:TextBox> </p> 
+           <p>Old password: <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required Field." ControlToValidate="oldpassTxtbox" ForeColor="Red" ValidationGroup="qw"></asp:RequiredFieldValidator>  <asp:TextBox ID="oldpassTxtbox" runat="server" TextMode="Password"></asp:TextBox> </p> 
                   <p>New password: <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required Field" ControlToValidate="new1pass" ForeColor="Red" ValidationGroup="qw"></asp:RequiredFieldValidator> <asp:TextBox ID="new1pass" runat="server" TextMode="Password"></asp:TextBox></p>
                   
                 <p> Repeat new password: <asp:TextBox ID="new2pass" runat="server" TextMode="Password"></asp:TextBox>  

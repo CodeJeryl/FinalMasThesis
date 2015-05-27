@@ -164,49 +164,52 @@
                         <span>
                             <img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />
                         </span>
-                        </a>
-                    </div>
+                    </a>
+                </div>
                 <div class="eight columns noleftmarg">
-                     <nav id="nav-wrap">
+                    <nav id="nav-wrap">
                         <ul class="nav-bar sf-menu bgbg">
 
-                                <li class="current">
-                                    <a href="<%= Page.ResolveUrl("~/Default.aspx") %>" class="ff">HOME</a>
-                                </li>
+                            <li class="current">
+                                <a href="<%= Page.ResolveUrl("~/Default.aspx") %>" class="ff">HOME</a>
+                            </li>
 
-                                <li>
-                                    <a class="ff">&nbsp;THE COLEGIO</a>
+                            <li>
+                                <a class="ff">&nbsp;THE COLEGIO</a>
                                 <ul class="about">
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/History.aspx") %>">History</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Philosophy.aspx") %>">Dominican Philosophy of Education</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Mission.aspx") %>">Mission, Vision and Creed</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Objectives.aspx") %>">Objectives</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/CoreValues.aspx") %>">Core Values</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/InstitutionalStrategies.aspx") %>">Institutional Strategies</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Symbols.aspx") %>">Symbols</a>
-                                                <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Saints.aspx") %>">Saints</a>
-                                            </ul>
-                                        </li>
-                                       
-                                  
-                                <li>
-                                    <a href="<%= Page.ResolveUrl("~/Calendar.aspx") %>" class="ff">SCHOOL CALENDAR</a>
-                                   </li>
-
-                             
-                             
-
-                                <li>
-                                    <a class="ff" id="my-button">LOGIN</a>
-                                  
-                                </li>
-
-                            </ul>
-
-                        </nav>
+                                    <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/History.aspx") %>">History</a>
+                                    <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Philosophy.aspx") %>">Dominican Philosophy of Education</a>
+                                    <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Mission.aspx") %>">Mission, Vision and Creed</a>
+                                    <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Objectives.aspx") %>">Objectives</a>
+                                    <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/CoreValues.aspx") %>">Core Values</a>
+                                    <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/InstitutionalStrategies.aspx") %>">Institutional Strategies</a>
+                                    <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Symbols.aspx") %>">Symbols</a>
+                                    <li><a href="<%= Page.ResolveUrl("~/Colegio/AboutUs/Saints.aspx") %>">Saints</a>
+                                </ul>
+                            </li>
 
 
-                  
+                            <li>
+                                <a href="<%= Page.ResolveUrl("~/Calendar.aspx") %>" class="ff">SCHOOL CALENDAR</a>
+                            </li>
+                            <li>
+                                <a href="<%= Page.ResolveUrl("~/ActivateAccount.aspx") %>" class="ff">ACTIVATE</a>
+                            </li>
+
+
+
+
+                            <li>
+                                <a class="ff" id="my-button">LOGIN</a>
+
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+
+
                 </div>
             </div>
         </div>
@@ -281,7 +284,9 @@
         <div id="popup">
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <asp:Label ID="errorLbl" runat="server" Text=""></asp:Label>
+                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False">
+                        <asp:Label ID="errorLbl" runat="server" Text="" ForeColor="white"></asp:Label>
+                  </asp:Panel>
                     <h3>Login</h3>
                     Username:
                     <asp:TextBox ID="usernameTxtbox" runat="server"></asp:TextBox>

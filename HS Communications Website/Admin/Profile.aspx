@@ -16,9 +16,8 @@
             <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False">
                 <h2 style="text-align: center">Profile Update Successful.</h2>
             </asp:Panel>
-            <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False">
-                <h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2>
+            <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4>
             </asp:Panel>
 
         <div class="row">
@@ -186,9 +185,9 @@
 
             </div>
             
-
-            <span style="margin: 80%">
-                <asp:Button ID="parentBtn" runat="server" Text="Update Profile" CssClass="buttonn" OnClick="parentBtn_Click" Enabled="False" /></span>
+            <div class="twelve columns">
+            <span style="margin: 83%">
+                <asp:Button ID="parentBtn" runat="server" Text="Update Profile" CssClass="buttonn" OnClick="parentBtn_Click" Enabled="False" /></span> </div>
         </asp:Panel>
 
         

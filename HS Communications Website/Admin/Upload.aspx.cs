@@ -23,7 +23,7 @@ namespace HS_Communications_Website.Admin
         {
           
             SqlConnection con = new SqlConnection(conString);
-
+            SqlConnection coc = new SqlConnection(conString);
             try
             {
                 if (Page.IsValid)
@@ -31,6 +31,7 @@ namespace HS_Communications_Website.Admin
                     Panel1.Visible = false;
                     ErrorPanel.Visible = false;
 
+           
                     if (FileUpload1.PostedFile.ContentLength > 5100000)
                     {
                         ErrorPanel.Visible = true;
@@ -63,31 +64,45 @@ namespace HS_Communications_Website.Admin
 
                         if (contenttype != String.Empty)
                         {
-                            Stream fs = FileUpload1.PostedFile.InputStream;
-                            BinaryReader br = new BinaryReader(fs);
-                            Byte[] bytes = br.ReadBytes((Int32) fs.Length);
+                            SqlCommand che = new SqlCommand("Select * from uploadedfiles where uploadtype='" + DropDownList1.Text + "' and section = '" + DropDownList2.Text + "'", coc);
+                            coc.Close();
+                            coc.Open();
+                            SqlDataReader dr = che.ExecuteReader();
+
+                          
+                            if(dr.Read())
+                            {
+                                ErrorPanel.Visible = true;
+                                ErrorLabel.Text = "Class Sched already Exist!";
+                            }
+                            else
+                            {
+                                Stream fs = FileUpload1.PostedFile.InputStream;
+                                BinaryReader br = new BinaryReader(fs);
+                                Byte[] bytes = br.ReadBytes((Int32)fs.Length);
 
 
-                            string strQuery = "insert into uploadedFiles values('" + DropDownList1.Text +"','" + TextBox1.Text +
-                                              "',@filename, @datee,@ContentType, @Data,'" + Session["name"] + "','"+DropDownList2.Text+"')";
+                                string strQuery = "insert into uploadedFiles values('" + DropDownList1.Text + "','" + TextBox1.Text +
+                                                  "',@filename, @datee,@ContentType, @Data,'" + Session["name"] + "','" + DropDownList2.Text + "')";
 
-                            SqlCommand cmd = new SqlCommand(strQuery, con);
+                                SqlCommand cmd = new SqlCommand(strQuery, con);
 
-                            cmd.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now.ToShortDateString();
-                            cmd.Parameters.Add("@filename", SqlDbType.VarChar).Value = filename;
-                            cmd.Parameters.Add("@ContentType", SqlDbType.VarChar).Value = contenttype;
-                            cmd.Parameters.Add("@Data", SqlDbType.Binary).Value = bytes;
+                                cmd.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now.ToShortDateString();
+                                cmd.Parameters.Add("@filename", SqlDbType.VarChar).Value = filename;
+                                cmd.Parameters.Add("@ContentType", SqlDbType.VarChar).Value = contenttype;
+                                cmd.Parameters.Add("@Data", SqlDbType.Binary).Value = bytes;
 
-                            con.Close();
-                            con.Open();
-                            cmd.ExecuteNonQuery();
+                                con.Close();
+                                con.Open();
+                                cmd.ExecuteNonQuery();
 
-                            Panel1.Visible = true;
-                            Label1.Text = "File Uploaded Successfully!";
+                                Panel1.Visible = true;
+                                Label1.Text = "File Uploaded Successfully!";
 
-                            //     SyllaUploadListview.DataBind();
-                                  ListView1.DataBind();
-                            //    dataload();
+                                //     SyllaUploadListview.DataBind();
+                                ListView1.DataBind();
+                                //    dataload();
+                            }
                         }
 
                         else
@@ -97,8 +112,10 @@ namespace HS_Communications_Website.Admin
 
                         }
 
-
+                        
                     }
+                    con.Close();
+                    coc.Close();
                 }
             }
             catch (Exception ex)
@@ -114,7 +131,8 @@ namespace HS_Communications_Website.Admin
         protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
             SqlConnection con = new SqlConnection(conString);
-
+            Panel1.Visible = false;
+            ErrorPanel.Visible = false;
             try
             {
                 HiddenField hid = (HiddenField)(e.Item.FindControl("HiddenField1"));

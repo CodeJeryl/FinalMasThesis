@@ -108,8 +108,8 @@
           
           <div class="nine columns">
               
-              <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
-                 Assigning Faculty Successful!</h2></asp:Panel>
+              <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
+                 Assigning Faculty Successful!</h4></asp:Panel>
 
               <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="SID" DataSourceID="SqlDataSource2" OnRowDataBound="GridView1_RowDataBound">
                   <Columns>

@@ -23,44 +23,38 @@ namespace HS_Communications_Website.Admin
             this.studnoGroupHeaderSection = new Telerik.Reporting.GroupHeaderSection();
             this.studnoCaptionTextBox = new Telerik.Reporting.TextBox();
             this.studnoDataTextBox = new Telerik.Reporting.TextBox();
+            this.firstnDataTextBox = new Telerik.Reporting.TextBox();
+            this.lastnDataTextBox = new Telerik.Reporting.TextBox();
             this.firstnGroupFooterSection = new Telerik.Reporting.GroupFooterSection();
             this.firstnGroupHeaderSection = new Telerik.Reporting.GroupHeaderSection();
-            this.firstnDataTextBox = new Telerik.Reporting.TextBox();
-            this.lastnGroupFooterSection = new Telerik.Reporting.GroupFooterSection();
-            this.lastnGroupHeaderSection = new Telerik.Reporting.GroupHeaderSection();
-            this.lastnDataTextBox = new Telerik.Reporting.TextBox();
-            this.labelsGroupFooterSection = new Telerik.Reporting.GroupFooterSection();
-            this.labelsGroupHeaderSection = new Telerik.Reporting.GroupHeaderSection();
             this.fNameCaptionTextBox = new Telerik.Reporting.TextBox();
-            this.fAddressCaptionTextBox = new Telerik.Reporting.TextBox();
-            this.mNameCaptionTextBox = new Telerik.Reporting.TextBox();
-            this.sqlDataSource1 = new Telerik.Reporting.SqlDataSource();
-            this.pageFooter = new Telerik.Reporting.PageFooterSection();
-            this.currentTimeTextBox = new Telerik.Reporting.TextBox();
-            this.pageInfoTextBox = new Telerik.Reporting.TextBox();
-            this.reportHeader = new Telerik.Reporting.ReportHeaderSection();
-            this.sectionCaptionTextBox = new Telerik.Reporting.TextBox();
-            this.sectionDataTextBox = new Telerik.Reporting.TextBox();
-            this.gR_YRCaptionTextBox = new Telerik.Reporting.TextBox();
-            this.gR_YRDataTextBox = new Telerik.Reporting.TextBox();
-            this.sYDataTextBox = new Telerik.Reporting.TextBox();
-            this.reportFooter = new Telerik.Reporting.ReportFooterSection();
-            this.detail = new Telerik.Reporting.DetailSection();
             this.fNameDataTextBox = new Telerik.Reporting.TextBox();
             this.fAddressDataTextBox = new Telerik.Reporting.TextBox();
             this.fMobileDataTextBox = new Telerik.Reporting.TextBox();
             this.fOccuDataTextBox = new Telerik.Reporting.TextBox();
             this.fTelDataTextBox = new Telerik.Reporting.TextBox();
+            this.lastnGroupFooterSection = new Telerik.Reporting.GroupFooterSection();
+            this.lastnGroupHeaderSection = new Telerik.Reporting.GroupHeaderSection();
+            this.mNameCaptionTextBox = new Telerik.Reporting.TextBox();
             this.mNameDataTextBox = new Telerik.Reporting.TextBox();
             this.mAddressDataTextBox = new Telerik.Reporting.TextBox();
             this.mMobileDataTextBox = new Telerik.Reporting.TextBox();
             this.mOccuDataTextBox = new Telerik.Reporting.TextBox();
             this.mTelDataTextBox = new Telerik.Reporting.TextBox();
+            this.labelsGroupFooterSection = new Telerik.Reporting.GroupFooterSection();
+            this.labelsGroupHeaderSection = new Telerik.Reporting.GroupHeaderSection();
+            this.fAddressCaptionTextBox = new Telerik.Reporting.TextBox();
             this.gNameDataTextBox = new Telerik.Reporting.TextBox();
             this.gAddressDataTextBox = new Telerik.Reporting.TextBox();
             this.gMobileDataTextBox = new Telerik.Reporting.TextBox();
             this.gOccuDataTextBox = new Telerik.Reporting.TextBox();
             this.gTelDataTextBox = new Telerik.Reporting.TextBox();
+            this.sqlDataSource1 = new Telerik.Reporting.SqlDataSource();
+            this.pageFooter = new Telerik.Reporting.PageFooterSection();
+            this.currentTimeTextBox = new Telerik.Reporting.TextBox();
+            this.pageInfoTextBox = new Telerik.Reporting.TextBox();
+            this.reportFooter = new Telerik.Reporting.ReportFooterSection();
+            this.detail = new Telerik.Reporting.DetailSection();
             this.pageHeader = new Telerik.Reporting.PageHeaderSection();
             this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBox2 = new Telerik.Reporting.TextBox();
@@ -89,7 +83,7 @@ namespace HS_Communications_Website.Admin
             this.studnoCaptionTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
             this.studnoCaptionTextBox.Name = "studnoCaptionTextBox";
             this.studnoCaptionTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.studnoCaptionTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.studnoCaptionTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.studnoCaptionTextBox.StyleName = "Caption";
             this.studnoCaptionTextBox.Value = "Student No & Full Name";
             // 
@@ -101,6 +95,24 @@ namespace HS_Communications_Website.Admin
             this.studnoDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.694166898727417D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
             this.studnoDataTextBox.StyleName = "Data";
             this.studnoDataTextBox.Value = "=Fields.studno";
+            // 
+            // firstnDataTextBox
+            // 
+            this.firstnDataTextBox.CanGrow = true;
+            this.firstnDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.8002004623413086D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.firstnDataTextBox.Name = "firstnDataTextBox";
+            this.firstnDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.6565482616424561D), Telerik.Reporting.Drawing.Unit.Cm(1.105633020401001D));
+            this.firstnDataTextBox.StyleName = "Data";
+            this.firstnDataTextBox.Value = "=Fields.firstn";
+            // 
+            // lastnDataTextBox
+            // 
+            this.lastnDataTextBox.CanGrow = true;
+            this.lastnDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(9.4569492340087891D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.lastnDataTextBox.Name = "lastnDataTextBox";
+            this.lastnDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.7747917175292969D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
+            this.lastnDataTextBox.StyleName = "Data";
+            this.lastnDataTextBox.Value = "=Fields.lastn";
             // 
             // firstnGroupFooterSection
             // 
@@ -119,185 +131,15 @@ namespace HS_Communications_Website.Admin
             this.fTelDataTextBox});
             this.firstnGroupHeaderSection.Name = "firstnGroupHeaderSection";
             // 
-            // firstnDataTextBox
-            // 
-            this.firstnDataTextBox.CanGrow = true;
-            this.firstnDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.8002004623413086D), Telerik.Reporting.Drawing.Unit.Cm(0D));
-            this.firstnDataTextBox.Name = "firstnDataTextBox";
-            this.firstnDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.6565482616424561D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.firstnDataTextBox.StyleName = "Data";
-            this.firstnDataTextBox.Value = "=Fields.firstn";
-            // 
-            // lastnGroupFooterSection
-            // 
-            this.lastnGroupFooterSection.Height = Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D);
-            this.lastnGroupFooterSection.Name = "lastnGroupFooterSection";
-            // 
-            // lastnGroupHeaderSection
-            // 
-            this.lastnGroupHeaderSection.Height = Telerik.Reporting.Drawing.Unit.Cm(1.116188645362854D);
-            this.lastnGroupHeaderSection.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.mNameCaptionTextBox,
-            this.mNameDataTextBox,
-            this.mAddressDataTextBox,
-            this.mMobileDataTextBox,
-            this.mOccuDataTextBox,
-            this.mTelDataTextBox});
-            this.lastnGroupHeaderSection.Name = "lastnGroupHeaderSection";
-            // 
-            // lastnDataTextBox
-            // 
-            this.lastnDataTextBox.CanGrow = true;
-            this.lastnDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(9.4569492340087891D), Telerik.Reporting.Drawing.Unit.Cm(0D));
-            this.lastnDataTextBox.Name = "lastnDataTextBox";
-            this.lastnDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.7747917175292969D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.lastnDataTextBox.StyleName = "Data";
-            this.lastnDataTextBox.Value = "=Fields.lastn";
-            // 
-            // labelsGroupFooterSection
-            // 
-            this.labelsGroupFooterSection.Height = Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D);
-            this.labelsGroupFooterSection.Name = "labelsGroupFooterSection";
-            this.labelsGroupFooterSection.Style.Visible = false;
-            // 
-            // labelsGroupHeaderSection
-            // 
-            this.labelsGroupHeaderSection.Height = Telerik.Reporting.Drawing.Unit.Cm(1.1058331727981567D);
-            this.labelsGroupHeaderSection.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.fAddressCaptionTextBox,
-            this.gNameDataTextBox,
-            this.gAddressDataTextBox,
-            this.gMobileDataTextBox,
-            this.gOccuDataTextBox,
-            this.gTelDataTextBox});
-            this.labelsGroupHeaderSection.Name = "labelsGroupHeaderSection";
-            this.labelsGroupHeaderSection.PrintOnEveryPage = true;
-            // 
             // fNameCaptionTextBox
             // 
             this.fNameCaptionTextBox.CanGrow = true;
             this.fNameCaptionTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D), Telerik.Reporting.Drawing.Unit.Cm(0.00010052680590888485D));
             this.fNameCaptionTextBox.Name = "fNameCaptionTextBox";
             this.fNameCaptionTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0485830307006836D), Telerik.Reporting.Drawing.Unit.Cm(1.1056321859359741D));
+            this.fNameCaptionTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.fNameCaptionTextBox.StyleName = "Caption";
             this.fNameCaptionTextBox.Value = "Father\'s Details";
-            // 
-            // fAddressCaptionTextBox
-            // 
-            this.fAddressCaptionTextBox.CanGrow = true;
-            this.fAddressCaptionTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
-            this.fAddressCaptionTextBox.Name = "fAddressCaptionTextBox";
-            this.fAddressCaptionTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1014997959136963D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.fAddressCaptionTextBox.StyleName = "Caption";
-            this.fAddressCaptionTextBox.Value = "Guardian\'s Details";
-            // 
-            // mNameCaptionTextBox
-            // 
-            this.mNameCaptionTextBox.CanGrow = true;
-            this.mNameCaptionTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D), Telerik.Reporting.Drawing.Unit.Cm(0D));
-            this.mNameCaptionTextBox.Name = "mNameCaptionTextBox";
-            this.mNameCaptionTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0485830307006836D), Telerik.Reporting.Drawing.Unit.Cm(1.1057323217391968D));
-            this.mNameCaptionTextBox.StyleName = "Caption";
-            this.mNameCaptionTextBox.Value = "Mother\'s Details";
-            // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.ConnectionString = "HsDbConnectionString";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            this.sqlDataSource1.SelectCommand = resources.GetString("sqlDataSource1.SelectCommand");
-            // 
-            // pageFooter
-            // 
-            this.pageFooter.Height = Telerik.Reporting.Drawing.Unit.Cm(1.1058331727981567D);
-            this.pageFooter.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.currentTimeTextBox,
-            this.pageInfoTextBox});
-            this.pageFooter.Name = "pageFooter";
-            // 
-            // currentTimeTextBox
-            // 
-            this.currentTimeTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
-            this.currentTimeTextBox.Name = "currentTimeTextBox";
-            this.currentTimeTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.8277082443237305D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.currentTimeTextBox.StyleName = "PageInfo";
-            this.currentTimeTextBox.Value = "=NOW()";
-            // 
-            // pageInfoTextBox
-            // 
-            this.pageInfoTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(7.9335417747497559D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
-            this.pageInfoTextBox.Name = "pageInfoTextBox";
-            this.pageInfoTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.8277082443237305D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.pageInfoTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.pageInfoTextBox.StyleName = "PageInfo";
-            this.pageInfoTextBox.Value = "=PageNumber";
-            // 
-            // reportHeader
-            // 
-            this.reportHeader.Height = Telerik.Reporting.Drawing.Unit.Cm(1.0001000165939331D);
-            this.reportHeader.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.sectionCaptionTextBox,
-            this.sectionDataTextBox,
-            this.gR_YRCaptionTextBox,
-            this.gR_YRDataTextBox,
-            this.sYDataTextBox});
-            this.reportHeader.Name = "reportHeader";
-            // 
-            // sectionCaptionTextBox
-            // 
-            this.sectionCaptionTextBox.CanGrow = true;
-            this.sectionCaptionTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D), Telerik.Reporting.Drawing.Unit.Cm(0.00010012308484874666D));
-            this.sectionCaptionTextBox.Name = "sectionCaptionTextBox";
-            this.sectionCaptionTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.5739583969116211D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.sectionCaptionTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.sectionCaptionTextBox.StyleName = "Caption";
-            this.sectionCaptionTextBox.Value = "Section:";
-            // 
-            // sectionDataTextBox
-            // 
-            this.sectionDataTextBox.CanGrow = true;
-            this.sectionDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.6797916889190674D), Telerik.Reporting.Drawing.Unit.Cm(0.00010012308484874666D));
-            this.sectionDataTextBox.Name = "sectionDataTextBox";
-            this.sectionDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.5739583969116211D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.sectionDataTextBox.StyleName = "Data";
-            this.sectionDataTextBox.Value = "=Fields.Section";
-            // 
-            // gR_YRCaptionTextBox
-            // 
-            this.gR_YRCaptionTextBox.CanGrow = true;
-            this.gR_YRCaptionTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.3066668510437012D), Telerik.Reporting.Drawing.Unit.Cm(0.00010012308484874666D));
-            this.gR_YRCaptionTextBox.Name = "gR_YRCaptionTextBox";
-            this.gR_YRCaptionTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.5739583969116211D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.gR_YRCaptionTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.gR_YRCaptionTextBox.StyleName = "Caption";
-            this.gR_YRCaptionTextBox.Value = "Year & SY";
-            // 
-            // gR_YRDataTextBox
-            // 
-            this.gR_YRDataTextBox.CanGrow = true;
-            this.gR_YRDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(8.2902908325195312D), Telerik.Reporting.Drawing.Unit.Cm(0.00010012308484874666D));
-            this.gR_YRDataTextBox.Name = "gR_YRDataTextBox";
-            this.gR_YRDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.166458010673523D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.gR_YRDataTextBox.StyleName = "Data";
-            this.gR_YRDataTextBox.Value = "=Fields.GR_YR";
-            // 
-            // sYDataTextBox
-            // 
-            this.sYDataTextBox.CanGrow = true;
-            this.sYDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(9.1001996994018555D), Telerik.Reporting.Drawing.Unit.Cm(0.00010012308484874666D));
-            this.sYDataTextBox.Name = "sYDataTextBox";
-            this.sYDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.5739583969116211D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.sYDataTextBox.StyleName = "Data";
-            this.sYDataTextBox.Value = "=Fields.SY";
-            // 
-            // reportFooter
-            // 
-            this.reportFooter.Height = Telerik.Reporting.Drawing.Unit.Cm(1.1852078437805176D);
-            this.reportFooter.Name = "reportFooter";
-            // 
-            // detail
-            // 
-            this.detail.Height = Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D);
-            this.detail.Name = "detail";
             // 
             // fNameDataTextBox
             // 
@@ -344,6 +186,33 @@ namespace HS_Communications_Website.Admin
             this.fTelDataTextBox.StyleName = "Data";
             this.fTelDataTextBox.Value = "=Fields.fTel";
             // 
+            // lastnGroupFooterSection
+            // 
+            this.lastnGroupFooterSection.Height = Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D);
+            this.lastnGroupFooterSection.Name = "lastnGroupFooterSection";
+            // 
+            // lastnGroupHeaderSection
+            // 
+            this.lastnGroupHeaderSection.Height = Telerik.Reporting.Drawing.Unit.Cm(1.116188645362854D);
+            this.lastnGroupHeaderSection.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
+            this.mNameCaptionTextBox,
+            this.mNameDataTextBox,
+            this.mAddressDataTextBox,
+            this.mMobileDataTextBox,
+            this.mOccuDataTextBox,
+            this.mTelDataTextBox});
+            this.lastnGroupHeaderSection.Name = "lastnGroupHeaderSection";
+            // 
+            // mNameCaptionTextBox
+            // 
+            this.mNameCaptionTextBox.CanGrow = true;
+            this.mNameCaptionTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.mNameCaptionTextBox.Name = "mNameCaptionTextBox";
+            this.mNameCaptionTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.0485830307006836D), Telerik.Reporting.Drawing.Unit.Cm(1.1057323217391968D));
+            this.mNameCaptionTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.mNameCaptionTextBox.StyleName = "Caption";
+            this.mNameCaptionTextBox.Value = "Mother\'s Details";
+            // 
             // mNameDataTextBox
             // 
             this.mNameDataTextBox.CanGrow = true;
@@ -389,6 +258,35 @@ namespace HS_Communications_Website.Admin
             this.mTelDataTextBox.StyleName = "Data";
             this.mTelDataTextBox.Value = "=Fields.mTel";
             // 
+            // labelsGroupFooterSection
+            // 
+            this.labelsGroupFooterSection.Height = Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D);
+            this.labelsGroupFooterSection.Name = "labelsGroupFooterSection";
+            this.labelsGroupFooterSection.Style.Visible = false;
+            // 
+            // labelsGroupHeaderSection
+            // 
+            this.labelsGroupHeaderSection.Height = Telerik.Reporting.Drawing.Unit.Cm(1.1058331727981567D);
+            this.labelsGroupHeaderSection.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
+            this.fAddressCaptionTextBox,
+            this.gNameDataTextBox,
+            this.gAddressDataTextBox,
+            this.gMobileDataTextBox,
+            this.gOccuDataTextBox,
+            this.gTelDataTextBox});
+            this.labelsGroupHeaderSection.Name = "labelsGroupHeaderSection";
+            this.labelsGroupHeaderSection.PrintOnEveryPage = true;
+            // 
+            // fAddressCaptionTextBox
+            // 
+            this.fAddressCaptionTextBox.CanGrow = true;
+            this.fAddressCaptionTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
+            this.fAddressCaptionTextBox.Name = "fAddressCaptionTextBox";
+            this.fAddressCaptionTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1014997959136963D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
+            this.fAddressCaptionTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.fAddressCaptionTextBox.StyleName = "Caption";
+            this.fAddressCaptionTextBox.Value = "Guardian\'s Details";
+            // 
             // gNameDataTextBox
             // 
             this.gNameDataTextBox.CanGrow = true;
@@ -433,6 +331,47 @@ namespace HS_Communications_Website.Admin
             this.gTelDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.0998997688293457D), Telerik.Reporting.Drawing.Unit.Cm(1.1057323217391968D));
             this.gTelDataTextBox.StyleName = "Data";
             this.gTelDataTextBox.Value = "=Fields.gTel";
+            // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.ConnectionString = "HsDbConnectionString";
+            this.sqlDataSource1.Name = "sqlDataSource1";
+            this.sqlDataSource1.SelectCommand = resources.GetString("sqlDataSource1.SelectCommand");
+            // 
+            // pageFooter
+            // 
+            this.pageFooter.Height = Telerik.Reporting.Drawing.Unit.Cm(1.1058331727981567D);
+            this.pageFooter.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
+            this.currentTimeTextBox,
+            this.pageInfoTextBox});
+            this.pageFooter.Name = "pageFooter";
+            // 
+            // currentTimeTextBox
+            // 
+            this.currentTimeTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
+            this.currentTimeTextBox.Name = "currentTimeTextBox";
+            this.currentTimeTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.8277082443237305D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
+            this.currentTimeTextBox.StyleName = "PageInfo";
+            this.currentTimeTextBox.Value = "=NOW()";
+            // 
+            // pageInfoTextBox
+            // 
+            this.pageInfoTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(7.9335417747497559D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
+            this.pageInfoTextBox.Name = "pageInfoTextBox";
+            this.pageInfoTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(7.8277082443237305D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
+            this.pageInfoTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.pageInfoTextBox.StyleName = "PageInfo";
+            this.pageInfoTextBox.Value = "=PageNumber";
+            // 
+            // reportFooter
+            // 
+            this.reportFooter.Height = Telerik.Reporting.Drawing.Unit.Cm(1.1852078437805176D);
+            this.reportFooter.Name = "reportFooter";
+            // 
+            // detail
+            // 
+            this.detail.Height = Telerik.Reporting.Drawing.Unit.Cm(0.13229165971279144D);
+            this.detail.Name = "detail";
             // 
             // pageHeader
             // 
@@ -515,7 +454,6 @@ namespace HS_Communications_Website.Admin
             this.labelsGroupFooterSection,
             this.pageHeader,
             this.pageFooter,
-            this.reportHeader,
             this.reportFooter,
             this.detail});
             this.Name = "Report1";
@@ -582,12 +520,6 @@ namespace HS_Communications_Website.Admin
         private Telerik.Reporting.PageFooterSection pageFooter;
         private Telerik.Reporting.TextBox currentTimeTextBox;
         private Telerik.Reporting.TextBox pageInfoTextBox;
-        private Telerik.Reporting.ReportHeaderSection reportHeader;
-        private Telerik.Reporting.TextBox sectionCaptionTextBox;
-        private Telerik.Reporting.TextBox sectionDataTextBox;
-        private Telerik.Reporting.TextBox gR_YRCaptionTextBox;
-        private Telerik.Reporting.TextBox gR_YRDataTextBox;
-        private Telerik.Reporting.TextBox sYDataTextBox;
         private Telerik.Reporting.ReportFooterSection reportFooter;
         private Telerik.Reporting.DetailSection detail;
         private Telerik.Reporting.TextBox fNameDataTextBox;

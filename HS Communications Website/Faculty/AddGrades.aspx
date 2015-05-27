@@ -17,26 +17,24 @@
         <div class="colp">
            
                 
-                 <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
-                  Grades Successfully updated.</h2></asp:Panel>
+                 <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
+                  Grades Successfully updated.</h4></asp:Panel>
 
-                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
 
-                
-                  <span>Subject: <asp:Label ID="subLbl" runat="server" Text="Label"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+              <span style="font-size: large">Subject:<asp:Label ID="subLbl" runat="server" Text="Label"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     Section:  <asp:Label ID="secLbl" runat="server" Text="Label"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="InsertEqui" runat="server" Text="Insert Equivalent" CssClass="buttonn alert" OnClick="InsertEqui_Click" BackColor="Red"/>
-              <asp:Button ID="UpdateButton" runat="server" Text="Save Grades" CssClass="buttonn" OnClick="UpdateButton_Click" Visible="False"/> </span>
-
-                
-                
-
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [first], [second], [third], [fourth], [SMTRID], [name] FROM [SMTRView] WHERE (([Subcode] = @Subcode) AND ([Sectno] = @Sectno))" DeleteCommand="DELETE FROM [SMTRview] WHERE [SMTRID] = @SMTRID" InsertCommand="INSERT INTO [SMTRview] ([first], [second], [third], [fourth], [SMTRID]) VALUES (@first, @second, @third, @fourth, @SMTRID)" UpdateCommand="UPDATE [SMTRView] SET [first] = @first, [second] = @second, [third] = @third, [fourth] = @fourth WHERE [SMTRID] = @SMTRID">
+                </span>
+             
+                <span style="position: absolute;left:83%">   <asp:Button ID="InsertEqui" runat="server" Text="Insert Equivalent" CssClass="buttonn alert" OnClick="InsertEqui_Click" BackColor="Red"/>
+                    <asp:Button ID="UpdateButton" runat="server" Text="Save Grades" CssClass="buttonn" OnClick="UpdateButton_Click" Visible="False"/></span>
+            
+           <br/><br/>
+              <span style="font-size: 18px"> <a href="Grades.aspx">Back to list of grades</a> </span>
+                <br/>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [first], [second], [third], [fourth], [SMTRID], [name] FROM [SMTRView] WHERE (([Subcode] = @Subcode) AND ([Sectno] = @Sectno)) order by [name] asc" DeleteCommand="DELETE FROM [SMTRview] WHERE [SMTRID] = @SMTRID" InsertCommand="INSERT INTO [SMTRview] ([first], [second], [third], [fourth], [SMTRID]) VALUES (@first, @second, @third, @fourth, @SMTRID)" UpdateCommand="UPDATE [SMTRView] SET [first] = @first, [second] = @second, [third] = @third, [fourth] = @fourth WHERE [SMTRID] = @SMTRID">
                         <DeleteParameters>
                             <asp:Parameter Name="SMTRID" Type="Int32" />
                         </DeleteParameters>

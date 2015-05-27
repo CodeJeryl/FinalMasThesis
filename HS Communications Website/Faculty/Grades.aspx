@@ -13,17 +13,17 @@
 			<h4><strong class="colhead">Grades</strong></h4>
 		</div>
        
-                 <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h2 style="text-align: center">
-                  Grades Successfully updated.</h2></asp:Panel>
-                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                 <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
+                  Grades Successfully updated.</h4></asp:Panel>
+                  <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
 
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [Sectno], [Subcode], [GR-YR] AS column1 FROM [subjectsView] WHERE ([fCode] = @fCode) ORDER BY [GR-YR]">
                         <SelectParameters>
                             <asp:SessionParameter DefaultValue="0" Name="fCode" SessionField="fcode" Type="Int32" />
                         </SelectParameters>
                     </asp:SqlDataSource>
-        <div class="eight columns centered">
+        <div class="seven columns centered">
                     <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
                        
                         <EditItemTemplate>

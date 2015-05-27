@@ -13,11 +13,11 @@
 			<h4><strong class="colhead">Message</strong></h4>
 		</div>
        
-                   <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False"><h4 style="text-align: center">
+                   <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
                    Message Successfully Sent!</h4></asp:Panel>
                 
-                 <asp:Panel ID="ErrorPanel" runat="server" CssClass="warning-box" Visible="False"><h2>
-                    <asp:Label ID="ErrorLabel" runat="server" Text="Label"></asp:Label></h2></asp:Panel>
+                 <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
+                    <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
                 <br />
                     <p style="font-size: 17px"> From: <asp:Label ID="fromLbl" runat="server" Text="Label"></asp:Label>
                             <span style="left: 70%;position: absolute"> Date and Time:<asp:Label ID="dateLbl" runat="server" Text="Label"></asp:Label></span>  
@@ -37,7 +37,7 @@
              <span style="left:87%; position: relative">       <asp:Button ID="Button1" runat="server" Text="Send Reply" CssClass="buttonn" OnClick="Button1_Click"/></span>
                
 
-             <h5>   <a href="Phomepage.aspx">Go back to Inbox</a></h5>
+             <h5>   <a href="Inbox.aspx">Go back to Inbox</a></h5>
            
 
 	</div><!-- end main content-->
