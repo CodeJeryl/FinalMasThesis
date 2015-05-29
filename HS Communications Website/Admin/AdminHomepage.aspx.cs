@@ -12,56 +12,101 @@ namespace HS_Communications_Website.Admin
 {
     public partial class AdminHomepage : System.Web.UI.Page
     {
-        SqlConnection con;
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 GetChartData();
                 GetChartDataSc();
-
             }
         }
 
         string conss =
                    System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
-  
+        SqlConnection con;
+        private string drop;
         private void GetChartData()
         {
-           
-            con = new SqlConnection(conss);
-            SqlCommand cmd = new SqlCommand("Select townAdd,Count(*) as Number from Students where townadd is not NULL group by townAdd ", con);
-            con.Open();
-            Series series = Chart1.Series["Series1"];
-            SqlDataReader red = cmd.ExecuteReader();
-
-            while (red.Read())
+            if (DropDownList1.Text == "")
             {
-                series.Points.AddXY(red["townAdd"].ToString(), red["Number"]);
 
+                con = new SqlConnection(conss);
+                SqlCommand cmd = new SqlCommand("Select town,tCount from dashboard where SY = '2011-2012' and category ='town' order by tcount", con);
+                con.Open();
+                Series series = Chart1.Series["Series1"];
+                SqlDataReader red = cmd.ExecuteReader();
+
+                while (red.Read())
+                {
+                    series.Points.AddXY(red["town"].ToString(), red["tCount"]);
+
+                }
+                con.Close();
+            }
+            else
+            {
+
+
+                con = new SqlConnection(conss);
+                SqlCommand cmd = new SqlCommand("Select town,tCount from dashboard where SY = '" + DropDownList1.Text + "' and category ='town' order by tcount", con);
+                con.Open();
+                Series series = Chart1.Series["Series1"];
+                SqlDataReader red = cmd.ExecuteReader();
+
+                while (red.Read())
+                {
+                    series.Points.AddXY(red["town"].ToString(), red["tCount"]);
+
+                }
+                con.Close();
             }
         }
+
+
         private void GetChartDataSc()
         {
-            var constring =
-                System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
-            string conss = constring.ConnectionString;
-
-
-            con = new SqlConnection(conss);
-            SqlCommand cmd = new SqlCommand("Select scLastAttend,Count(*) as Number from Students where scLastAttend is not NULL group by scLastAttend ", con);
-            con.Open();
-            Series series = Chart2.Series["Series1"];
-            SqlDataReader red = cmd.ExecuteReader();
-
-            while (red.Read())
+            if (DropDownList1.Text == "")
             {
-                series.Points.AddXY(red["scLastAttend"].ToString(), red["Number"]);
 
+                con = new SqlConnection(conss);
+                SqlCommand cmd = new SqlCommand("Select school,sCount from dashboard where SY = '2011-2012' and category ='sc' order by scount", con);
+                con.Open();
+                Series series = Chart2.Series["Series1"];
+                SqlDataReader red = cmd.ExecuteReader();
+
+                while (red.Read())
+                {
+                    series.Points.AddXY(red["school"].ToString(), red["sCount"]);
+                }
+
+                con.Close();
+            }
+            else
+            {
+                con = new SqlConnection(conss);
+                SqlCommand cmd = new SqlCommand("Select school,sCount from dashboard where SY = '" + DropDownList1.Text + "' and category ='sc' order by scount", con);
+                con.Open();
+                Series series = Chart2.Series["Series1"];
+                SqlDataReader red = cmd.ExecuteReader();
+
+                while (red.Read())
+                {
+                    series.Points.AddXY(red["school"].ToString(), red["sCount"]);
+
+                }
+
+                con.Close();
             }
         }
 
-       
+      
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetChartData();
+            GetChartDataSc();
+        }
+
+
     }
 }

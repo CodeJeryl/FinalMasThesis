@@ -213,6 +213,7 @@
 <%--              <li><a href="AddAdviser.aspx">Assign Adviser to Section</a></li>--%>
                
                 <li><a href="AddTeachers.aspx">Add Teachers</a></li>
+                                         <li><a href="ManageDashboard.aspx">Manage Dashboard</a></li>
                 <li><a href="ManageAccnt.aspx">Enable/Disable Accounts</a></li>
                                     </ul>
                                 </li>

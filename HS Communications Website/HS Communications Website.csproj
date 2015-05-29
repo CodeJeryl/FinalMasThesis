@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AddAdviser.aspx" />
+    <Content Include="Admin\ManageDashboard.aspx" />
     <Content Include="Colegio\AboutUs\CoreValues.aspx" />
     <Content Include="Colegio\AboutUs\History.aspx" />
     <Content Include="Colegio\AboutUs\InstitutionalStrategies.aspx" />
@@ -587,6 +588,13 @@
     </Compile>
     <Compile Include="Admin\AddAdviser.aspx.designer.cs">
       <DependentUpon>AddAdviser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageDashboard.aspx.cs">
+      <DependentUpon>ManageDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageDashboard.aspx.designer.cs">
+      <DependentUpon>ManageDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Colegio\AboutUs\CoreValues.aspx.cs">
       <DependentUpon>CoreValues.aspx</DependentUpon>
