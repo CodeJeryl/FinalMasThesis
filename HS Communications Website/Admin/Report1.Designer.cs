@@ -162,7 +162,7 @@ namespace HS_Communications_Website.Admin
             // fMobileDataTextBox
             // 
             this.fMobileDataTextBox.CanGrow = true;
-            this.fMobileDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.468260765075684D), Telerik.Reporting.Drawing.Unit.Cm(0.063372261822223663D));
+            this.fMobileDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.968258857727051D), Telerik.Reporting.Drawing.Unit.Cm(0.063372261822223663D));
             this.fMobileDataTextBox.Name = "fMobileDataTextBox";
             this.fMobileDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.4315402507781982D), Telerik.Reporting.Drawing.Unit.Cm(1.0529165267944336D));
             this.fMobileDataTextBox.StyleName = "Data";
@@ -171,7 +171,7 @@ namespace HS_Communications_Website.Admin
             // fOccuDataTextBox
             // 
             this.fOccuDataTextBox.CanGrow = true;
-            this.fOccuDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.90000057220459D), Telerik.Reporting.Drawing.Unit.Cm(0.0633726641535759D));
+            this.fOccuDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.468259811401367D), Telerik.Reporting.Drawing.Unit.Cm(0.0633726641535759D));
             this.fOccuDataTextBox.Name = "fOccuDataTextBox";
             this.fOccuDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.4997992515563965D), Telerik.Reporting.Drawing.Unit.Cm(1.0529165267944336D));
             this.fOccuDataTextBox.StyleName = "Data";
@@ -234,7 +234,7 @@ namespace HS_Communications_Website.Admin
             // mMobileDataTextBox
             // 
             this.mMobileDataTextBox.CanGrow = true;
-            this.mMobileDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.468260765075684D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.mMobileDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.90000057220459D), Telerik.Reporting.Drawing.Unit.Cm(0.010458017699420452D));
             this.mMobileDataTextBox.Name = "mMobileDataTextBox";
             this.mMobileDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.4315402507781982D), Telerik.Reporting.Drawing.Unit.Cm(1.10573148727417D));
             this.mMobileDataTextBox.StyleName = "Data";
@@ -243,7 +243,7 @@ namespace HS_Communications_Website.Admin
             // mOccuDataTextBox
             // 
             this.mOccuDataTextBox.CanGrow = true;
-            this.mOccuDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.90000057220459D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.mOccuDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.400001525878906D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.mOccuDataTextBox.Name = "mOccuDataTextBox";
             this.mOccuDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.4997992515563965D), Telerik.Reporting.Drawing.Unit.Cm(1.10573148727417D));
             this.mOccuDataTextBox.StyleName = "Data";
@@ -308,7 +308,7 @@ namespace HS_Communications_Website.Admin
             // gMobileDataTextBox
             // 
             this.gMobileDataTextBox.CanGrow = true;
-            this.gMobileDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.468260765075684D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.gMobileDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.90000057220459D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.gMobileDataTextBox.Name = "gMobileDataTextBox";
             this.gMobileDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.4315402507781982D), Telerik.Reporting.Drawing.Unit.Cm(1.1057323217391968D));
             this.gMobileDataTextBox.StyleName = "Data";
@@ -317,7 +317,7 @@ namespace HS_Communications_Website.Admin
             // gOccuDataTextBox
             // 
             this.gOccuDataTextBox.CanGrow = true;
-            this.gOccuDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(14.90000057220459D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.gOccuDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(11.400001525878906D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.gOccuDataTextBox.Name = "gOccuDataTextBox";
             this.gOccuDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.4997992515563965D), Telerik.Reporting.Drawing.Unit.Cm(1.1057323217391968D));
             this.gOccuDataTextBox.StyleName = "Data";

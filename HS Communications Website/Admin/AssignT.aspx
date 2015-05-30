@@ -145,7 +145,7 @@
                               <asp:TextBox ID="fcodeTxtbox" runat="server" MaxLength="5" Text='<%# Bind("Fcode") %>'></asp:TextBox>
                           </ItemTemplate>
                       </asp:TemplateField>
-                      <asp:BoundField DataField="SID" HeaderText="SID" SortExpression="SID" ReadOnly="True" />
+                      <asp:BoundField DataField="SID" HeaderText="SID" SortExpression="SID" ReadOnly="True" Visible="False" />
                   </Columns>
               </asp:GridView>
               

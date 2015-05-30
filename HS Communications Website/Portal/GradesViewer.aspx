@@ -117,16 +117,16 @@
                                     <td>
                                         <asp:Label ID="UnitsLabel" runat="server" Text='<%# Eval("Units") %>' />
                                     </td>
-                                    <td  style="background-color: #ffdc70">
+                                    <td  style="background-color: #ffeaaa; text-align: center">
                                         <asp:Label ID="firstLabel" runat="server" Text='<%# Eval("first") %>'  />
                                     </td>
-                                    <td >
+                                    <td style="text-align: center">
                                         <asp:Label ID="secondLabel" runat="server" Text='<%# Eval("second") %>' />
                                     </td>
-                                    <td  style="background-color: #ffdc70">
+                                    <td  style="background-color: #ffeaaa; text-align: center">
                                         <asp:Label ID="thirdLabel" runat="server" Text='<%# Eval("third") %>' />
                                     </td>
-                                     <td >
+                                     <td style="text-align: center">
                                         <asp:Label ID="fourthLabel" runat="server" Text='<%# Eval("fourth") %>' />
                                     </td>
                                  <%--   <td>

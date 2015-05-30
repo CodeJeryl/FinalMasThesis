@@ -64,16 +64,47 @@ namespace HS_Communications_Website.Admin
 
                         if (contenttype != String.Empty)
                         {
-                            SqlCommand che = new SqlCommand("Select * from uploadedfiles where uploadtype='" + DropDownList1.Text + "' and section = '" + DropDownList2.Text + "'", coc);
-                            coc.Close();
-                            coc.Open();
-                            SqlDataReader dr = che.ExecuteReader();
-
-                          
-                            if(dr.Read())
+                            if(DropDownList1.Text == "Class Schedule")
                             {
-                                ErrorPanel.Visible = true;
-                                ErrorLabel.Text = "Class Sched already Exist!";
+                                SqlCommand che = new SqlCommand("Select * from uploadedfiles where uploadtype='" + DropDownList1.Text + "' and section = '" + DropDownList2.Text + "'", coc);
+                                coc.Close();
+                                coc.Open();
+                                SqlDataReader dr = che.ExecuteReader();
+
+
+                                if (dr.Read())
+                                {
+                                    ErrorPanel.Visible = true;
+                                    ErrorLabel.Text = "Class Sched already Exist!";
+                                }
+                                else
+                                {
+                                    Stream fs = FileUpload1.PostedFile.InputStream;
+                                    BinaryReader br = new BinaryReader(fs);
+                                    Byte[] bytes = br.ReadBytes((Int32)fs.Length);
+
+
+                                    string strQuery = "insert into uploadedFiles values('" + DropDownList1.Text + "','" + TextBox1.Text +
+                                                      "',@filename, @datee,@ContentType, @Data,'" + Session["name"] + "','" + DropDownList2.Text + "')";
+
+                                    SqlCommand cmd = new SqlCommand(strQuery, con);
+
+                                    cmd.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now.ToShortDateString();
+                                    cmd.Parameters.Add("@filename", SqlDbType.VarChar).Value = filename;
+                                    cmd.Parameters.Add("@ContentType", SqlDbType.VarChar).Value = contenttype;
+                                    cmd.Parameters.Add("@Data", SqlDbType.Binary).Value = bytes;
+
+                                    con.Close();
+                                    con.Open();
+                                    cmd.ExecuteNonQuery();
+
+                                    Panel1.Visible = true;
+                                    Label1.Text = "File Uploaded Successfully!";
+
+                                    //     SyllaUploadListview.DataBind();
+                                    ListView1.DataBind();
+                                    //    dataload();
+                                }
                             }
                             else
                             {
@@ -103,12 +134,13 @@ namespace HS_Communications_Website.Admin
                                 ListView1.DataBind();
                                 //    dataload();
                             }
+                            
                         }
 
                         else
                         {
                             ErrorPanel.Visible = true;
-                            ErrorLabel.Text = "File format not recognized. Upload Jpg/Jpeg/Pdf/Word Documents only";
+                            ErrorLabel.Text = "File format not recognized. Upload Jpg/Jpeg for Class Schedule and Pdf/Word Documents for Memo";
 
                         }
 

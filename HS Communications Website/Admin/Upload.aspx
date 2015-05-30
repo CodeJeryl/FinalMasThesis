@@ -31,7 +31,7 @@
                 
                 <p>Title: <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required" ControlToValidate="TextBox1" ValidationGroup="e"></asp:RequiredFieldValidator></p>
                
-                    <p> Browse File : <asp:FileUpload ID="FileUpload1" runat="server" /> <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="FileUpload1" ValidationGroup="e"></asp:RequiredFieldValidator></p><br />
+                    <p> Browse File : <asp:FileUpload ID="FileUpload1" runat="server" /> <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Choose File to Upload." ControlToValidate="FileUpload1" ValidationGroup="e"></asp:RequiredFieldValidator></p><br />
                 
                
                    <p> <asp:Button ID="Button1" runat="server" Text="Upload Now" OnClick="Button1_Click" CssClass="buttonn" ValidationGroup="e" /></p>
