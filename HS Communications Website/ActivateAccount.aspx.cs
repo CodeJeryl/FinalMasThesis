@@ -20,6 +20,10 @@ namespace HS_Communications_Website
         string password;
         protected void Button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+           
             Panel1.Visible = false;
             ErrorPanel.Visible = false;
            
@@ -80,6 +84,12 @@ namespace HS_Communications_Website
             {
                 ErrorPanel.Visible = true;
                 ErrorLabel.Text = "Incorrect UserId/Username or Email";
+            }
+            }
+            catch (Exception ex)
+            {
+                ErrorPanel.Visible = true;
+                ErrorLabel.Text = "Check your Internet Connection!";
             }
 
         }

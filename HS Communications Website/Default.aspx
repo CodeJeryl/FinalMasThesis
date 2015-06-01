@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="stylesheets/skins/teal.css">
     <!-- skin color -->
     <link rel="stylesheet" href="stylesheets/responsive.css">
-
+    <link href="stylesheets/letran/lightbox.css" rel="stylesheet" />
 
     <style>
         #container {
@@ -268,14 +268,38 @@
        
        </div>
 
-    <hr />
  
-    <br />
 
     <div class="row">
         <div class="twelve columns">
-          
-            
+           <div class="centersectiontitle">
+                <br />
+                <h4>Gallery</h4>
+
+            </div>
+             
+                        <span style="padding: 30px"><a href="images/HighSchool/IMG1.jpg" data-lightbox="facilities">
+                            <img src="images/HighSchool/IMG1.jpg" width="255px"/>
+                        </a></span>
+                        <span style="padding: 30px"><a href="images/HighSchool/IMG2.jpg" data-lightbox="facilities">
+                            <img src="images/HighSchool/IMG2.jpg" width="255px"/>
+                        </a></span>
+                        <span style="padding: 30px"><a href="images/HighSchool/IMG3.jpg" data-lightbox="facilities">
+                            <img src="images/HighSchool/IMG3.jpg" width="255px"/>
+                        </a></span> 
+                        <span style="padding: 30px"><a href="images/HighSchool/IMG4.jpg" data-lightbox="facilities">
+                            <img src="images/HighSchool/IMG4.jpg" width="255px"/>
+                        </a></span>
+                        <span style="padding: 30px"><a href="images/HighSchool/IMG5.jpg" data-lightbox="facilities">
+                            <img src="images/HighSchool/IMG5.jpg" width="255px"/>
+                        </a></span>
+                        <span style="padding: 30px"><a href="images/HighSchool/IMG6.jpg" data-lightbox="facilities">
+                            <img src="images/HighSchool/IMG6.jpg" width="255px"/>
+                        </a></span>
+                   <br/>
+                    
+                    <span style="position: absolute; left:78%; color: darkred;font-size: 15px">More pictures. <a href="#">Click here</a></span>
+
             
             
             
@@ -302,5 +326,6 @@
     <script src="javascripts/hoverIntent.js"></script>
     <script src="javascripts/superfish.js"></script>
     <script src="javascripts/responsivemenu.js"></script>
-
+    <script src="javascripts/gallery/jquery-1.11.0.min.js"></script>
+    <script src="javascripts/gallery/lightbox.min.js"></script>
 </asp:Content>
