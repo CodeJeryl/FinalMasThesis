@@ -269,60 +269,17 @@
        </div>
 
     <hr />
-    <div class="row">
-        <div class="twelve columns">
-            <%--  <img src="images/MainHome/2ndheader.jpg" width="100%" />
-            <span style="position: absolute; top: 62%; left: 38%;"><a class="button1" href="Admissions/Online.aspx">CLICK HERE TO APPLY</a></span>--%>
-            <a href="Admissions/Online.aspx">
-                <img src="images/newsbanner/sub_banner.png" width="100%" /></a>
-        </div>
-    </div>
+ 
     <br />
 
     <div class="row">
         <div class="twelve columns">
-            <ul class="ca-menu">
-                <li>
-                    <a href="Media/ArribaRadio/Home.aspx" target="_blank">
-                        <span class="ca-icon">C</span>
-                        <div class="ca-content">
-                            <h2 class="ca-main">Arriba Campus<br />
-                                Radio 87.9</h2>
-                            <h3 class="ca-sub">Listen Now!</h3>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="Media/LetranBataanExperience/ArribaLife.aspx">
-                        <span class="ca-icon">R</span>
-                        <div class="ca-content">
-                            <h2 class="ca-main">Letran Bataan<br />
-                                Experience</h2>
-                            <h3 class="ca-sub">Arriba Life</h3>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="Media/Gallery.aspx">
-                        <span class="ca-icon">I</span><%--<img src="images/NewsThumbs/article6th.jpg" />--%>
-                        <div class="ca-content">
-                            <h2 class="ca-main">Photos and<br />
-                                Videos</h2>
-                            <h3 class="ca-sub">Latest Music Video</h3>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="College/DegreePrograms.aspx">
-                        <span class="ca-icon">D</span>
-                        <div class="ca-content">
-                            <h2 class="ca-main">Course<br />
-                                Programs</h2>
-                            <h3 class="ca-sub">View Course Offerings</h3>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+          
+            
+            
+            
+            
+
         </div>
     </div>
     
