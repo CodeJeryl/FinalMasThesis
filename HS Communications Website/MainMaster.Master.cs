@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -16,6 +18,9 @@ namespace HS_Communications_Website
 
         }
 
+        FormsAuthenticationTicket tkt;
+        string cookiestr;
+        HttpCookie ck;
         protected void loginBtn_Click(object sender, EventArgs e)
         {
 
@@ -25,7 +30,7 @@ namespace HS_Communications_Website
 
             SqlConnection conek = new SqlConnection(conString);
             SqlConnection conek1 = new SqlConnection(conString);
-            SqlConnection conek2 = new SqlConnection(conString);
+          //  SqlConnection conek2 = new SqlConnection(conString);
 
             try
             {
@@ -35,8 +40,11 @@ namespace HS_Communications_Website
                 
                 SqlCommand comsearch =
                     new SqlCommand(
-                        "Select * From facTbl where empID = '" + usernameTxtbox.Text + "' and password = '" +
-                        passTxtbox.Text + "' and disabled = 'false'", conek);
+                        "Select * From facTbl where empID = @userName and password = @password and disabled = 'false'", conek);
+                comsearch.Parameters.Add("@userName", SqlDbType.VarChar, 50);
+                comsearch.Parameters["@userName"].Value = usernameTxtbox.Text;
+                comsearch.Parameters.Add("@password", SqlDbType.VarChar, 50);
+                comsearch.Parameters["@password"].Value = passTxtbox.Text;
               
                 SqlDataReader rd = comsearch.ExecuteReader();
                 
@@ -62,11 +70,22 @@ namespace HS_Communications_Website
                         //SqlCommand com = new SqlCommand("update adminol set online = '" + 1 + "'", conek1);
 
                         // com.ExecuteNonQuery();
-                        System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
-                        System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
-                        System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+                        tkt = new FormsAuthenticationTicket(1, usernameTxtbox.Text, DateTime.Now, DateTime.Now.AddMinutes(60),false,"");
+                        cookiestr = FormsAuthentication.Encrypt(tkt);
+                        ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
+                        ck.Expires = tkt.Expiration;
+                        ck.Path = FormsAuthentication.FormsCookiePath;
+                        Response.Cookies.Add(ck);
 
-                        Response.Redirect("~/Admin/AdminHomepage.aspx", false);
+                        string strRedirect;
+                      strRedirect = "~/Admin/AdminHomepage.aspx";
+                        Response.Redirect(strRedirect, true);
+
+                        //System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
+                        //System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
+                        //System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+
+                        //Response.Redirect("~/Admin/AdminHomepage.aspx", false);
                     }
                     else
                     {
@@ -76,12 +95,22 @@ namespace HS_Communications_Website
                         //Session["email"] = rd.GetString(1);
                         //Session["name"] = rd.GetString(3);
                         //Session["address"] = rd.GetString(9);
+                        tkt = new FormsAuthenticationTicket(1, usernameTxtbox.Text, DateTime.Now, DateTime.Now.AddMinutes(60), false, "");
+                        cookiestr = FormsAuthentication.Encrypt(tkt);
+                        ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
+                        ck.Expires = tkt.Expiration;
+                        ck.Path = FormsAuthentication.FormsCookiePath;
+                        Response.Cookies.Add(ck);
 
-                        System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
-                        System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
-                        System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+                        string strRedirect;
+                      strRedirect = "~/Faculty/Fhomepage.aspx";
+                        Response.Redirect(strRedirect, true);
 
-                        Response.Redirect("~/Faculty/Fhomepage.aspx", false);
+                        //System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
+                        //System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
+                        //System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+
+                        //Response.Redirect("~/Faculty/Fhomepage.aspx", false);
                     }
                 }
                 else
@@ -93,8 +122,12 @@ namespace HS_Communications_Website
 
                     SqlCommand comsearch1 =
                         new SqlCommand(
-                            "Select * From LoginView where username = '" + usernameTxtbox.Text + "' and password = '" +
-                            passTxtbox.Text + "' and activated = 1", conek1);
+                            "Select * From LoginView where username = @userName and password = @password and activated = 1", conek1);
+                    comsearch1.Parameters.Add("@userName", SqlDbType.VarChar, 50);
+                    comsearch1.Parameters["@userName"].Value = usernameTxtbox.Text;
+                    comsearch1.Parameters.Add("@password", SqlDbType.VarChar, 50);
+                    comsearch1.Parameters["@password"].Value = passTxtbox.Text;
+
                     SqlDataReader rd1 = comsearch1.ExecuteReader();
                     if (rd1.Read())
                     {
@@ -115,11 +148,23 @@ namespace HS_Communications_Website
                             //SqlCommand com = new SqlCommand("update adminol set online = '" + 1 + "'", conek1);
 
                             // com.ExecuteNonQuery();
-                            System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
-                            System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
-                            System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
 
-                            Response.Redirect("~/Portal/Phomepage.aspx", false);
+                            tkt = new FormsAuthenticationTicket(1, usernameTxtbox.Text, DateTime.Now, DateTime.Now.AddMinutes(60), false, "");
+                            cookiestr = FormsAuthentication.Encrypt(tkt);
+                            ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
+                            ck.Expires = tkt.Expiration;
+                            ck.Path = FormsAuthentication.FormsCookiePath;
+                            Response.Cookies.Add(ck);
+
+                            string strRedirect;
+                           strRedirect = "~/Portal/Phomepage.aspx";
+                            Response.Redirect(strRedirect, true);
+
+                            //System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
+                            //System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
+                            //System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+
+                            //Response.Redirect("~/Portal/Phomepage.aspx", false);
                         }
                         else
                         {
@@ -137,11 +182,21 @@ namespace HS_Communications_Website
                             //SqlCommand com = new SqlCommand("update adminol set online = '" + 1 + "'", conek1);
 
                             // com.ExecuteNonQuery();
-                            System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
-                            System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
-                            System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+                            tkt = new FormsAuthenticationTicket(1, usernameTxtbox.Text, DateTime.Now, DateTime.Now.AddMinutes(60), false, "");
+                            cookiestr = FormsAuthentication.Encrypt(tkt);
+                            ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
+                            ck.Expires = tkt.Expiration;
+                            ck.Path = FormsAuthentication.FormsCookiePath;
+                            Response.Cookies.Add(ck);
 
-                            Response.Redirect("~/Portal/Phomepage.aspx", false);
+                            string strRedirect;
+                          strRedirect = "~/Portal/Phomepage.aspx";
+                            Response.Redirect(strRedirect, true);
+                            //System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
+                            //System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
+                            //System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+
+                            //Response.Redirect("~/Portal/Phomepage.aspx", false);
                         }
                     }
                     else

@@ -997,6 +997,9 @@
     <Content Include="template\stylesheets\websymbols\websymbols-regular-webfont.eot" />
     <Content Include="template\stylesheets\websymbols\websymbols-regular-webfont.ttf" />
     <Content Include="template\stylesheets\websymbols\websymbols-regular-webfont.woff" />
+    <Content Include="Admin\Web.config" />
+    <Content Include="Faculty\Web.config" />
+    <Content Include="Portal\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

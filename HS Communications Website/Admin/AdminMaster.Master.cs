@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace HS_Communications_Website.Admin
 {
     public partial class AdminMaster : System.Web.UI.MasterPage

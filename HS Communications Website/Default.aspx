@@ -279,7 +279,7 @@
             </div>
              
                         <span style="padding: 30px"><a href="images/HighSchool/IMG1.jpg" data-lightbox="facilities">
-                            <img src="images/HighSchool/IMG1.jpg" width="255px"/>
+                            <img src="images/HighSchool/IMG1.jpg" width="255px"/>i
                         </a></span>
                         <span style="padding: 30px"><a href="images/HighSchool/IMG2.jpg" data-lightbox="facilities">
                             <img src="images/HighSchool/IMG2.jpg" width="255px"/>
