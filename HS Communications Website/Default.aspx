@@ -151,6 +151,14 @@
 
     <div id="ei-slider" class="ei-slider">
         <ul class="ei-slider-large">
+              <li>
+                <img src="images/newsbanner/banner2.jpg" class="responsiveslide">
+                <%--<div class="ei-title">
+			<h2>High School students aim for K12 development</h2>  10px 40px 0px 40px
+			<h3 style="margin-top: 0px;">K-12 in Letran Bataan.</h3>
+		</div>--%>
+            </li>
+
             <li>
                 <img src="images/newsbanner/2.jpg" class="responsiveslide">
                 <%--<div class="ei-title">
@@ -158,42 +166,31 @@
 			<h3 style="margin-top: 0px;">K-12 in Letran Bataan.</h3>
 		</div>--%>
             </li>
-           <%--  <li>
-                <img src="images/newsbanner/1.jpg" alt="Binyag Arriba 2015" class="responsiveslide">
-            
-            </li>--%>
-       <%--     <li>
-                <a href="Admissions/ProcedureRequirements.aspx">
-                    <img src="images/newsbanner/3.jpg" class="responsiveslide"></a>
-                <div class="ei-title">
-                    <h2 style="margin-top: 0px; font-size: 20px"><a href="Admissions/ProcedureRequirements.aspx" style="color: white">Click here for Admissions Requirements</a></h2>
-                    <h3 style="margin-top: 0px; font-size: 20px"><a href="Admissions/Online.aspx">Click here to Apply Online Now!</a></h3>
-                </div>
-            </li>--%>
-            <li>
-                <img src="images/newsbanner/4.jpg" alt="image04" class="responsiveslide">
+          <li>
+                <img src="images/newsbanner/banner1.jpg" class="responsiveslide">
                 <%--<div class="ei-title">
-			<h2>High School students aim for K12 development</h2>
+			<h2>High School students aim for K12 development</h2>  10px 40px 0px 40px
 			<h3 style="margin-top: 0px;">K-12 in Letran Bataan.</h3>
 		</div>--%>
             </li>
-            <%--    <li>
-                <img src="images/newsbanner/orbit5.jpg" alt="image05" class="responsiveslide">
-                <div class="ei-title">
-			<h2>High School students aim for K12 development</h2>
-			<h3 style="margin-top: 0px;">K-12 in Letran Bataan.</h3>
-		</div>
-            </li>--%>
+
+  
+            <li>
+                <img src="images/newsbanner/4.jpg" alt="image04" class="responsiveslide">
+              
+            </li>
+          
         </ul>
         <!-- slider-thumbs -->
 
         <ul class="ei-slider-thumbs">
             <li class="ei-slider-element">Current</li>
-            <li><a href="#">Slide 1</a><img src="images/newsbanner/2.jpg" class="slideshowthumb" alt="thumb01" /></li>
-           <%-- <li><a href="#">Slide 2</a><img src="images/newsbanner/1.jpg" class="slideshowthumb" alt="thumb02" /></li>--%>
-            <li><a href="#">Slide 3</a><img src="images/newsbanner/3.jpg" class="slideshowthumb" alt="thumb03" /></li>
-       <%--     <li><a href="#">Slide 4</a><img src="images/newsbanner/4.jpg" class="slideshowthumb" alt="thumb04" /></li>--%>
-            <%--  <li><a href="#">Slide 5</a><img src="images/newsbanner/orbit5.jpg" class="slideshowthumb" alt="thumb05" /></li>--%>
+         <li><a href="#">Slide 1</a><img src="images/newsbanner/banner2.jpg" class="slideshowthumb" alt="thumb01" /></li>
+            <li><a href="#">Slide 2</a><img src="images/newsbanner/1.jpg" class="slideshowthumb" alt="thumb02" /></li>
+        
+  <li><a href="#">Slide 3</a><img src="images/newsbanner/banner1.jpg" class="slideshowthumb" alt="thumb01" /></li>
+            <li><a href="#">Slide 4</a><img src="images/newsbanner/4.jpg" class="slideshowthumb" alt="thumb04" /></li>
+            
         </ul>
     </div>
 
@@ -298,7 +295,7 @@
                         </a></span>
                    <br/>
                     
-                    <span style="position: absolute; left:78%; color: darkred;font-size: 15px">More pictures. <a href="#">Click here</a></span>
+                    <%--<span style="position: absolute; left:78%; color: darkred;font-size: 15px">More pictures. <a href="#">Click here</a></span>--%>
 
             
             
@@ -326,6 +323,6 @@
     <script src="javascripts/hoverIntent.js"></script>
     <script src="javascripts/superfish.js"></script>
     <script src="javascripts/responsivemenu.js"></script>
-    <script src="javascripts/gallery/jquery-1.11.0.min.js"></script>
+    
     <script src="javascripts/gallery/lightbox.min.js"></script>
 </asp:Content>

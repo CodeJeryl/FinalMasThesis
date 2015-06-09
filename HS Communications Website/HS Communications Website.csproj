@@ -242,6 +242,8 @@
     <Content Include="images\loading.gif" />
     <Content Include="images\MainHome\2ndheader.jpg" />
     <Content Include="images\MainHome\Admisbutton.png" />
+    <Content Include="images\newsbanner\banner1.jpg" />
+    <Content Include="images\newsbanner\banner2.jpg" />
     <Content Include="images\MainHome\entbutton.png" />
     <Content Include="images\masterpage\bannerPic.png" />
     <Content Include="images\masterpage\logo.png" />
