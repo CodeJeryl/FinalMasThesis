@@ -388,7 +388,7 @@ namespace HS_Communications_Website.Admin
             // 
             this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.3141670227050781D), Telerik.Reporting.Drawing.Unit.Cm(0.00010012308484874666D));
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(9.5D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
+            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.719833374023438D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
             this.textBox1.Style.Font.Name = "Old English Text MT";
             this.textBox1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(20D);
             this.textBox1.Value = "Colegio de San Juan de Letran";

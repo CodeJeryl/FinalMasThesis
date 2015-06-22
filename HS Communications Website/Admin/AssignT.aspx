@@ -14,7 +14,7 @@
 		</div>
         <div class="colp">
             
-            <div class="three columns" style="position: fixed">
+            <div class="four columns" style="position: fixed">
               <asp:ListView ID="ListView1" runat="server" DataKeyNames="fCode" DataSourceID="SqlDataSource1">
                   <AlternatingItemTemplate>
                       <tr style="background-color:#FFF8DC;">
@@ -84,7 +84,13 @@
                               </td>
                           </tr>
                           <tr runat="server">
-                              <td runat="server" style="text-align: center;background-color: #CCCCCC;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;"></td>
+                              <td runat="server" style="text-align: center;background-color: #CCCCCC;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;">
+                                    <asp:DataPager ID="DataPager1" runat="server" PageSize="5">
+                                      <Fields>
+                                          <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="False" ShowLastPageButton="False" />
+                                      </Fields>
+                                  </asp:DataPager>
+                              </td>
                           </tr>
                       </table>
                   </LayoutTemplate>
@@ -106,7 +112,7 @@
             <asp:Button ID="UpdateButton" runat="server" Text="Update Table" CssClass="buttonn" OnClick="UpdateButton_Click" />
 </div>
           
-          <div class="nine columns">
+          <div class="eight columns">
               
               <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
                  Assigning Faculty Successful!</h4></asp:Panel>
@@ -318,7 +324,7 @@
               
 
           </div>
-                    
+             
               
                 </div>
         

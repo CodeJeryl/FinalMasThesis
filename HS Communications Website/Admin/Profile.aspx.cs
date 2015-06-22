@@ -50,7 +50,7 @@ namespace HS_Communications_Website.Admin
                     if (!er.IsDBNull(22)) provinceAddTxtbox.Text = er.GetString(22);
 
 
-                    RadioButtonList1.Text = er.GetString(10);
+                    if (!er.IsDBNull(10)) RadioButtonList1.Text = er.GetString(10);
                     if (!er.IsDBNull(12)) emailAddTxtbox.Text = er.GetString(12);
 
                     con1.Close();

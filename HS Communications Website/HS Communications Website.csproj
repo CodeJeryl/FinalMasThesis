@@ -57,8 +57,12 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Telerik.Reporting, Version=7.0.13.220, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
-    <Reference Include="Telerik.ReportViewer.WebForms, Version=7.0.13.220, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Reporting, Version=7.0.13.220, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=7.0.13.220, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AddAdviser.aspx" />
@@ -979,7 +983,6 @@
     <Content Include="stylesheets\websymbols\websymbols-regular-webfont.eot" />
     <Content Include="stylesheets\websymbols\websymbols-regular-webfont.ttf" />
     <Content Include="stylesheets\websymbols\websymbols-regular-webfont.woff" />
-    <Content Include="images\newsbanner\Thumbs.db" />
     <Content Include="template\stylesheets\fonts\Bitter-Bold-webfont.eot" />
     <Content Include="template\stylesheets\fonts\Bitter-Bold-webfont.ttf" />
     <Content Include="template\stylesheets\fonts\Bitter-Bold-webfont.woff" />
@@ -1002,6 +1005,7 @@
     <Content Include="Admin\Web.config" />
     <Content Include="Faculty\Web.config" />
     <Content Include="Portal\Web.config" />
+    <None Include="Properties\PublishProfiles\arvixe.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

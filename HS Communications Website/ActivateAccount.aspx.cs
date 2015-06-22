@@ -66,16 +66,17 @@ namespace HS_Communications_Website
                 upd.ExecuteNonQuery();
                 conP.Close();
 
-                conPins.Close();
-                conPins.Open();
-                SqlCommand ins2 = new SqlCommand("Insert into pDetailsTbl(studno) values('" + userTxtbox.Text + "')", conPins);
-                ins2.ExecuteNonQuery();
-                conPins.Close();
+                //insert to pdetails table
+                //conPins.Close();
+                //conPins.Open();
+                //SqlCommand ins2 = new SqlCommand("Insert into pDetailsTbl(studno) values('" + userTxtbox.Text + "')", conPins);
+                //ins2.ExecuteNonQuery();
+                //conPins.Close();
 
                 string mess = this.PopulateBody(fulln, y.ToString(), userTxtbox.Text, lastn);
                 // string mess = "Your Password: " + y.ToString() + "<br/> you can change your password after logging in.";
 
-                sendEmail("JerylSuarez@letranbataan.edu.ph", emailTxtbox.Text, "", "", "HighSchool Communication Account Activation", mess);
+                sendEmail("JerylSuarez@letranbataan.edu.ph", emailTxtbox.Text, "", "", "HighSchool Communications: Account Activation", mess);
               
                 Panel1.Visible = true;
              //   SucLbl.Text = "Student Account and Parent Account is Successfully Activated";

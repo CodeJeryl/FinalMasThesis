@@ -14,7 +14,7 @@
 		</div>
        
                 <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
-                   Student Account and Parent Account is Successfully Activated</h4></asp:Panel>
+                   Student Account and Parent Account Successfully Activated</h4></asp:Panel>
                   <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
                     <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
                 

@@ -182,7 +182,7 @@
                                    <a>Uploading</a>
                                     <ul class="dropdown">
                                         <li><a href="Upload.aspx">Memo/Class Schedule</a></li>
-                <li><a href="AddStudents.aspx">Upload New Students</a></li>
+       <%--         <li><a href="AddStudents.aspx">Upload New Students</a></li>--%>
                                             <li><a href="ManageGrades.aspx">Grades</a></li>
                                     </ul>
                                 </li>
