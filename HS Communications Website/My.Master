@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="My.master.cs" Inherits="HS_Communications_Website.My" %>
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+     <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+<meta property="og:image" content="http://my.letranbataan.edu.ph/img/etc/FBThumb.jpg" />
+
+<meta property="og:description" content="" />
+
+<meta property="og:url"content="http://my.letranbataan.edu.ph" />
+
+<meta property="og:title" content="Letran Bataan College Student Portal" />
+    
+
+  <title>Letran Student Portal</title>
+
+  <link rel="stylesheet" href="foundation/css/normalize.css" />
+  <!-- If you are using CSS version, add this -->
+  <link rel="stylesheet" href="foundation/css/foundation.css" />
+  <link rel="stylesheet" href="foundation/css/app.css" />
+
+  <script src="foundation/js/vendor/custom.modernizr.js"></script>
+   
+    
+    <style>
+       body { 
+    background: url(img/backdroptry.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* IE */
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/backdroptry.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/backdroptry.jpg', sizingMethod='scale')";
+
+}
+         </style>
+    
+
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.custom.js"></script>
+
+</head>
+<body>
+   <%-- <img src="img/backdropSS.jpg" />--%>
+    <form id="form1" runat="server">
+      <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div >
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    
+  <script>
+      document.write('<script src=' +
+      ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+      '.js><\/script>')
+  </script>
+ 
+    <script src="Foundation/js/vendor/jquery.js"></script>
+  <script src="Foundation/js/foundation.min.js"></script>
+  
+
+  <script>
+      $(document).foundation();
+     </script>
+</body>
+
+</html>
+

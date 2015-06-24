@@ -133,6 +133,7 @@
     <Content Include="Foundation\js\vendor\jquery.js" />
     <Content Include="Foundation\js\vendor\modernizr.js" />
     <Content Include="Foundation\js\vendor\placeholder.js" />
+    <Content Include="Home.aspx" />
     <Content Include="images\12.jpg" />
     <Content Include="images\13.jpg" />
     <Content Include="images\14.JPG" />
@@ -344,6 +345,7 @@
     <Content Include="images\up-arrow.png" />
     <Content Include="images\white-arrow.gif" />
     <Content Include="images\wraphover.png" />
+    <Content Include="img\backdroptry.jpg" />
     <Content Include="img\close.png" />
     <Content Include="img\demopage\donate.png" />
     <Content Include="img\demopage\favicon.ico" />
@@ -359,6 +361,8 @@
     <Content Include="img\demopage\thumb-4.jpg" />
     <Content Include="img\demopage\thumb-5.jpg" />
     <Content Include="img\demopage\thumb-6.jpg" />
+    <Content Include="img\etc\FBthumb.jpg" />
+    <Content Include="img\etc\head.png" />
     <Content Include="img\loading.gif" />
     <Content Include="img\next.png" />
     <Content Include="img\prev.png" />
@@ -390,6 +394,8 @@
     <Content Include="javascripts\slidepanel.js" />
     <Content Include="javascripts\superfish.js" />
     <Content Include="javascripts\twitterusername.js" />
+    <Content Include="log.aspx" />
+    <Content Include="Mail\CollegeSend.html" />
     <Content Include="Mail\Send.html" />
     <Content Include="Portal\ChangePassword.aspx" />
     <Content Include="Portal\ContactUs.aspx" />
@@ -873,12 +879,33 @@
     <Compile Include="Faculty\printStudent.aspx.designer.cs">
       <DependentUpon>printStudent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="log.aspx.cs">
+      <DependentUpon>log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="log.aspx.designer.cs">
+      <DependentUpon>log.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MainMaster.Master.cs">
       <DependentUpon>MainMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MainMaster.Master.designer.cs">
       <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="My.Master.cs">
+      <DependentUpon>My.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My.Master.designer.cs">
+      <DependentUpon>My.Master</DependentUpon>
     </Compile>
     <Compile Include="Portal\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
@@ -1005,6 +1032,7 @@
     <Content Include="Admin\Web.config" />
     <Content Include="Faculty\Web.config" />
     <Content Include="Portal\Web.config" />
+    <Content Include="My.Master" />
     <None Include="Properties\PublishProfiles\arvixe.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1023,6 +1051,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\AddedStudents\" />
+    <Folder Include="College\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
