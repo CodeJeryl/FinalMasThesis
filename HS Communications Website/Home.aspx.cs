@@ -61,7 +61,7 @@ namespace HS_Communications_Website
 
                     try
                     {
-                        if (TextBox1.Text.Substring(0, 1) == "5")
+                        if (studNumberTxtbox.Text.StartsWith("5"))
                         {
                             //hs
                             SqlConnection conek1 = new SqlConnection(hsSql);
@@ -161,7 +161,7 @@ namespace HS_Communications_Website
                             rd1.Close();
 
                         }
-                        else if (TextBox1.Text.Substring(0, 1) == "4")
+                        else if (studNumberTxtbox.Text.StartsWith("4"))
                         {
                             SqlCommand studsearch = new SqlCommand("Select * from userAccounts where studno = @studno",
                                                                    con);
@@ -247,7 +247,7 @@ namespace HS_Communications_Website
             {
                 //if (Page.IsValid)
                 //{
-                if (TextBox1.Text.Substring(0, 1) == "5")
+                if (studNumberTxtbox.Text.StartsWith("5"))
                 {
 
                   
@@ -310,7 +310,7 @@ namespace HS_Communications_Website
                         Label1.Text = "Incorrect StudentID or already Activated!";
                     }
                 }
-                else if (TextBox1.Text.Substring(0, 1) == "4")
+                else if (studNumberTxtbox.Text.StartsWith("4")) 
                 {
 
                     using (SqlConnection con = new SqlConnection(sql))
@@ -449,67 +449,85 @@ namespace HS_Communications_Website
 
         protected void forgot1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(sql))
+            try
             {
-                Random x = new Random();
-                int y = x.Next();
+                 if (studNumberTxtbox.Text.StartsWith("5"))
+                 {
+                     
 
-                con.Close();
-                con.Open();
+                 }
+                 else if (studNumberTxtbox.Text.StartsWith("4"))
+                 {
+                     using (SqlConnection con = new SqlConnection(sql))
+                     {
+                         Random x = new Random();
+                         int y = x.Next();
 
-                SqlCommand newcom =
-                    new SqlCommand("Select * from userAccounts where studno =  @studno and forgotpass = @midname", con);
-                newcom.Parameters.Add("@studno", SqlDbType.Int, 10);
-                newcom.Parameters["@studno"].Value = studTxt3.Text;
+                         con.Close();
+                         con.Open();
 
-                newcom.Parameters.Add("@midname", SqlDbType.VarChar);
-                newcom.Parameters["@midname"].Value = midnameTxtbox.Text;
+                         SqlCommand newcom =
+                             new SqlCommand("Select * from userAccounts where studno =  @studno and forgotpass = @midname", con);
+                         newcom.Parameters.Add("@studno", SqlDbType.Int, 10);
+                         newcom.Parameters["@studno"].Value = studTxt3.Text;
 
-                SqlDataReader red1 = newcom.ExecuteReader();
+                         newcom.Parameters.Add("@midname", SqlDbType.VarChar);
+                         newcom.Parameters["@midname"].Value = midnameTxtbox.Text;
 
-                if (red1.Read())
-                {
-                    //bool val = red1[41] as bool? ?? default(bool);
-                    //if (val)
-                    //{
-                    errorPanelForgot.Visible = true;
+                         SqlDataReader red1 = newcom.ExecuteReader();
 
-                    Button3.Enabled = false;
-                    SqlConnection con1 = new SqlConnection(sql);
-                    con1.Close();
-                    con1.Open();
-                    string hashed = CreateHash(y.ToString());
-                    SqlCommand up1 =
-                        new SqlCommand(
-                            "update userAccounts set password = '" + hashed + "' where studno = '" +
-                            Convert.ToInt32(studTxt3.Text) + "'", con1);
-                    up1.ExecuteNonQuery();
-                    string mess = this.PopulateBody(red1.GetInt32(0).ToString(), y.ToString());
-                    //  string mess = "Your New Password: " + y.ToString() + "<br/> you can change your password after logging in.";
+                         if (red1.Read())
+                         {
+                             //bool val = red1[41] as bool? ?? default(bool);
+                             //if (val)
+                             //{
+                             errorPanelForgot.Visible = true;
 
-                    sendEmail("JerylSuarez@letranbataan.edu.ph", red1.GetString(2), "", "",
-                              "Letran Bataan Student Portal: Forgot Password", mess);
-                    errorPanel1.Visible = true;
-                    Label2.Text =
-                        "Your New Password has been sent to your email. Email will arrive within 24 hours. Thank you!";
-                    con1.Close();
-                    //jerylsuarez@gmail.com
-                    //}
-                    //else
-                    //{
-                    //    errorPanelForgot.Visible = true;
-                    //    Label2.Text = "Validate your Account First!";
+                             Button3.Enabled = false;
+                             SqlConnection con1 = new SqlConnection(sql);
+                             con1.Close();
+                             con1.Open();
+                             string hashed = CreateHash(y.ToString());
+                             SqlCommand up1 =
+                                 new SqlCommand(
+                                     "update userAccounts set password = '" + hashed + "' where studno = '" +
+                                     Convert.ToInt32(studTxt3.Text) + "'", con1);
+                             up1.ExecuteNonQuery();
+                             string mess = this.PopulateBody(red1.GetInt32(0).ToString(), y.ToString());
+                             //  string mess = "Your New Password: " + y.ToString() + "<br/> you can change your password after logging in.";
 
-                    //}
-                }
-                else
-                {
-                    errorPanelForgot.Visible = true;
-                    Label2.Text = "Student Number & Middle Name did not Match!";
-                }
+                             sendEmail("JerylSuarez@letranbataan.edu.ph", red1.GetString(2), "", "",
+                                       "Letran Bataan Student Portal: Forgot Password", mess);
+                             errorPanelForgot.Visible = true;
+                             Label2.Text =
+                                 "Your New Password has been sent to your email. Email will arrive within 24 hours. Thank you!";
+                             con1.Close();
+                             //jerylsuarez@gmail.com
+                             //}
+                             //else
+                             //{
+                             //    errorPanelForgot.Visible = true;
+                             //    Label2.Text = "Validate your Account First!";
 
-                con.Close();
+                             //}
+                         }
+                         else
+                         {
+                             errorPanelForgot.Visible = true;
+                             Label2.Text = "Student Number & Middle Name did not Match!";
+                         }
+
+                         con.Close();
+                     }
+
+                 }
             }
+            catch (Exception ex1)
+            {
+                errorPanelForgot.Visible = true;
+                Label2.Text = ex1.Message;
+            }
+           
 
         }
 

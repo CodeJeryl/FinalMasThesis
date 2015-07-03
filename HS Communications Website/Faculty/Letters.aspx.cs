@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -60,6 +61,46 @@ namespace HS_Communications_Website.Faculty
                     Response.Flush();
 
                     Response.End();
+                }
+
+            }
+            catch (Exception er)
+            {
+                ErrorPanel.Visible = true;
+                ErrorLabel.Text = er.Message;
+                //   throw;
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+        }
+
+        protected void searchBtn1_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            try
+            {
+                if (TextBox11.Text == "")
+                {
+                    ListView1.DataSource = null;
+                    ListView1.DataSourceID = "SqlDataSource1";
+                    ListView1.DataBind();
+                }
+                else
+                {
+
+                    con.Close();
+                    con.Open();
+                    SqlDataAdapter dap = new SqlDataAdapter("Select id,title,date,uploader from uploadedFiles where title like '%" + TextBox11.Text + "%'", con);
+                    DataTable tab = new DataTable();
+                    tab.Clear();
+                    dap.Fill(tab);
+
+                    ListView1.DataSourceID = null;
+                    ListView1.DataSource = tab;
+                    ListView1.DataBind();
                 }
 
             }

@@ -24,6 +24,20 @@
                     </SelectParameters>
                     </asp:SqlDataSource>
         	<div class="seven columns centered">
+        	     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                <div class="row collapse prefix-radius">
+                                 <div class="small-5 columns">
+                                      <span class="prefix">Title of Memo:</span>
+                                    </div>
+                                    <div class="small-5 columns">
+                                       <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="small-2 columns">
+                                        <asp:Button ID="searchBtn1" runat="server" Text="Search" CssClass="button postfix" OnClick="searchBtn1_Click" />
+                                    </div>
+                                     </div>
+
                 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
                 
                     <EditItemTemplate>
@@ -129,7 +143,12 @@
                         </tr>
                     </SelectedItemTemplate>
                     </asp:ListView>
-                
+                 </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="searchBtn1" EventName="Click" />
+                        <asp:PostBackTrigger ControlID="ListView1" />
+                    </Triggers>
+                </asp:UpdatePanel>
                 </div>
 	</div><!-- end main content-->
 

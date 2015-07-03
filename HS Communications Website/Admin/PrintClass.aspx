@@ -14,7 +14,13 @@
 	    <div class="sectiontitle">
 			<h4><strong class="colhead">Class list Generator</strong></h4>
 		</div>
-       
+        <div class="four columns ">
+            <strong>Choose Section: </strong>
+      <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="SqlDataSource1" DataTextField="Section" DataValueField="Section">
+           </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [Section], [GR_YR] FROM [BLHD] ORDER BY [GR_YR]"></asp:SqlDataSource>
+        </div>
+       <br/>
         
                 <telerik:ReportViewer ID="ReportViewer1" runat="server" Height="800px" ShowDocumentMapButton="False" ShowHistoryButtons="False" ShowPrintPreviewButton="False" ShowRefreshButton="False" Width="820px"></telerik:ReportViewer>
                 

@@ -53,7 +53,6 @@ namespace HS_Communications_Website.Admin
             {
                 ErrorPanel.Visible = true;
                 ErrorLabel.Text = ee.Message;
-
             }
 
         }
@@ -66,6 +65,7 @@ namespace HS_Communications_Website.Admin
                 ErrorPanel.Visible = false;
 
                 SqlConnection con = new SqlConnection(conss);
+                SqlConnection con1 = new SqlConnection(conss);
 
                 string titl = "RE: " + titleLbl.Text;
                 con.Close();
@@ -83,6 +83,14 @@ namespace HS_Communications_Website.Admin
                 Panel1.Visible = true;
 
                 repTxtbox.Text = "";
+                con.Close();
+
+                con1.Open();
+                SqlCommand qw1 = new SqlCommand("update personalMsgtbl set status = 'replied' where msgID = '" + Convert.ToInt32(Session["msgid"].ToString()) + "'", con);
+                qw1.ExecuteNonQuery();
+
+                con1.Close();
+
 
             }
             catch (Exception ex)

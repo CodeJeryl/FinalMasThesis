@@ -20,5 +20,12 @@ namespace HS_Communications_Website.Faculty
             }
 
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            r.ReportParameters["section"].Value = DropDownList1.SelectedValue.ToString();
+            ReportViewer1.ReportSource = r;
+            ReportViewer1.RefreshReport();
+        }
     }
 }

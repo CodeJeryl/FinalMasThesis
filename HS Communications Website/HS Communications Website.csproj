@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="Admin\AddAdviser.aspx" />
     <Content Include="Admin\ManageDashboard.aspx" />
+    <Content Include="Admin\ManageSchools.aspx" />
     <Content Include="Colegio\AboutUs\CoreValues.aspx" />
     <Content Include="Colegio\AboutUs\History.aspx" />
     <Content Include="Colegio\AboutUs\InstitutionalStrategies.aspx" />
@@ -110,7 +111,9 @@
     <Content Include="Foundation\css\foundation.css" />
     <Content Include="Foundation\css\foundation.min.css" />
     <Content Include="Foundation\css\normalize.css" />
+    <Content Include="Foundation\js\oldRevealHome\foundation.js" />
     <Content Include="Foundation\js\foundation.min.js" />
+    <Content Include="Foundation\js\oldRevealHome\foundation.reveal.js" />
     <Content Include="Foundation\js\foundation\foundation.abide.js" />
     <Content Include="Foundation\js\foundation\foundation.accordion.js" />
     <Content Include="Foundation\js\foundation\foundation.alert.js" />
@@ -128,6 +131,8 @@
     <Content Include="Foundation\js\foundation\foundation.tab.js" />
     <Content Include="Foundation\js\foundation\foundation.tooltip.js" />
     <Content Include="Foundation\js\foundation\foundation.topbar.js" />
+    <Content Include="Foundation\js\jquery-1.9.1.js" />
+    <Content Include="Foundation\js\jquery-ui.custom.js" />
     <Content Include="Foundation\js\vendor\fastclick.js" />
     <Content Include="Foundation\js\vendor\jquery.cookie.js" />
     <Content Include="Foundation\js\vendor\jquery.js" />
@@ -607,6 +612,13 @@
     </Compile>
     <Compile Include="Admin\ManageDashboard.aspx.designer.cs">
       <DependentUpon>ManageDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageSchools.aspx.cs">
+      <DependentUpon>ManageSchools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageSchools.aspx.designer.cs">
+      <DependentUpon>ManageSchools.aspx</DependentUpon>
     </Compile>
     <Compile Include="Colegio\AboutUs\CoreValues.aspx.cs">
       <DependentUpon>CoreValues.aspx</DependentUpon>

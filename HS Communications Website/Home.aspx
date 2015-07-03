@@ -19,7 +19,10 @@ platform = navigator.platform.toLowerCase();
                 type = "text/javascript"; e.parentNode.insertBefore($, e)
         })(document, "script");
     }
+    
 </script>
+    
+     
 <!--End of Zopim Live Chat Script-->
     
 
@@ -129,7 +132,7 @@ platform = navigator.platform.toLowerCase();
     --%>
     
 
-<div id="ActivateModal" class="reveal-modal small" data-reveal>
+<div id="ActivateModal" class="reveal-modal small" >
     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
         <ContentTemplate>
   <h2>Account Activation</h2>
@@ -154,7 +157,7 @@ platform = navigator.platform.toLowerCase();
 </div>
     
     
-<div id="forgotDiv" class="reveal-modal small" data-reveal>
+<div id="forgotDiv" class="reveal-modal small">
     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
         <ContentTemplate>
   <h2>Forgot Password</h2>
@@ -171,7 +174,7 @@ platform = navigator.platform.toLowerCase();
             </ContentTemplate>
        </asp:UpdatePanel>
 </div>
-    
+  
 
 </asp:Content>
 

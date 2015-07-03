@@ -15,6 +15,7 @@ namespace HS_Communications_Website.Admin
             Telerik.Reporting.Group group3 = new Telerik.Reporting.Group();
             Telerik.Reporting.Group group4 = new Telerik.Reporting.Group();
             Telerik.Reporting.ReportParameter reportParameter1 = new Telerik.Reporting.ReportParameter();
+            Telerik.Reporting.ReportParameter reportParameter2 = new Telerik.Reporting.ReportParameter();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             Telerik.Reporting.Drawing.StyleRule styleRule2 = new Telerik.Reporting.Drawing.StyleRule();
             Telerik.Reporting.Drawing.StyleRule styleRule3 = new Telerik.Reporting.Drawing.StyleRule();
@@ -423,6 +424,8 @@ namespace HS_Communications_Website.Admin
             this.DataSource = this.sqlDataSource1;
             this.Filters.Add(new Telerik.Reporting.Filter("=IIF(Fields.studno is null, \"true\", Fields.studno)", Telerik.Reporting.FilterOperator.Equal, "=IIF(Parameters.studno.Value is null,IsNull(Fields.studno, \"true\"), Parameters.st" +
             "udno.Value)"));
+            this.Filters.Add(new Telerik.Reporting.Filter("=IIF(Fields.lastn is null, \"true\",Fields.lastn)", Telerik.Reporting.FilterOperator.Equal, "=IIF(Parameters.lastn.Value is null,IsNull(Fields.lastn, \"true\"),Parameters.lastn" +
+            ".Value)"));
             group1.GroupFooter = this.studnoGroupFooterSection;
             group1.GroupHeader = this.studnoGroupHeaderSection;
             group1.Groupings.Add(new Telerik.Reporting.Grouping("=Fields.studno"));
@@ -464,7 +467,11 @@ namespace HS_Communications_Website.Admin
             reportParameter1.Name = "studno";
             reportParameter1.Type = Telerik.Reporting.ReportParameterType.Integer;
             reportParameter1.Visible = true;
+            reportParameter2.AllowNull = true;
+            reportParameter2.Name = "lastn";
+            reportParameter2.Visible = true;
             this.ReportParameters.Add(reportParameter1);
+            this.ReportParameters.Add(reportParameter2);
             this.Style.BackgroundColor = System.Drawing.Color.White;
             styleRule1.Selectors.AddRange(new Telerik.Reporting.Drawing.ISelector[] {
             new Telerik.Reporting.Drawing.StyleSelector("Title")});
