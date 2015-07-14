@@ -14,7 +14,6 @@ namespace HS_Communications_Website.Admin
         {
 
         }
-
         string conss =
                   System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
   
@@ -40,7 +39,6 @@ namespace HS_Communications_Website.Admin
                     Session["msgid"] = hid.Value;
                     Session["studid"] = studid.Value;
                     Response.Redirect("Message.aspx");
-
                 }
 
                 if (e.CommandName == "del")
@@ -55,7 +53,6 @@ namespace HS_Communications_Website.Admin
                     //   SyllaUploadListview.DataBind();
                     ListView1.DataBind();
                     //  dataload();
-
                 }
             }
             catch (Exception er)

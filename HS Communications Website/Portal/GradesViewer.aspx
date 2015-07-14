@@ -18,7 +18,8 @@
                 <br />
                 
 
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [Subcode], [Units], [first], [second], [third], [fourth], [d1], [d2], [d3], [d4] FROM [SMTR] WHERE ([Studno] = @Studno)">
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [Subcode], [Units], [first], [second], [third], [fourth], 
+                            [Ave], [d1], [d2], [d3], [d4] FROM [GradesViewer] WHERE ([Studno] = @Studno)">
                             <SelectParameters>
                                 <asp:SessionParameter DefaultValue="0" Name="Studno" SessionField="studno" Type="Int32" />
                             </SelectParameters>
@@ -129,6 +130,9 @@
                                      <td style="text-align: center">
                                         <asp:Label ID="fourthLabel" runat="server" Text='<%# Eval("fourth") %>' />
                                     </td>
+                                     <td  style="background-color: #ffeaaa; text-align: center">
+                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Ave") %>' />
+                                    </td>
                                  <%--   <td>
                                         <asp:Label ID="d1Label" runat="server" Text='<%# Eval("d1") %>' />
                                     </td>
@@ -155,7 +159,7 @@
                                                     <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Second Quarter</th>
                                                     <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Third Quarter</th>
                                                     <th runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Fourth Quarter</th>
-                                                  
+                                                      <th id="Th1" runat="server" style="padding:10px 15px 10px 15px;background-color:yellow">Average</th>
                                                 </tr>
                                                 <tr id="itemPlaceholder" runat="server">
                                                 </tr>
@@ -202,6 +206,15 @@
                                 </tr>
                             </SelectedItemTemplate>
                         </asp:ListView>
+                
+                <br /> 
+                <div style="font-weight: 500; font-size: 15px">
+                    First Quarter Average : <asp:Label ID="firstAve" runat="server" Text="1"></asp:Label> <br/>
+                      Second Quarter Average : <asp:Label ID="secondAve" runat="server" Text="2"></asp:Label> <br/>
+                      Third Quarter Average : <asp:Label ID="thirdAve" runat="server" Text="3"></asp:Label> <br/>
+                      Fourth Quarter Average : <asp:Label ID="fourthAve" runat="server" Text="4"></asp:Label> <br/>
+                      General Weoghted Average : <asp:Label ID="genAve" runat="server" Text="5"></asp:Label> 
+                </div>
                     </div>
                  
                 

@@ -31,19 +31,16 @@ namespace HS_Communications_Website.Admin
                 {
 
                     DropDownList drop = (DropDownList)(e.Item.FindControl("DropDownList1"));
-
-                    SqlCommand en = new SqlCommand("update smtr set "+drop.SelectedValue+" = 'true'", con);
+                    SqlCommand en = new SqlCommand("update smtr set " + drop.SelectedValue + " = 'true'", con);
                     en.ExecuteNonQuery();
 
                 }
-                if(e.CommandName == "disable")
+                if (e.CommandName == "disable")
                 {
 
                     DropDownList drop = (DropDownList)(e.Item.FindControl("DropDownList1"));
-
                     SqlCommand en1 = new SqlCommand("update smtr set " + drop.SelectedValue + " = 'false'", con);
                     en1.ExecuteNonQuery();
-
                 }
 
                 con.Close();
@@ -51,7 +48,6 @@ namespace HS_Communications_Website.Admin
 
                 Panel1.Visible = true;
                 Label1.Text = "Visibility of grades is successfully updated!";
-
             }
             catch (Exception ee)
             {
@@ -62,11 +58,8 @@ namespace HS_Communications_Website.Admin
 
         protected void ListView2_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
-            
             try
             {
-
-
                 if (e.CommandName == "open")
                 {
                     Label sectno = (Label)(e.Item.FindControl("SectnoLabel"));
@@ -78,9 +71,7 @@ namespace HS_Communications_Website.Admin
                     Session["teachername"] = teachername.Text;
 
                     Response.Redirect("AddGrades.aspx");
-                  }
-
-
+                }
             }
             catch (Exception ee)
             {

@@ -17,22 +17,21 @@ namespace HS_Communications_Website.Admin
         }
 
 
-        string conss = ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString; 
+        string conss = ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
         protected void Button1_Click(object sender, EventArgs e)
         {
             try
             {
 
-          
-            SqlConnection con = new SqlConnection(conss);
+                SqlConnection con = new SqlConnection(conss);
 
-            con.Close();
-            con.Open();
-            
-            SqlCommand com = new SqlCommand("Insert into schoolTbl values('"+TextBox1.Text+"','"+TextBox2.Text+"'",con);
-            com.ExecuteNonQuery();
+                con.Close();
+                con.Open();
 
-            Panel1.Visible = true;
+                SqlCommand com = new SqlCommand("Insert into schoolTbl values('" + TextBox1.Text + "','" + TextBox2.Text + "')", con);
+                com.ExecuteNonQuery();
+
+                Panel1.Visible = true;
             }
             catch (Exception ex)
             {

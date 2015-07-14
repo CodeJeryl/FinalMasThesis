@@ -45,7 +45,10 @@
 
                 <div class="six columns">
                     <p>School Last Attended: 
-                        <asp:TextBox ID="lastattendTxtbox" runat="server"></asp:TextBox></p>
+                        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="school" DataValueField="schAddress" Height="40px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1" Width="272px">
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [school], [schAddress] FROM [schoolTbl] ORDER BY [school]"></asp:SqlDataSource>
+                       </p>
                 </div>
                 <div class="six columns">
                     <p>School Address: 
