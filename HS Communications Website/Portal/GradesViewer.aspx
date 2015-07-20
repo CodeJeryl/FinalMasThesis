@@ -208,12 +208,12 @@
                         </asp:ListView>
                 
                 <br /> 
-                <div style="font-weight: 500; font-size: 15px">
-                    First Quarter Average : <asp:Label ID="firstAve" runat="server" Text="1"></asp:Label> <br/>
-                      Second Quarter Average : <asp:Label ID="secondAve" runat="server" Text="2"></asp:Label> <br/>
-                      Third Quarter Average : <asp:Label ID="thirdAve" runat="server" Text="3"></asp:Label> <br/>
-                      Fourth Quarter Average : <asp:Label ID="fourthAve" runat="server" Text="4"></asp:Label> <br/>
-                      General Weoghted Average : <asp:Label ID="genAve" runat="server" Text="5"></asp:Label> 
+                <div style="font-weight: 700; font-size: 15px">
+                    First Quarter Average : <asp:Label ID="firstAve" runat="server" Text=""></asp:Label> <br/>
+                      Second Quarter Average : <asp:Label ID="secondAve" runat="server" Text=""></asp:Label> <br/>
+                      Third Quarter Average : <asp:Label ID="thirdAve" runat="server" Text=""></asp:Label> <br/>
+                      Fourth Quarter Average : <asp:Label ID="fourthAve" runat="server" Text=""></asp:Label> <br/>
+                      General Weighted Average : <asp:Label ID="genAve" runat="server" Text=""></asp:Label> 
                 </div>
                     </div>
                  

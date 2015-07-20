@@ -213,6 +213,7 @@
                                         <li><a href="AddTeachers.aspx">Add Teachers</a></li>
                                         <li><a href="ManageDashboard.aspx">Manage Dashboard</a></li>
                                            <li><a href="ManageSchools.aspx">Manage Schools</a></li>
+                                          <li><a href="GradeRange.aspx">Manage Range of Grades</a></li>
                                         <li><a href="ManageAccnt.aspx">Enable/Disable Accounts</a></li>
                                     </ul>
                                 </li>
@@ -250,9 +251,10 @@
                     <p class="back-top floatright">
                         <a href="#top"><span></span></a>
                     </p>
-                    <div class="four columns">
-                        <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>
-                        Dominican Avenue, Abucay, Bataan
+                       <div class="four columns">
+                        <h1><a class="bataan">Student Portal</a></h1>                  
+                        <%--   <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>--%>
+                      
                         <p></p>
                     </div>
 

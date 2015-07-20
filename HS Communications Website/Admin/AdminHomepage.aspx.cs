@@ -32,7 +32,7 @@ namespace HS_Communications_Website.Admin
             {
 
                 con = new SqlConnection(conss);
-                SqlCommand cmd = new SqlCommand("Select town,tCount from dashboard where SY = '2011-2012' and category ='town' order by tcount", con);
+                SqlCommand cmd = new SqlCommand("Select town,tCount from dashboard where SY = '2014-2015' and category ='town' order by tcount", con);
                 con.Open();
                 Series series = Chart1.Series["Series1"];
                 SqlDataReader red = cmd.ExecuteReader();
@@ -70,7 +70,7 @@ namespace HS_Communications_Website.Admin
             {
 
                 con = new SqlConnection(conss);
-                SqlCommand cmd = new SqlCommand("Select school,sCount from dashboard where SY = '2011-2012' and category ='sc' order by scount", con);
+                SqlCommand cmd = new SqlCommand("Select school,sCount from dashboard where SY = '2014-2015' and category ='sc' order by scount", con);
                 con.Open();
                 Series series = Chart2.Series["Series1"];
                 SqlDataReader red = cmd.ExecuteReader();

@@ -25,13 +25,16 @@ namespace HS_Communications_Website.Portal
                 SqlCommand avg = new SqlCommand("Select AVG(Convert(decimal,LEFT(first, 2))),avg(Convert(decimal,LEFT(second, 2))),avg(Convert(decimal,LEFT(third, 2))),avg(Convert(decimal,LEFT(fourth, 2))) from gradesviewer where studno = '" + Session["studno"] + "'", con1);
                 SqlDataReader rd = avg.ExecuteReader();
 
+                
                 if(rd.Read())
                 {
-                  if (!rd.IsDBNull(0))  firstAve.Text = rd.GetDecimal(0).ToString();
-                  if (!rd.IsDBNull(1)) secondAve.Text = rd.GetDecimal(1).ToString();
-                  if (!rd.IsDBNull(2)) thirdAve.Text = rd.GetDecimal(2).ToString();
-                  if (!rd.IsDBNull(3)) fourthAve.Text = rd.GetDecimal(3).ToString();
-                    genAve.Text = ((rd.GetDecimal(0) + rd.GetDecimal(1) + rd.GetDecimal(2) + rd.GetDecimal(3))/4).ToString();
+             if (!rd.IsDBNull(0))  firstAve.Text = rd.GetDecimal(0).ToString("#.##");
+             if (!rd.IsDBNull(1)) secondAve.Text = rd.GetDecimal(1).ToString("#.##");
+             if (!rd.IsDBNull(2)) thirdAve.Text = rd.GetDecimal(2).ToString("#.##");
+             if (!rd.IsDBNull(3)) fourthAve.Text = rd.GetDecimal(3).ToString("#.##");
+  
+                    if(!rd.IsDBNull(0) && !rd.IsDBNull(1) && !rd.IsDBNull(2) && !rd.IsDBNull(3))
+                        genAve.Text = ((rd.GetDecimal(0) + rd.GetDecimal(1) + rd.GetDecimal(2) + rd.GetDecimal(3)) / 4).ToString("#.##");
                 }
 
               

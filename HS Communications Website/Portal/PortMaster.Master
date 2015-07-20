@@ -222,12 +222,12 @@
                     <p class="back-top floatright">
                         <a href="#top"><span></span></a>
                     </p>
-                    <div class="four columns">
-                        <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>
-                        Dominican Avenue, Abucay, Bataan
+                     <div class="four columns">
+                        <h1><a class="bataan">Student Portal</a></h1>                  
+                        <%--   <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>--%>
+                      
                         <p></p>
                     </div>
-
 
                     <div class="two columns">
                         <br />

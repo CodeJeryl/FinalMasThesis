@@ -17,32 +17,59 @@ namespace HS_Communications_Website.Faculty
         private bool d4;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-                subLbl.Text = Session["subcode"].ToString();
-            secLbl.Text = Session["sectno"].ToString();
-            //    teachLbl.Text = Session["teachername"].ToString();
-
-            var constring =
-                   System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
-            string conss = constring.ConnectionString;
-
-            SqlConnection con = new SqlConnection(conss);
-
-            con.Close();
-            con.Open();
-            SqlCommand check = new SqlCommand("Select d1,d2,d3,d4 from smtr", con);
-            SqlDataReader er = check.ExecuteReader();
-
-            if (er.Read())
+            try
             {
 
-                 a1 = !Convert.ToBoolean(er.GetString(0));
-                b2 = !Convert.ToBoolean(er.GetString(1));
-                c3 = !Convert.ToBoolean(er.GetString(2));
-               d4 = !Convert.ToBoolean(er.GetString(3));
+                if (!IsPostBack)
+                    subLbl.Text = Session["subcode"].ToString();
+                secLbl.Text = Session["sectno"].ToString();
+                //    teachLbl.Text = Session["teachername"].ToString();
+
+                var constring =
+                       System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
+                string conss = constring.ConnectionString;
+
+                SqlConnection con = new SqlConnection(conss);
+
+                con.Close();
+                con.Open();
+                SqlCommand check = new SqlCommand("Select d1,d2,d3,d4 from smtr", con);
+                SqlDataReader er = check.ExecuteReader();
+
+                if (er.Read())
+                {
+
+                    a1 = !Convert.ToBoolean(er.GetString(0));
+                    b2 = !Convert.ToBoolean(er.GetString(1));
+                    c3 = !Convert.ToBoolean(er.GetString(2));
+                    d4 = !Convert.ToBoolean(er.GetString(3));
+
+                }
+                con.Close();
+                con.Open();
+
+                SqlDataAdapter dap = new SqlDataAdapter("Select fromGrades from gradeRangeTbl", con);
+
+                dap.Fill(ds);
+
+                codeA = (int)ds.Tables[0].Rows[0][0];
+                codeB = (int)ds.Tables[0].Rows[1][0];
+                codeC = (int)ds.Tables[0].Rows[2][0];
+                codeD = (int)ds.Tables[0].Rows[3][0];
 
             }
+            catch (Exception ex)
+            {
+                ErrorPanel.Visible = true;
+                ErrorLabel.Text = ex.Message;
+            }
         }
+
+        private DataSet ds = new DataSet();
+        private int codeA;
+        private int codeB;
+        private int codeC;
+        private int codeD;
 
         protected void UpdateButton_Click(object sender, EventArgs e)
         {
@@ -101,13 +128,13 @@ namespace HS_Communications_Website.Faculty
             try
             {
 
-                    e.Row.Cells[1].Enabled = a1;
-                    e.Row.Cells[2].Enabled = b2;
-                    e.Row.Cells[3].Enabled = c3;
-                    e.Row.Cells[4].Enabled = d4;
+                e.Row.Cells[1].Enabled = a1;
+                e.Row.Cells[2].Enabled = b2;
+                e.Row.Cells[3].Enabled = c3;
+                e.Row.Cells[4].Enabled = d4;
 
-              
-                
+
+
                 if (e.Row.RowType == DataControlRowType.DataRow)
                     if (!tableCopied)
                     {
@@ -115,8 +142,7 @@ namespace HS_Communications_Website.Faculty
                         ViewState["originalValuesDataTable"] = originalDataTable;
                         tableCopied = true;
                     }
-
-
+                
                 if (e.Row.RowType == DataControlRowType.DataRow)
                 {
                     DataRow dr = ((DataRowView)e.Row.DataItem).Row;
@@ -125,19 +151,19 @@ namespace HS_Communications_Website.Faculty
                     bool isNumeric = int.TryParse(dr["first"].ToString(), out a);
                     if (isNumeric)
                     {
-                        if (a >= 90)
+                        if (a >= codeA)
                         {
                             ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(A)";
                         }
-                        else if (a >= 85)
+                        else if (a >= codeB)
                         {
                             ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(P)";
                         }
-                        else if (a >= 80)
+                        else if (a >= codeC)
                         {
                             ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(AP)";
                         }
-                        else if (a >= 75)
+                        else if (a >= codeD)
                         {
                             ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(D)";
                         }
@@ -151,19 +177,19 @@ namespace HS_Communications_Website.Faculty
                     bool isNumeric2 = int.TryParse(dr["second"].ToString(), out b);
                     if (isNumeric2)
                     {
-                        if (b >= 90)
+                        if (b >= codeA)
                         {
                             ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(A)";
                         }
-                        else if (b >= 85)
+                        else if (b >= codeB)
                         {
                             ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(P)";
                         }
-                        else if (b >= 80)
+                        else if (b >= codeC)
                         {
                             ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(AP)";
                         }
-                        else if (b >= 75)
+                        else if (b >= codeD)
                         {
                             ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(D)";
                         }
@@ -177,19 +203,19 @@ namespace HS_Communications_Website.Faculty
                     bool isNumeric3 = int.TryParse(dr["third"].ToString(), out c);
                     if (isNumeric3)
                     {
-                        if (b >= 90)
+                        if (b >= codeA)
                         {
                             ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(A)";
                         }
-                        else if (b >= 85)
+                        else if (b >= codeB)
                         {
                             ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(P)";
                         }
-                        else if (b >= 80)
+                        else if (b >= codeC)
                         {
                             ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(AP)";
                         }
-                        else if (b >= 75)
+                        else if (b >= codeD)
                         {
                             ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(D)";
                         }
@@ -203,19 +229,19 @@ namespace HS_Communications_Website.Faculty
                     bool isNumeric4 = int.TryParse(dr["fourth"].ToString(), out d);
                     if (isNumeric4)
                     {
-                        if (b >= 90)
+                        if (b >= codeA)
                         {
                             ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(A)";
                         }
-                        else if (b >= 85)
+                        else if (b >= codeB)
                         {
                             ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(P)";
                         }
-                        else if (b >= 80)
+                        else if (b >= codeC)
                         {
                             ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(AP)";
                         }
-                        else if (b >= 75)
+                        else if (b >= codeD)
                         {
                             ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(D)";
                         }

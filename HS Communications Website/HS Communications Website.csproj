@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AddAdviser.aspx" />
+    <Content Include="Admin\GradeRange.aspx" />
     <Content Include="Admin\ManageDashboard.aspx" />
     <Content Include="Admin\ManageSchools.aspx" />
     <Content Include="Colegio\AboutUs\CoreValues.aspx" />
@@ -605,6 +606,13 @@
     </Compile>
     <Compile Include="Admin\AddAdviser.aspx.designer.cs">
       <DependentUpon>AddAdviser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GradeRange.aspx.cs">
+      <DependentUpon>GradeRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\GradeRange.aspx.designer.cs">
+      <DependentUpon>GradeRange.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ManageDashboard.aspx.cs">
       <DependentUpon>ManageDashboard.aspx</DependentUpon>
