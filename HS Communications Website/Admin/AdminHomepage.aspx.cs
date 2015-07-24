@@ -15,8 +15,10 @@ namespace HS_Communications_Website.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            
+           if (!IsPostBack)
             {
+                DropDownList1.SelectedValue = "2014-2015";
                 GetChartData();
                 GetChartDataSc();
             }

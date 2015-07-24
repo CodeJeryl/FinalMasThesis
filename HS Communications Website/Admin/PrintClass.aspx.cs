@@ -22,9 +22,12 @@ namespace HS_Communications_Website.Admin
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (DropDownList1.Text != "Choose Section")
+            {
             r.ReportParameters["section"].Value = DropDownList1.SelectedValue.ToString();
             ReportViewer1.ReportSource = r;
             ReportViewer1.RefreshReport();
+            }
         }
     }
 }

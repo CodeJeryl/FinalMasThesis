@@ -36,9 +36,7 @@ namespace HS_Communications_Website.Portal
                     if(!rd.IsDBNull(0) && !rd.IsDBNull(1) && !rd.IsDBNull(2) && !rd.IsDBNull(3))
                         genAve.Text = ((rd.GetDecimal(0) + rd.GetDecimal(1) + rd.GetDecimal(2) + rd.GetDecimal(3)) / 4).ToString("#.##");
                 }
-
-              
-
+                
             }
             catch (Exception ex)
             {

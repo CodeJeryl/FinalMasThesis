@@ -21,15 +21,15 @@ namespace HS_Communications_Website.Admin
         string conString = ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
         protected void Button1_Click(object sender, EventArgs e)
         {
-          
+            Panel1.Visible = false;
+            ErrorPanel.Visible = false;
             SqlConnection con = new SqlConnection(conString);
             SqlConnection coc = new SqlConnection(conString);
             try
             {
                 if (Page.IsValid)
                 {
-                    Panel1.Visible = false;
-                    ErrorPanel.Visible = false;
+                  
 
            
                     if (FileUpload1.PostedFile.ContentLength > 5100000)
@@ -44,20 +44,20 @@ namespace HS_Communications_Website.Admin
 
                         string filename = Path.GetFileName(filePath);
                         string contenttype = String.Empty;
-                        string ext = Path.GetExtension(filename);
+                        string ext = Path.GetExtension(filename).ToUpper();
 
                         switch (ext)
                         {
-                            case ".doc":
+                            case ".DOC":
                                 contenttype = "application/msword";
                                 break;
-                            case ".docx":
+                            case ".DOCX":
                                 contenttype = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
                                 break;
-                            case ".pdf":
+                            case ".PDF":
                                 contenttype = "application/pdf";
                                 break;
-                            case ".jpg":
+                            case ".JPG":
                                 contenttype = "image/jpeg";
                                 break;
                         }

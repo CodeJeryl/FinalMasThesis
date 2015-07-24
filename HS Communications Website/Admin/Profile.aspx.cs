@@ -21,6 +21,8 @@ namespace HS_Communications_Website.Admin
         {
             try
             {
+               // DropDownList1.Items.Insert(0, new ListItem("--Choose School--", "0"));
+               
                 var constring =
                     System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
                 string conss = constring.ConnectionString;
@@ -133,6 +135,11 @@ namespace HS_Communications_Website.Admin
                 upd2.ExecuteNonQuery();
                 conP.Close();
 
+                conP.Open();
+
+                SqlCommand upd3 = new SqlCommand("update BLHD set lname = '" + lastnameTxtbox.Text + "',fname = '" + firstnameTxtbox.Text + "' where studno = '" + TextBox1.Text + "'",conP);
+                upd3.ExecuteNonQuery();
+                conP.Close();
 
 
                 Panel1.Visible = true;

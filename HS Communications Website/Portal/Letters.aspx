@@ -28,7 +28,7 @@
                     <asp:Parameter DefaultValue="Memo" Name="uploadtype" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
-            <div class="eight columns centered">
+            <div class="ten columns centered">
 
                 <div class="seven columns centered">
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">

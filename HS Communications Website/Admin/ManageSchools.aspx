@@ -30,6 +30,101 @@
                 </p>
                 <span style="position: relative; left: 60%">
                  <asp:Button ID="Button1" runat="server" Text="Add Schools" CssClass="buttonn" OnClick="Button1_Click" ValidationGroup="s" /></span>
+                
+                <br/>
+                <br/>
+
+                <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
+                   
+                    <EditItemTemplate>
+                        <tr style="">
+                            <td>
+                                <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
+                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
+                            </td>
+                            <td>
+                                <asp:Label ID="idLabel1" runat="server" Text='<%# Eval("id") %>' />
+                            </td>
+                            <td>
+                                <asp:TextBox ID="schoolTextBox" runat="server" Text='<%# Bind("school") %>' />
+                            </td>
+                            <td>
+                                <asp:TextBox ID="schAddressTextBox" runat="server" Text='<%# Bind("schAddress") %>' />
+                            </td>
+                        </tr>
+                    </EditItemTemplate>
+                    <EmptyDataTemplate>
+                        <table runat="server" style="">
+                            <tr>
+                                <td>No data was returned.</td>
+                            </tr>
+                        </table>
+                    </EmptyDataTemplate>
+                    <InsertItemTemplate>
+                        <tr style="">
+                            <td>
+                                <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
+                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
+                            </td>
+                            <td>&nbsp;</td>
+                            <td>
+                                <asp:TextBox ID="schoolTextBox" runat="server" Text='<%# Bind("school") %>' />
+                            </td>
+                            <td>
+                                <asp:TextBox ID="schAddressTextBox" runat="server" Text='<%# Bind("schAddress") %>' />
+                            </td>
+                        </tr>
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <tr style="">
+                            <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# Eval("id") %>' />
+                 <td>
+                                <asp:Label ID="schoolLabel" runat="server" Text='<%# Eval("school") %>' />
+                            </td>
+                            <td>
+                                <asp:Label ID="schAddressLabel" runat="server" Text='<%# Eval("schAddress") %>' />
+                            </td>
+                              <td>
+                                 <asp:Button ID="enableBtn" runat="server" Text="Enable"  CssClass="buttonn" CommandName="del"/>
+                            </td>
+                        </tr>
+                    </ItemTemplate>
+                    <LayoutTemplate>
+                        <table runat="server">
+                            <tr runat="server">
+                                <td runat="server">
+                                    <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                        <tr runat="server" style="">
+                                           
+                                            <th runat="server">school</th>
+                                            <th runat="server">schAddress</th>
+                                            <th id="Th1" runat="server">Control</th>
+                                        </tr>
+                                        <tr id="itemPlaceholder" runat="server">
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr runat="server">
+                                <td runat="server" style=""></td>
+                            </tr>
+                        </table>
+                    </LayoutTemplate>
+                    <SelectedItemTemplate>
+                        <tr style="">
+                            <td>
+                                <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
+                            </td>
+                            <td>
+                                <asp:Label ID="schoolLabel" runat="server" Text='<%# Eval("school") %>' />
+                            </td>
+                            <td>
+                                <asp:Label ID="schAddressLabel" runat="server" Text='<%# Eval("schAddress") %>' />
+                            </td>
+                        </tr>
+                    </SelectedItemTemplate>
+                   </asp:ListView>
+                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT * FROM [schoolTbl] ORDER BY [school]"></asp:SqlDataSource>
             </div>
 
            

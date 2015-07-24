@@ -236,11 +236,11 @@
                 <h4>Important Dates</h4>
             </div>
         <ul class="latest-posts">
-          <li><span class="date"><em class="day">27</em><em class="month">Mar</em></span> <br/><a href="#">Baccalaureate Mass</a> </li>
-          <li><span class="date"><em class="day">30</em><em class="month">Mar</em></span> <br/><a href="#">1st Commencement Exercises </a> </li>
-          <li><span class="date"><em class="day">7</em><em class="month">Apr</em></span><br/> <a href="#">Encoding of Grades</a> </li>
-          <li><span class="date"><em class="day">13</em><em class="month">Apr</em></span> <br/><a href="#">Start of Enrollment</a> </li>
-              <li><span class="date"><em class="day">22</em><em class="month">Jun</em></span><br/> <a href="#">Start of Classes</a> </li>
+          <li><span class="date"><em class="day">3</em><em class="month">Aug</em></span> <br/><a href="#">Nutrition Month Culminating Activities</a> </li>
+          <li><span class="date"><em class="day">8</em><em class="month">Aug</em></span> <br/><a href="#">Feast of St. Dominic </a> </li>
+          <li><span class="date"><em class="day">24</em><em class="month">Aug</em></span><br/> <a href="#">1st Quarter Examination</a> </li>
+          <li><span class="date"><em class="day">27</em><em class="month">Aug</em></span> <br/><a href="#">Buwan ng Wika Culminating Activities</a> </li>
+              <li><span class="date"><em class="day">29</em><em class="month">Aug</em></span><br/> <a href="#">Bible Quiz Competition</a> </li>
         </ul>
         
 

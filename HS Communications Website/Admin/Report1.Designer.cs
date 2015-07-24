@@ -70,7 +70,7 @@ namespace HS_Communications_Website.Admin
             // 
             // studnoGroupHeaderSection
             // 
-            this.studnoGroupHeaderSection.Height = Telerik.Reporting.Drawing.Unit.Cm(1.1058331727981567D);
+            this.studnoGroupHeaderSection.Height = Telerik.Reporting.Drawing.Unit.Cm(1.1690056324005127D);
             this.studnoGroupHeaderSection.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.studnoCaptionTextBox,
             this.studnoDataTextBox,
@@ -111,7 +111,7 @@ namespace HS_Communications_Website.Admin
             this.lastnDataTextBox.CanGrow = true;
             this.lastnDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(9.4569492340087891D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.lastnDataTextBox.Name = "lastnDataTextBox";
-            this.lastnDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.7747917175292969D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
+            this.lastnDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.7747917175292969D), Telerik.Reporting.Drawing.Unit.Cm(1.1690056324005127D));
             this.lastnDataTextBox.StyleName = "Data";
             this.lastnDataTextBox.Value = "=Fields.lastn";
             // 

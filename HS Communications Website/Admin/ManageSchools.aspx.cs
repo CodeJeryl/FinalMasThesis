@@ -39,5 +39,25 @@ namespace HS_Communications_Website.Admin
                 ErrorLabel.Text = ex.Message;
             }
         }
+
+        protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conss); 
+            HiddenField hid = (HiddenField)(e.Item.FindControl("HiddenField1"));
+            if (e.CommandName == "del")
+            {
+                con.Close();
+                con.Open();
+
+                SqlCommand qw = new SqlCommand("delete from schoolTbl where ID = '" + hid.Value + "'", con);
+                qw.ExecuteNonQuery();
+                ErrorPanel.Visible = true;
+                ErrorLabel.Text = "School successfully Deleted!";
+                //   SyllaUploadListview.DataBind();
+                ListView1.DataBind();
+                //  dataload();
+
+            }
+        }
     }
 }
