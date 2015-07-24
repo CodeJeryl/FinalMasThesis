@@ -26,8 +26,19 @@ namespace HS_Communications_Website.Admin
             {
                 HiddenField hid = (HiddenField)(e.Item.FindControl("HiddenField1"));
                 HiddenField studid = (HiddenField)(e.Item.FindControl("HiddenField2"));
+                Label statlbl = (Label)(e.Item.FindControl("statusLabel"));
+                
                 if (e.CommandName == "read")
                 {
+                    if (statlbl.Text == "replied")
+                    {
+                        Session["msgid"] = hid.Value;
+                        Session["studid"] = studid.Value;
+                        Response.Redirect("Message.aspx"); 
+                    }
+                    else
+                    {
+                 
                     con.Close();
                     con.Open();
 
@@ -39,6 +50,8 @@ namespace HS_Communications_Website.Admin
                     Session["msgid"] = hid.Value;
                     Session["studid"] = studid.Value;
                     Response.Redirect("Message.aspx");
+
+                    }
                 }
 
                 if (e.CommandName == "del")

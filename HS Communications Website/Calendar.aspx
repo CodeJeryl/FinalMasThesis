@@ -36,39 +36,38 @@
     <div class="row">
 	<div class="twelve columns">
 		<div class="sectiontitle">
-			<h4 class="colhead1">February</h4>
+			<h4 class="colhead1">August</h4>
 		</div>
       <p>
            <ul class="disc">
-               <li>18 - Ash Wednesday</li>
-	<li>25 - EDSA People’s Power (No Classes)</li>
+               <li>1 - Recollection (Grade 9 squires and parents) 8:00 a.m - 12:00 nn</li>
+	<li>3 - Nutrition Month Culminating Activities</li>
+               
+           <li>    8 -	Feast of St. Dominic</li>
+	<li>14 -	2nd Monthly Faculty Meeting (shortened schedule)</li>
+ 	<li>24-26	-	1st Quarter Examination</li>
+          <li>     27		-	Buwan ng Wika Culminating Activities </li>
+          <li>     28-30		-	Annual Retreat of Grade 10 squires</li>
+           <li>    29		- 	Bible Quiz Competition </li>
        </ul>
 		
 		</p>
         
         	<div class="sectiontitle">
-			<h4 class="colhead1">March</h4>
+			<h4 class="colhead1">September</h4>
 		</div>
         <p>
 			     <ul class="disc">
-			         <li>2 - APSA Post-Test (High School)</li>
-	<li>3 -	Student Instructional Survey Grades7- 9</li>
-	<li>5 - NAT Examination (High School) – NO CLASS DAY FOR GRADES 7 , 8 , & 9</li>
-	<li>3-4 & 6	Final Examination (Graduating-HS)</li>
-	<li>9 -	Deadline of Encoding of Grades (Graduating)</li>
-	<li>9-13 -	Students’ Clearance Week</li>
-	<li>13 - Deadline for the Submission of Clearance to the Office of the Registrar</li>
-	<li>16 - Practice - Baccalaureate Mass</li>
-	<li>17 - Practice - Graduation (High School)</li>
-	<li>19 - Practice - Baccalaureate Mass</li>
-	<li>19 - Convocation for March – Recognition Day (Graduating)</li>
-	<li>20 - Practice - Graduation (High School)</li>
-	<li>24 - Final Practice-Baccalaureate Mass (HS&C)</li>
-	<li>25 - Final Practice-Graduation (High School)</li>
-	<li>23-27 - Final Examinations-High School</li>
-	<li> 27 - Submission and Encoding of Grades (Undergraduates)</li>
-	<li> 27 - BACCALAUREATE MASS</li>
-	<li>30 - 1ST Commencement Exercises-High School</li>
+			         <li>2 - Convocation (Host-Gr. 9 – Leeuwenhoek)</li>
+	<li>1 -	1st Friday Mass (Host-Gr. 8 – Mendel)</li>
+	<li>5 - Feast of the Virgin Mary</li>
+	<li>8 - Class Picture Taking</li>
+	<li>12 -	1st PTC / Distribution of Cards (shortened period)</li>
+	<li>19 -	NCAE Review  (Grade 9 students only)</li>
+	<li>24		-	Division Math Competition</li>
+	<li>25		-	Faculty Meeting   (shortened period)</li>
+	<li>26		-	English Week Culminating Activity</li>
+	
 </ul>
 		</p>
         <p>

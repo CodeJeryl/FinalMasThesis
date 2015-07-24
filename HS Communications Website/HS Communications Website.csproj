@@ -69,6 +69,7 @@
     <Content Include="Admin\GradeRange.aspx" />
     <Content Include="Admin\ManageDashboard.aspx" />
     <Content Include="Admin\ManageSchools.aspx" />
+    <Content Include="Admin\updateHeader.aspx" />
     <Content Include="Colegio\AboutUs\CoreValues.aspx" />
     <Content Include="Colegio\AboutUs\History.aspx" />
     <Content Include="Colegio\AboutUs\InstitutionalStrategies.aspx" />
@@ -627,6 +628,13 @@
     </Compile>
     <Compile Include="Admin\ManageSchools.aspx.designer.cs">
       <DependentUpon>ManageSchools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\updateHeader.aspx.cs">
+      <DependentUpon>updateHeader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\updateHeader.aspx.designer.cs">
+      <DependentUpon>updateHeader.aspx</DependentUpon>
     </Compile>
     <Compile Include="Colegio\AboutUs\CoreValues.aspx.cs">
       <DependentUpon>CoreValues.aspx</DependentUpon>

@@ -15,17 +15,43 @@ namespace HS_Communications_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+
+                
+                SqlConnection con = new SqlConnection(conString);
+                con.Close();
+                con.Open();
+                SqlCommand se = new SqlCommand("SELECT Data,status FROM headerTbl WHERE status = 'active'",con);
+
+                SqlDataReader rd = se.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    byte[] bytes = (byte[])rd.GetSqlBinary(0);
+                    string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
+                    Image1.ImageUrl = "data:image/png;base64," + base64String;
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                ErrorPanel.Visible = true;
+                errorLbl.Text = ex.Message;
+            }
 
         }
+        
 
         FormsAuthenticationTicket tkt;
         string cookiestr;
         HttpCookie ck;
+  
+        string conString = ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
         protected void loginBtn_Click(object sender, EventArgs e)
         {
 
-            var strcon = ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
-            string conString = strcon.ConnectionString;
+          
             ErrorPanel.Visible = false;
 
             SqlConnection conek = new SqlConnection(conString);

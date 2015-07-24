@@ -162,8 +162,10 @@
                 <div class="four columns">
                     <a href="<%= Page.ResolveUrl("~/Default.aspx") %>">
                         <span>
-                            <img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />
+                            <%--<img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />--%>
+                             <asp:Image ID="Image1" runat="server" />
                         </span>
+                   
                     </a>
                 </div>
                 <div class="eight columns noleftmarg">

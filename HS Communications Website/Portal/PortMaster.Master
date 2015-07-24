@@ -147,7 +147,8 @@
                 <div class="four columns">
                     <a href="<%= Page.ResolveUrl("~/Home.aspx") %>">
                         <span>
-                            <img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />
+                            <%--<img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />--%>
+                             <asp:Image ID="Image1" runat="server" />
                         </span>
                         </a>
                     </div>

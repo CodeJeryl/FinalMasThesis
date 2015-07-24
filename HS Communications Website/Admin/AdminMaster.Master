@@ -148,7 +148,8 @@
                 <div class="four columns">
                     <a href="<%= Page.ResolveUrl("~/Home.aspx") %>">
                         <span>
-                            <img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />
+                            <%--<img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />--%>
+                             <asp:Image ID="Image1" runat="server" />
                         </span>
                     </a>
                 </div>
@@ -182,6 +183,7 @@
                                         <li><a href="Upload.aspx">Memo/Class Schedule</a></li>
                                         <%--         <li><a href="AddStudents.aspx">Upload New Students</a></li>--%>
                                         <li><a href="ManageGrades.aspx">Grades</a></li>
+                                            <li><a href="updateHeader.aspx">Upload Header Logo</a></li>
                                     </ul>
                                 </li>
 
