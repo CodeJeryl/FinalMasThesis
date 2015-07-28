@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="HS_Communications_Website.Admin.Profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="hr">
@@ -12,7 +13,7 @@
 	    <div class="sectiontitle">
 			<h4><strong class="colhead">Student Information</strong></h4>
 		</div>
-       
+      
             <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False">
                 <h2 style="text-align: center">Profile Update Successful.</h2>
             </asp:Panel>
@@ -75,7 +76,7 @@
         </div>
         <div class="four columns">
             <p>Date of Birth: (MM/DD/YYYY)
-                <asp:TextBox ID="dob" runat="server"></asp:TextBox>
+               <asp:TextBox ID="dob" runat="server" TextMode="Date"></asp:TextBox>
             </p>
         </div>
         <div class="four columns">

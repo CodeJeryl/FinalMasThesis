@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Portal/PortMaster.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="HS_Communications_Website.Portal.Profile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="hr">
+    <div class="hr"> 
 </div>
 <!-- CONTENT 
 ================================================== -->
@@ -68,7 +69,7 @@
                       </asp:Panel>
         <div class="four columns">
             <p>Date of Birth: (MM/DD/YYYY)
-                <asp:TextBox ID="dob" runat="server"></asp:TextBox>
+                <asp:TextBox ID="dob" runat="server" TextMode="Date"></asp:TextBox>
             </p>
         </div>
         <div class="four columns">

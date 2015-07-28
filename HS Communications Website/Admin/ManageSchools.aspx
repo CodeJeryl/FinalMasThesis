@@ -34,13 +34,14 @@
                 <br/>
                 <br/>
 
-                <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
+                <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand" DataKeyNames="id">
+                   
                    
                     <EditItemTemplate>
-                        <tr style="">
+                        <tr style="background-color: #FFCC66;color: #000080;">
                             <td>
-                                <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
-                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
+                                <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" CssClass="buttonn"/>
+                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" CssClass="buttonn"/>
                             </td>
                             <td>
                                 <asp:Label ID="idLabel1" runat="server" Text='<%# Eval("id") %>' />
@@ -54,7 +55,7 @@
                         </tr>
                     </EditItemTemplate>
                     <EmptyDataTemplate>
-                        <table runat="server" style="">
+                        <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
                             <tr>
                                 <td>No data was returned.</td>
                             </tr>
@@ -66,7 +67,8 @@
                                 <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                                 <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
                             </td>
-                            <td>&nbsp;</td>
+                            <td>
+                                &nbsp;</td>
                             <td>
                                 <asp:TextBox ID="schoolTextBox" runat="server" Text='<%# Bind("school") %>' />
                             </td>
@@ -76,16 +78,19 @@
                         </tr>
                     </InsertItemTemplate>
                     <ItemTemplate>
-                        <tr style="">
-                            <asp:HiddenField ID="HiddenField1" runat="server" Value='<%# Eval("id") %>' />
+                        <tr style="background-color: #FFFBD6;color: #333333;">
                  <td>
-                                <asp:Label ID="schoolLabel" runat="server" Text='<%# Eval("school") %>' />
+                                <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete"  CssClass="buttonn"/>
+                                <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" CssClass="buttonn" />
+                            </td>
+                            <td>
+                                <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
+                            </td>
+                              <td>
+                                  <asp:Label ID="schoolLabel" runat="server" Text='<%# Eval("school") %>' />
                             </td>
                             <td>
                                 <asp:Label ID="schAddressLabel" runat="server" Text='<%# Eval("schAddress") %>' />
-                            </td>
-                              <td>
-                                 <asp:Button ID="enableBtn" runat="server" Text="Enable"  CssClass="buttonn" CommandName="del"/>
                             </td>
                         </tr>
                     </ItemTemplate>
@@ -93,12 +98,12 @@
                         <table runat="server">
                             <tr runat="server">
                                 <td runat="server">
-                                    <table id="itemPlaceholderContainer" runat="server" border="0" style="">
-                                        <tr runat="server" style="">
-                                           
-                                            <th runat="server">school</th>
-                                            <th runat="server">schAddress</th>
-                                            <th id="Th1" runat="server">Control</th>
+                                    <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
+                                        <tr runat="server" style="background-color: #FFFBD6;color: #333333;">
+                                            <th runat="server">Controls</th>
+                                            <th runat="server">id</th>
+                                            <th runat="server">Cchool</th>
+                                            <th runat="server">School Address</th>
                                         </tr>
                                         <tr id="itemPlaceholder" runat="server">
                                         </tr>
@@ -106,12 +111,17 @@
                                 </td>
                             </tr>
                             <tr runat="server">
-                                <td runat="server" style=""></td>
+                                <td runat="server" style="text-align: center;background-color: #FFCC66;font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;">
+                                </td>
                             </tr>
                         </table>
                     </LayoutTemplate>
                     <SelectedItemTemplate>
-                        <tr style="">
+                        <tr style="background-color: #FFCC66;font-weight: bold;color: #000080;">
+                            <td>
+                                <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
+                                <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
+                            </td>
                             <td>
                                 <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
                             </td>
@@ -124,7 +134,24 @@
                         </tr>
                     </SelectedItemTemplate>
                    </asp:ListView>
-                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT * FROM [schoolTbl] ORDER BY [school]"></asp:SqlDataSource>
+                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT * FROM [schoolTbl] ORDER BY [school]" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [schoolTbl] WHERE [id] = @original_id AND (([school] = @original_school) OR ([school] IS NULL AND @original_school IS NULL)) AND (([schAddress] = @original_schAddress) OR ([schAddress] IS NULL AND @original_schAddress IS NULL))" InsertCommand="INSERT INTO [schoolTbl] ([school], [schAddress]) VALUES (@school, @schAddress)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [schoolTbl] SET [school] = @school, [schAddress] = @schAddress WHERE [id] = @original_id AND (([school] = @original_school) OR ([school] IS NULL AND @original_school IS NULL)) AND (([schAddress] = @original_schAddress) OR ([schAddress] IS NULL AND @original_schAddress IS NULL))">
+                       <DeleteParameters>
+                           <asp:Parameter Name="original_id" Type="Int32" />
+                           <asp:Parameter Name="original_school" Type="String" />
+                           <asp:Parameter Name="original_schAddress" Type="String" />
+                       </DeleteParameters>
+                       <InsertParameters>
+                           <asp:Parameter Name="school" Type="String" />
+                           <asp:Parameter Name="schAddress" Type="String" />
+                       </InsertParameters>
+                       <UpdateParameters>
+                           <asp:Parameter Name="school" Type="String" />
+                           <asp:Parameter Name="schAddress" Type="String" />
+                           <asp:Parameter Name="original_id" Type="Int32" />
+                           <asp:Parameter Name="original_school" Type="String" />
+                           <asp:Parameter Name="original_schAddress" Type="String" />
+                       </UpdateParameters>
+                   </asp:SqlDataSource>
             </div>
 
            

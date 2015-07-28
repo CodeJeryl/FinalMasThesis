@@ -203,19 +203,19 @@ namespace HS_Communications_Website.Faculty
                     bool isNumeric3 = int.TryParse(dr["third"].ToString(), out c);
                     if (isNumeric3)
                     {
-                        if (b >= codeA)
+                        if (c >= codeA)
                         {
                             ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(A)";
                         }
-                        else if (b >= codeB)
+                        else if (c >= codeB)
                         {
                             ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(P)";
                         }
-                        else if (b >= codeC)
+                        else if (c >= codeC)
                         {
                             ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(AP)";
                         }
-                        else if (b >= codeD)
+                        else if (c >= codeD)
                         {
                             ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(D)";
                         }
@@ -229,19 +229,19 @@ namespace HS_Communications_Website.Faculty
                     bool isNumeric4 = int.TryParse(dr["fourth"].ToString(), out d);
                     if (isNumeric4)
                     {
-                        if (b >= codeA)
+                        if (d >= codeA)
                         {
                             ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(A)";
                         }
-                        else if (b >= codeB)
+                        else if (d >= codeB)
                         {
                             ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(P)";
                         }
-                        else if (b >= codeC)
+                        else if (d >= codeC)
                         {
                             ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(AP)";
                         }
-                        else if (b >= codeD)
+                        else if (d >= codeD)
                         {
                             ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(D)";
                         }

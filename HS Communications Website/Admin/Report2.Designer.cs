@@ -128,7 +128,7 @@ namespace HS_Communications_Website.Admin
             // sectionDataTextBox
             // 
             this.sectionDataTextBox.CanGrow = true;
-            this.sectionDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.5000004768371582D), Telerik.Reporting.Drawing.Unit.Cm(3.3562510013580322D));
+            this.sectionDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.5999999046325684D), Telerik.Reporting.Drawing.Unit.Cm(3D));
             this.sectionDataTextBox.Name = "sectionDataTextBox";
             this.sectionDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.5000004768371582D), Telerik.Reporting.Drawing.Unit.Cm(0.59970015287399292D));
             this.sectionDataTextBox.Style.Font.Name = "Verdana";
@@ -149,7 +149,7 @@ namespace HS_Communications_Website.Admin
             // gR_YRDataTextBox
             // 
             this.gR_YRDataTextBox.CanGrow = true;
-            this.gR_YRDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.8000001907348633D), Telerik.Reporting.Drawing.Unit.Cm(3.3781254291534424D));
+            this.gR_YRDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.8999996185302734D), Telerik.Reporting.Drawing.Unit.Cm(3.0218746662139893D));
             this.gR_YRDataTextBox.Name = "gR_YRDataTextBox";
             this.gR_YRDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.69979941844940186D), Telerik.Reporting.Drawing.Unit.Cm(0.577825665473938D));
             this.gR_YRDataTextBox.StyleName = "Data";
@@ -157,45 +157,48 @@ namespace HS_Communications_Website.Admin
             // 
             // textBox5
             // 
-            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.4000000953674316D), Telerik.Reporting.Drawing.Unit.Cm(2.7782249450683594D));
+            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.2999997138977051D), Telerik.Reporting.Drawing.Unit.Cm(1.9000002145767212D));
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.1999988555908203D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
+            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.0000004768371582D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
             this.textBox5.Style.Font.Name = "Arial Black";
-            this.textBox5.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+            this.textBox5.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(15D);
             this.textBox5.Value = "CLASS LIST";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.2054166793823242D), Telerik.Reporting.Drawing.Unit.Cm(1.0848915576934815D));
+            this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(1.0002996921539307D));
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(8.2999992370605469D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
+            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.9945834875106812D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
             this.textBox4.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+            this.textBox4.Style.Visible = false;
             this.textBox4.Value = "Dominican Avenue Abucay, Bataan 2114";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(4.9000000953674316D), Telerik.Reporting.Drawing.Unit.Cm(1.6000000238418579D));
+            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.7000007629394531D), Telerik.Reporting.Drawing.Unit.Cm(0.40039968490600586D));
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.4999995231628418D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
+            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.300000190734863D), Telerik.Reporting.Drawing.Unit.Cm(1.1996003389358521D));
             this.textBox3.Style.Font.Name = "Arial Black";
-            this.textBox3.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(11D);
+            this.textBox3.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(20D);
             this.textBox3.Value = "HIGH SCHOOL DEPARTMENT";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.1050000190734863D), Telerik.Reporting.Drawing.Unit.Cm(1.9844748973846436D));
+            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(1.9000000953674316D));
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.8999996185302734D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
+            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1999998092651367D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
             this.textBox2.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
+            this.textBox2.Style.Visible = false;
             this.textBox2.Value = "Science-Oriented Curriculum";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(3.2000000476837158D), Telerik.Reporting.Drawing.Unit.Cm(9.9921220680698752E-05D));
+            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(9.9921220680698752E-05D));
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.299999237060547D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
+            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1999998092651367D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
             this.textBox1.Style.Font.Name = "Old English Text MT";
             this.textBox1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(20D);
+            this.textBox1.Style.Visible = false;
             this.textBox1.Value = "Colegio de San Juan de Letran";
             // 
             // textBox6

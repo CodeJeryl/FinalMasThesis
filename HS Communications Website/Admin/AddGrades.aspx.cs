@@ -58,6 +58,7 @@ namespace HS_Communications_Website.Admin
             
         protected void UpdateButton_Click(object sender, EventArgs e)
         {
+            ErrorPanel.Visible = false;
             updatebtn();
             InsertEqui.Visible = true;
             UpdateButton.Visible = false;
@@ -112,6 +113,8 @@ namespace HS_Communications_Website.Admin
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
+           // ErrorPanel.Visible = false;
+
             if (e.Row.RowType == DataControlRowType.DataRow)
                 if (!tableCopied)
                 {
@@ -125,8 +128,21 @@ namespace HS_Communications_Website.Admin
             {
                 DataRow dr = ((DataRowView) e.Row.DataItem).Row;
                
-                int a;
+              int a;
                 bool isNumeric = int.TryParse(dr["first"].ToString(), out a);
+                if (a > 1 && a < 70)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "There is/are grades that is less than 70, Fix it immediately!";
+                    return;
+                }
+                else if (a > 100)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "There is/are grades that is greater than 100, Fix it immediately!";
+                    return;
+                }
+                
                 if (isNumeric)
                 {
                     if (a >= codeA)
@@ -153,6 +169,19 @@ namespace HS_Communications_Website.Admin
 
                 int b;
                 bool isNumeric2 = int.TryParse(dr["second"].ToString(), out b);
+                if (b > 1 && b < 70)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "There is/are grades that is less than 70, Fix it immediately!";
+                    return;
+                }
+                else if (b > 100)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "There is/are grades that is greater than 100, Fix it immediately!";
+                    return;
+                }
+               
                 if (isNumeric2)
                 {
                     if (b >= codeA)
@@ -179,6 +208,19 @@ namespace HS_Communications_Website.Admin
 
                 int c;
                 bool isNumeric3 = int.TryParse(dr["third"].ToString(), out c);
+                if (c > 1 && c < 70)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "There is/are grades that is less than 70, Fix it immediately!";
+                    return;
+                }
+                else if (c > 100)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "There is/are grades that is greater than 100, Fix it immediately!";
+                    return;
+                }
+                
                 if (isNumeric3)
                 {
                     if (c >= codeA)
@@ -205,6 +247,19 @@ namespace HS_Communications_Website.Admin
 
                 int d;
                 bool isNumeric4 = int.TryParse(dr["fourth"].ToString(), out d);
+                if (d > 1 && d < 70)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "There is/are grades that is less than 70, Fix it immediately!";
+                    return;
+                }
+                else if (d > 100)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "There is/are grades that is greater than 100, Fix it immediately!";
+                    return;
+                }
+                
                 if (isNumeric4)
                 {
                     if (d >= codeA)

@@ -151,6 +151,7 @@ namespace HS_Communications_Website.Admin
                 ErrorLabel.Text = ex.Message;
             }
         }
+       
 
         protected void Button1_Click(object sender, EventArgs e)
         {

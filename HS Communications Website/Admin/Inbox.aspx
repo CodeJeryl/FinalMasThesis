@@ -84,7 +84,7 @@
                                  <asp:Label ID="senderNameLabel" runat="server" Text='<%# Eval("senderName") %>' />
                             </td>
                             <td>
-                                <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date") %>' />
+                                <asp:Label ID="dateLabel" runat="server" Text='<%# Eval("date", "{0:d}") %>' />
                             </td>
                             <td>
                                 <asp:Label ID="statusLabel" runat="server" Text='<%# Eval("status") %>' />

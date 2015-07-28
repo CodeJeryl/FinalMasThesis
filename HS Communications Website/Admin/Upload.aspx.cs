@@ -114,7 +114,7 @@ namespace HS_Communications_Website.Admin
 
 
                                 string strQuery = "insert into uploadedFiles values('" + DropDownList1.Text + "','" + TextBox1.Text +
-                                                  "',@filename, @datee,@ContentType, @Data,'" + Session["name"] + "','" + DropDownList2.Text + "')";
+                                                  "',@filename, @datee,@ContentType, @Data,'" + Session["name"] + "','')";
 
                                 SqlCommand cmd = new SqlCommand(strQuery, con);
 
@@ -162,6 +162,8 @@ namespace HS_Communications_Website.Admin
         string content;
         protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
         {
+            Panel1.Visible = false;
+            ErrorPanel.Visible = false;
             SqlConnection con = new SqlConnection(conString);
             Panel1.Visible = false;
             ErrorPanel.Visible = false;
@@ -233,6 +235,9 @@ namespace HS_Communications_Website.Admin
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Panel1.Visible = false;
+            ErrorPanel.Visible = false;
+
             if (DropDownList1.SelectedItem.Text == "Class Schedule")
             {
                 Panel2.Visible = true;

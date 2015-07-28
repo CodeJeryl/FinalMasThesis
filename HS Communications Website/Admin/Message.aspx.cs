@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -75,7 +76,8 @@ namespace HS_Communications_Website.Admin
                 SqlCommand ins =
                     new SqlCommand(
                         "Insert into personalMsgTbl values('" + Session["studid"] + "','" + Session["name"].ToString() + "','" +
-                         titl + "','" + repTxtbox.Text + "','" + DateTime.Now.ToShortDateString() + "','true','Unread','"+ parent +"')", con);
+                         titl + "','" + repTxtbox.Text + "',@datee,'true','Unread','"+ parent +"')", con);
+                ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
                 ins.ExecuteNonQuery();
 
                 con.Close();
