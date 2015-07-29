@@ -24,14 +24,31 @@ namespace HS_Communications_Website.Admin
             {
 
                 SqlConnection con = new SqlConnection(conss);
+                SqlConnection con1 = new SqlConnection(conss);
 
+                con1.Close();
+                con1.Open();
+                SqlCommand sea = new SqlCommand("Select school from schoolTbl where school = '"+TextBox1.Text+"'",con1);
+                SqlDataReader rd = sea.ExecuteReader();
+
+                if(rd.Read())
+                {
+                    Panel1.Visible = false;
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = "School already exist!";
+                }
+                else
+                {
+                    ErrorPanel.Visible = false;
                 con.Close();
                 con.Open();
 
                 SqlCommand com = new SqlCommand("Insert into schoolTbl values('" + TextBox1.Text + "','" + TextBox2.Text + "')", con);
                 com.ExecuteNonQuery();
 
+                    ListView1.DataBind();
                 Panel1.Visible = true;
+                }
             }
             catch (Exception ex)
             {

@@ -104,6 +104,7 @@ namespace HS_Communications_Website.Admin
                                     //     SyllaUploadListview.DataBind();
                                     ListView1.DataBind();
                                     //    dataload();
+                                    TextBox1.Text = "";
                                 }
                             }
                             else
@@ -133,6 +134,7 @@ namespace HS_Communications_Website.Admin
                                 //     SyllaUploadListview.DataBind();
                                 ListView1.DataBind();
                                 //    dataload();
+                                TextBox1.Text = "";
                             }
                             
                         }

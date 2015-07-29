@@ -381,8 +381,6 @@
     <Content Include="javascripts\Arribalife\jquery.scrollTo-1.4.2-min.js" />
     <Content Include="javascripts\bpop.js" />
     <Content Include="javascripts\custom.js" />
-    <Content Include="javascripts\datetime\datePicker.css" />
-    <Content Include="javascripts\datetime\jquery.datePicker.js" />
     <Content Include="javascripts\elasticslideshow.js" />
     <Content Include="javascripts\formvalidation.js" />
     <Content Include="javascripts\foundation.min.js" />

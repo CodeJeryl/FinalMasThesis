@@ -59,9 +59,9 @@ namespace HS_Communications_Website.Admin
         protected void UpdateButton_Click(object sender, EventArgs e)
         {
             ErrorPanel.Visible = false;
-            updatebtn();
             InsertEqui.Visible = true;
             UpdateButton.Visible = false;
+            updatebtn();
         }
 
         private void updatebtn()
@@ -133,13 +133,17 @@ namespace HS_Communications_Website.Admin
                 if (a > 1 && a < 70)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "There is/are grades that is less than 70, Fix it immediately!";
+                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                    InsertEqui.Visible = true;
+                    UpdateButton.Visible = false;
                     return;
                 }
                 else if (a > 100)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "There is/are grades that is greater than 100, Fix it immediately!";
+                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                    InsertEqui.Visible = true;
+                    UpdateButton.Visible = false;
                     return;
                 }
                 
@@ -172,13 +176,17 @@ namespace HS_Communications_Website.Admin
                 if (b > 1 && b < 70)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "There is/are grades that is less than 70, Fix it immediately!";
+                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                    InsertEqui.Visible = true;
+                    UpdateButton.Visible = false;
                     return;
                 }
                 else if (b > 100)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "There is/are grades that is greater than 100, Fix it immediately!";
+                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                    InsertEqui.Visible = true;
+                    UpdateButton.Visible = false;
                     return;
                 }
                
@@ -211,13 +219,17 @@ namespace HS_Communications_Website.Admin
                 if (c > 1 && c < 70)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "There is/are grades that is less than 70, Fix it immediately!";
+                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                    InsertEqui.Visible = true;
+                    UpdateButton.Visible = false;
                     return;
                 }
                 else if (c > 100)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "There is/are grades that is greater than 100, Fix it immediately!";
+                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                    InsertEqui.Visible = true;
+                    UpdateButton.Visible = false;
                     return;
                 }
                 
@@ -250,13 +262,17 @@ namespace HS_Communications_Website.Admin
                 if (d > 1 && d < 70)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "There is/are grades that is less than 70, Fix it immediately!";
+                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                    InsertEqui.Visible = true;
+                    UpdateButton.Visible = false;
                     return;
                 }
                 else if (d > 100)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "There is/are grades that is greater than 100, Fix it immediately!";
+                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                    InsertEqui.Visible = true;
+                    UpdateButton.Visible = false;
                     return;
                 }
                 
@@ -288,9 +304,10 @@ namespace HS_Communications_Website.Admin
 
         protected void InsertEqui_Click(object sender, EventArgs e)
         {
-            updatebtn();
+            ErrorPanel.Visible = false;
             UpdateButton.Visible = true;
             InsertEqui.Visible = false;
+            updatebtn();
         }
     }
 }

@@ -28,10 +28,7 @@ namespace HS_Communications_Website.Admin
             this.sYDataTextBox = new Telerik.Reporting.TextBox();
             this.gR_YRDataTextBox = new Telerik.Reporting.TextBox();
             this.textBox5 = new Telerik.Reporting.TextBox();
-            this.textBox4 = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
-            this.textBox2 = new Telerik.Reporting.TextBox();
-            this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBox6 = new Telerik.Reporting.TextBox();
             this.textBox7 = new Telerik.Reporting.TextBox();
             this.reportFooter = new Telerik.Reporting.ReportFooterSection();
@@ -111,16 +108,13 @@ namespace HS_Communications_Website.Admin
             // 
             // reportHeader
             // 
-            this.reportHeader.Height = Telerik.Reporting.Drawing.Unit.Cm(4.5D);
+            this.reportHeader.Height = Telerik.Reporting.Drawing.Unit.Cm(2.8220751285552979D);
             this.reportHeader.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.sectionDataTextBox,
             this.sYDataTextBox,
             this.gR_YRDataTextBox,
             this.textBox5,
-            this.textBox4,
             this.textBox3,
-            this.textBox2,
-            this.textBox1,
             this.textBox6,
             this.textBox7});
             this.reportHeader.Name = "reportHeader";
@@ -128,7 +122,7 @@ namespace HS_Communications_Website.Admin
             // sectionDataTextBox
             // 
             this.sectionDataTextBox.CanGrow = true;
-            this.sectionDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.5999999046325684D), Telerik.Reporting.Drawing.Unit.Cm(3D));
+            this.sectionDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(7.6000003814697266D), Telerik.Reporting.Drawing.Unit.Cm(1.6000000238418579D));
             this.sectionDataTextBox.Name = "sectionDataTextBox";
             this.sectionDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.5000004768371582D), Telerik.Reporting.Drawing.Unit.Cm(0.59970015287399292D));
             this.sectionDataTextBox.Style.Font.Name = "Verdana";
@@ -139,7 +133,7 @@ namespace HS_Communications_Website.Admin
             // sYDataTextBox
             // 
             this.sYDataTextBox.CanGrow = true;
-            this.sYDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.5999999046325684D), Telerik.Reporting.Drawing.Unit.Cm(3.8000001907348633D));
+            this.sYDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(7.3997993469238281D), Telerik.Reporting.Drawing.Unit.Cm(2.1999998092651367D));
             this.sYDataTextBox.Name = "sYDataTextBox";
             this.sYDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.5739583969116211D), Telerik.Reporting.Drawing.Unit.Cm(0.62207520008087158D));
             this.sYDataTextBox.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
@@ -149,7 +143,7 @@ namespace HS_Communications_Website.Admin
             // gR_YRDataTextBox
             // 
             this.gR_YRDataTextBox.CanGrow = true;
-            this.gR_YRDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(5.8999996185302734D), Telerik.Reporting.Drawing.Unit.Cm(3.0218746662139893D));
+            this.gR_YRDataTextBox.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.5999999046325684D), Telerik.Reporting.Drawing.Unit.Cm(1.6218746900558472D));
             this.gR_YRDataTextBox.Name = "gR_YRDataTextBox";
             this.gR_YRDataTextBox.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.69979941844940186D), Telerik.Reporting.Drawing.Unit.Cm(0.577825665473938D));
             this.gR_YRDataTextBox.StyleName = "Data";
@@ -157,54 +151,26 @@ namespace HS_Communications_Website.Admin
             // 
             // textBox5
             // 
-            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.2999997138977051D), Telerik.Reporting.Drawing.Unit.Cm(1.9000002145767212D));
+            this.textBox5.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.0999999046325684D), Telerik.Reporting.Drawing.Unit.Cm(0.89980012178421021D));
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.0000004768371582D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
             this.textBox5.Style.Font.Name = "Arial Black";
             this.textBox5.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(15D);
             this.textBox5.Value = "CLASS LIST";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(1.0002996921539307D));
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(1.9945834875106812D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
-            this.textBox4.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-            this.textBox4.Style.Visible = false;
-            this.textBox4.Value = "Dominican Avenue Abucay, Bataan 2114";
-            // 
             // textBox3
             // 
-            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.7000007629394531D), Telerik.Reporting.Drawing.Unit.Cm(0.40039968490600586D));
+            this.textBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.8999998569488525D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.300000190734863D), Telerik.Reporting.Drawing.Unit.Cm(1.1996003389358521D));
+            this.textBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.90000057220459D), Telerik.Reporting.Drawing.Unit.Cm(1.1996003389358521D));
             this.textBox3.Style.Font.Name = "Arial Black";
             this.textBox3.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(20D);
             this.textBox3.Value = "HIGH SCHOOL DEPARTMENT";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(1.9000000953674316D));
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1999998092651367D), Telerik.Reporting.Drawing.Unit.Cm(0.59970033168792725D));
-            this.textBox2.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(12D);
-            this.textBox2.Style.Visible = false;
-            this.textBox2.Value = "Science-Oriented Curriculum";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(9.9921220680698752E-05D));
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.1999998092651367D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.textBox1.Style.Font.Name = "Old English Text MT";
-            this.textBox1.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(20D);
-            this.textBox1.Style.Visible = false;
-            this.textBox1.Value = "Colegio de San Juan de Letran";
-            // 
             // textBox6
             // 
             this.textBox6.CanGrow = true;
-            this.textBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6D), Telerik.Reporting.Drawing.Unit.Cm(3.8000001907348633D));
+            this.textBox6.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.79979944229126D), Telerik.Reporting.Drawing.Unit.Cm(2.1999998092651367D));
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.80000019073486328D), Telerik.Reporting.Drawing.Unit.Cm(0.62207520008087158D));
             this.textBox6.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
@@ -214,7 +180,7 @@ namespace HS_Communications_Website.Admin
             // textBox7
             // 
             this.textBox7.CanGrow = true;
-            this.textBox7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(6.2999997138977051D), Telerik.Reporting.Drawing.Unit.Cm(3.3562510013580322D));
+            this.textBox7.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(7.1997995376586914D), Telerik.Reporting.Drawing.Unit.Cm(1.5999997854232788D));
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(0.40000021457672119D), Telerik.Reporting.Drawing.Unit.Cm(0.577825665473938D));
             this.textBox7.Style.Font.Bold = true;
@@ -330,10 +296,7 @@ namespace HS_Communications_Website.Admin
         private Telerik.Reporting.TextBox lNameDataTextBox;
         private Telerik.Reporting.TextBox fNameDataTextBox;
         private Telerik.Reporting.TextBox textBox5;
-        private Telerik.Reporting.TextBox textBox4;
         private Telerik.Reporting.TextBox textBox3;
-        private Telerik.Reporting.TextBox textBox2;
-        private Telerik.Reporting.TextBox textBox1;
         private Telerik.Reporting.TextBox textBox6;
         private Telerik.Reporting.TextBox textBox7;
 

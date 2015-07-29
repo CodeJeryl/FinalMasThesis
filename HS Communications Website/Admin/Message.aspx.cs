@@ -88,7 +88,7 @@ namespace HS_Communications_Website.Admin
                 con.Close();
 
                 con1.Open();
-                SqlCommand qw1 = new SqlCommand("update personalMsgtbl set status = 'replied' where msgID = '" + Convert.ToInt32(Session["msgid"].ToString()) + "'", con);
+                SqlCommand qw1 = new SqlCommand("update personalMsgtbl set status = 'replied' where msgID = '" + Convert.ToInt32(Session["msgid"].ToString()) + "'", con1);
                 qw1.ExecuteNonQuery();
 
                 con1.Close();

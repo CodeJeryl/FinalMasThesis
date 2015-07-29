@@ -73,9 +73,11 @@ namespace HS_Communications_Website.Faculty
 
         protected void UpdateButton_Click(object sender, EventArgs e)
         {
-            updatebtn();
+            ErrorPanel.Visible = false;
+           
             InsertEqui.Visible = true;
             UpdateButton.Visible = false;
+            updatebtn();
         }
 
         private void updatebtn()
@@ -149,6 +151,22 @@ namespace HS_Communications_Website.Faculty
 
                     int a;
                     bool isNumeric = int.TryParse(dr["first"].ToString(), out a);
+                    if (a > 1 && a < 70)
+                    {
+                        ErrorPanel.Visible = true;
+                        ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                        InsertEqui.Visible = true;
+                        UpdateButton.Visible = false;
+                        return;
+                    }
+                    else if (a > 100)
+                    {
+                        ErrorPanel.Visible = true;
+                        ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                        InsertEqui.Visible = true;
+                        UpdateButton.Visible = false;
+                        return;
+                    }
                     if (isNumeric)
                     {
                         if (a >= codeA)
@@ -175,6 +193,22 @@ namespace HS_Communications_Website.Faculty
 
                     int b;
                     bool isNumeric2 = int.TryParse(dr["second"].ToString(), out b);
+                    if (b > 1 && b < 70)
+                    {
+                        ErrorPanel.Visible = true;
+                        ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                        InsertEqui.Visible = true;
+                        UpdateButton.Visible = false;
+                        return;
+                    }
+                    else if (b > 100)
+                    {
+                        ErrorPanel.Visible = true;
+                        ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                        InsertEqui.Visible = true;
+                        UpdateButton.Visible = false;
+                        return;
+                    }
                     if (isNumeric2)
                     {
                         if (b >= codeA)
@@ -201,6 +235,23 @@ namespace HS_Communications_Website.Faculty
 
                     int c;
                     bool isNumeric3 = int.TryParse(dr["third"].ToString(), out c);
+                    if (c > 1 && c < 70)
+                    {
+                        ErrorPanel.Visible = true;
+                        ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                        InsertEqui.Visible = true;
+                        UpdateButton.Visible = false;
+                        return;
+                    }
+                    else if (c > 100)
+                    {
+                        ErrorPanel.Visible = true;
+                        ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                        InsertEqui.Visible = true;
+                        UpdateButton.Visible = false;
+                        return;
+                    }
+                
                     if (isNumeric3)
                     {
                         if (c >= codeA)
@@ -227,6 +278,22 @@ namespace HS_Communications_Website.Faculty
 
                     int d;
                     bool isNumeric4 = int.TryParse(dr["fourth"].ToString(), out d);
+                    if (d > 1 && d < 70)
+                    {
+                        ErrorPanel.Visible = true;
+                        ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                        InsertEqui.Visible = true;
+                        UpdateButton.Visible = false;
+                        return;
+                    }
+                    else if (d > 100)
+                    {
+                        ErrorPanel.Visible = true;
+                        ErrorLabel.Text = "Enter grades between 70-100 only. ";
+                        InsertEqui.Visible = true;
+                        UpdateButton.Visible = false;
+                        return;
+                    }
                     if (isNumeric4)
                     {
                         if (d >= codeA)
@@ -260,9 +327,10 @@ namespace HS_Communications_Website.Faculty
         }
         protected void InsertEqui_Click(object sender, EventArgs e)
         {
-            updatebtn();
+            ErrorPanel.Visible = false;
             UpdateButton.Visible = true;
             InsertEqui.Visible = false;
+            updatebtn();
         }
     }
 }

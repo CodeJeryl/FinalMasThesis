@@ -14,9 +14,9 @@
             </div>
 
 
-            <div class="six columns centered" style="min-height: 300px;">
+            <div class="nine columns centered" style="min-height: 300px;">
                    <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
-                    School has been added successfully! </h4></asp:Panel>
+                    School has been successfully added! </h4></asp:Panel>
                   <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="false"><h4>
                     <asp:Label ID="ErrorLabel" ForeColor="white" runat="server" Text="Label"></asp:Label></h4></asp:Panel>
                 
@@ -28,7 +28,7 @@
                     School Address: <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Required Field" ControlToValidate="TextBox2" ValidationGroup="s"></asp:RequiredFieldValidator>
                      <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                 </p>
-                <span style="position: relative; left: 60%">
+                <span style="position: relative; left: 75%">
                  <asp:Button ID="Button1" runat="server" Text="Add Schools" CssClass="buttonn" OnClick="Button1_Click" ValidationGroup="s" /></span>
                 
                 <br/>
@@ -43,9 +43,9 @@
                                 <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" CssClass="buttonn"/>
                                 <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" CssClass="buttonn"/>
                             </td>
-                            <td>
-                                <asp:Label ID="idLabel1" runat="server" Text='<%# Eval("id") %>' />
-                            </td>
+                          
+                                <asp:Label ID="idLabel1" runat="server" Text='<%# Eval("id") %>' Visible="False" />
+                 
                             <td>
                                 <asp:TextBox ID="schoolTextBox" runat="server" Text='<%# Bind("school") %>' />
                             </td>
@@ -80,18 +80,19 @@
                     <ItemTemplate>
                         <tr style="background-color: #FFFBD6;color: #333333;">
                  <td>
-                                <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete"  CssClass="buttonn"/>
+                                <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete"  CssClass="buttonn" Visible="False" />
                                 <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" CssClass="buttonn" />
                             </td>
-                            <td>
-                                <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
-                            </td>
+                         
+                               
+                    
                               <td>
                                   <asp:Label ID="schoolLabel" runat="server" Text='<%# Eval("school") %>' />
                             </td>
                             <td>
                                 <asp:Label ID="schAddressLabel" runat="server" Text='<%# Eval("schAddress") %>' />
                             </td>
+                             <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' Visible="False" />
                         </tr>
                     </ItemTemplate>
                     <LayoutTemplate>
@@ -100,9 +101,9 @@
                                 <td runat="server">
                                     <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                                         <tr runat="server" style="background-color: #FFFBD6;color: #333333;">
-                                            <th runat="server">Controls</th>
-                                            <th runat="server">id</th>
-                                            <th runat="server">Cchool</th>
+                                            <th runat="server">Control</th>
+                                          
+                                            <th runat="server">School</th>
                                             <th runat="server">School Address</th>
                                         </tr>
                                         <tr id="itemPlaceholder" runat="server">
