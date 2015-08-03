@@ -16,8 +16,9 @@
         
         <div class="four columns ">
             <strong>Choose Section: </strong>
-      <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="SqlDataSource1" DataTextField="Section" DataValueField="Section">
-           </asp:DropDownList>
+      <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" DataSourceID="SqlDataSource1" DataTextField="Section" DataValueField="Section"  AppendDataBoundItems="True">
+           <asp:ListItem Text="Choose Section" Value="0" />
+          </asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [Section], [GR_YR] FROM [BLHD] ORDER BY [GR_YR]"></asp:SqlDataSource>
         </div>
        <br/>

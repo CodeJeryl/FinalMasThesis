@@ -35,7 +35,10 @@ namespace HS_Communications_Website.Admin
                 {
                     Panel1.Visible = false;
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "School already exist!";
+                    ErrorLabel.Text = TextBox1+ " - School already exist!";
+
+                    TextBox1.Text = "";
+                    TextBox2.Text = "";
                 }
                 else
                 {
@@ -45,7 +48,8 @@ namespace HS_Communications_Website.Admin
 
                 SqlCommand com = new SqlCommand("Insert into schoolTbl values('" + TextBox1.Text + "','" + TextBox2.Text + "')", con);
                 com.ExecuteNonQuery();
-
+                    TextBox1.Text = "";
+                    TextBox2.Text = "";
                     ListView1.DataBind();
                 Panel1.Visible = true;
                 }

@@ -14,7 +14,7 @@
 			<h4><strong class="colhead">Student Information</strong></h4>
 		</div>
       
-            <asp:Panel ID="Panel1" runat="server" CssClass="info-box" Visible="False">
+            <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False">
                 <h2 style="text-align: center">Profile Update Successful.</h2>
             </asp:Panel>
             <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False"><h4>
@@ -46,14 +46,15 @@
 
                 <div class="six columns">
                     <p>School Last Attended: 
-                        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="school" DataValueField="schAddress" Height="40px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1" Width="272px">
+                        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="school" DataValueField="schAddress" Height="40px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1" Width="272px" AppendDataBoundItems="True">
+                        <asp:ListItem Text="Choose School" Value="0" />
                         </asp:DropDownList>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT [school], [schAddress] FROM [schoolTbl] ORDER BY [school]"></asp:SqlDataSource>
                        </p>
                 </div>
                 <div class="six columns">
                     <p>School Address: 
-                        <asp:TextBox ID="schoolAddTxtbox" runat="server"></asp:TextBox></p>
+                        <asp:TextBox ID="schoolAddTxtbox" runat="server" ReadOnly="True"></asp:TextBox></p>
                 </div>
         </asp:Panel>
                  <div class="six columns">

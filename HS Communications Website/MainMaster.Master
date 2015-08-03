@@ -284,6 +284,7 @@
         </div>
 
         <div id="popup">
+            <asp:Panel ID="Panel1" runat="server" DefaultButton="loginBtn1">
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                   <asp:Panel ID="ErrorPanel" runat="server" CssClass="alert-box alert" Visible="False">
@@ -298,6 +299,7 @@
                     <asp:LinkButton ID="loginBtn1" runat="server" OnClick="loginBtn_Click" CssClass="buttonn">Login</asp:LinkButton>
                 </ContentTemplate>
             </asp:UpdatePanel>
+                </asp:Panel>
         </div>
     </form>
 

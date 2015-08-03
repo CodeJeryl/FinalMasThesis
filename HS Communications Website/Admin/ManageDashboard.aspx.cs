@@ -37,7 +37,7 @@ namespace HS_Communications_Website.Admin
                 con.Close();
 
                 con.Open();
-                SqlCommand cout1 = new SqlCommand("Insert into Dashboard(school,sCount,sy,category) select scLastAttend,Count(*) as sCount,'" + DropDownList2.SelectedItem.Text + "','sc' from students where studentno LIKE '" + DropDownList2.SelectedValue + "%' and scLastAttend is not NULL group by scLastAttend", con);
+                SqlCommand cout1 = new SqlCommand("Insert into Dashboard(school,sCount,sy,category) select scLastAttend,Count(*) as sCount,'" + DropDownList2.SelectedItem.Text + "','sc' from students where studentno LIKE '" + DropDownList2.SelectedValue + "%' and scLastAttend is not NULL and sclastattend <> 'Choose School' group by scLastAttend", con);
                 cout1.ExecuteNonQuery();
                 con.Close();
 

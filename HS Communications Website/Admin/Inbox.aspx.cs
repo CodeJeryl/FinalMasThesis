@@ -59,7 +59,7 @@ namespace HS_Communications_Website.Admin
                     con.Close();
                     con.Open();
 
-                    SqlCommand qw = new SqlCommand("delete from personalMsgTbl where ID = '" + hid.Value + "'", con);
+                    SqlCommand qw = new SqlCommand("delete from personalMsgTbl where msgID = '" + hid.Value + "'", con);
                     qw.ExecuteNonQuery();
                     ErrorPanel.Visible = true;
                     ErrorLabel.Text = "Message successfully Deleted!";

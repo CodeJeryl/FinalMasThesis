@@ -27,11 +27,12 @@
                <asp:ListItem Value="students">STUDENTS</asp:ListItem>
                <asp:ListItem Value="parents">PARENTS</asp:ListItem>
                <asp:ListItem Value="faculty">FACULTY</asp:ListItem>
-               </asp:DropDownList>  &nbsp;&nbsp;&nbsp;   <asp:CheckBox ID="CheckBox1" runat="server" Text="Send to specific section" OnCheckedChanged="CheckBox1_CheckedChanged" AutoPostBack="True" Visible="False" /> &nbsp;&nbsp;&nbsp; <asp:Label ID="seclbl" runat="server" Text="Section: "></asp:Label> <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sectno" DataValueField="Sectno" Visible="False"></asp:DropDownList> 
+               </asp:DropDownList>  &nbsp;&nbsp;&nbsp;   <asp:CheckBox ID="CheckBox1" runat="server" Text="Send to specific section" OnCheckedChanged="CheckBox1_CheckedChanged" AutoPostBack="True" Visible="False" /> &nbsp;&nbsp;&nbsp; 
+             <asp:Label ID="seclbl" runat="server" Text="Section: "></asp:Label> <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="Sectno" DataValueField="Sectno" Visible="False"></asp:DropDownList> 
               
                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HsDbConnectionString %>" SelectCommand="SELECT DISTINCT [Sectno] FROM [Section] ORDER BY [Sectno]"></asp:SqlDataSource>
                  </ContentTemplate>
-     </asp:UpdatePanel>
+            </asp:UpdatePanel>
      
                     <p> Title: <asp:TextBox ID="titleTxtbox" runat="server"></asp:TextBox></p>
                   <p> Message: <asp:TextBox ID="messageTxtbox" runat="server" TextMode="MultiLine"></asp:TextBox></p>

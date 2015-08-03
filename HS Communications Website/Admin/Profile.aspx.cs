@@ -41,8 +41,12 @@ namespace HS_Communications_Website.Admin
                     midnametxtbox.Text = er.GetString(5);
                     // addressTxtbox.Text = er.GetString(9);drpNationality.Items.Add(var);                   drpNationality.Text = var;
   
-                    if (!er.IsDBNull(14)) DropDownList1.Items.Add(er.GetString(14));
-                    if (!er.IsDBNull(14)) DropDownList1.Text = er.GetString(14);
+           //        if (!er.IsDBNull(14)) DropDownList1.Items.Add(er.GetString(14));
+
+                    //      if (!er.IsDBNull(14)) DropDownList1.Text = er.GetString(14);
+                    DropDownList1.SelectedItem.Selected = false;
+                    if (!er.IsDBNull(14)) DropDownList1.Items.FindByText(er.GetString(14)).Selected = true;
+
                     if (!er.IsDBNull(15)) schoolAddTxtbox.Text = er.GetString(15);
                     if (!er.IsDBNull(16)) dob.Text = er.GetString(16);
                     if (!er.IsDBNull(17)) placeBtxtbox.Text = er.GetString(17);
@@ -130,7 +134,7 @@ namespace HS_Communications_Website.Admin
 
                 SqlCommand upd2 = new SqlCommand("update Students set mobile = '" + mobileTxtbox.Text + "',email = '" + emailAddTxtbox.Text + "'" +
                                               ",houseAdd = '" + houseAddTxtbox.Text + "',brgyAdd = '" + brgyAddTxtbox.Text + "',townAdd = '" + townAddTxtbox.Text + "', provAdd = '" + provinceAddTxtbox.Text + "'" +
-                                              ",dob = '" + dob.Text + "', pob = '" + placeBtxtbox.Text + "', gender = '" + RadioButtonList1.SelectedValue + "',scLastAttend ='" + DropDownList1.Text + "',scAddress = '" + schoolAddTxtbox.Text + "'," +
+                                              ",dob = '" + dob.Text + "', pob = '" + placeBtxtbox.Text + "', gender = '" + RadioButtonList1.SelectedValue + "',scLastAttend ='" + DropDownList1.SelectedItem.Text + "',scAddress = '" + schoolAddTxtbox.Text + "'," +
                                                  "lastname = '" + lastnameTxtbox.Text + "',firstname = '" + firstnameTxtbox.Text + "', middlename = '" + midnametxtbox.Text + "' where studentno = '" + TextBox1.Text + "'", conP);
                 upd2.ExecuteNonQuery();
                 conP.Close();
@@ -168,8 +172,10 @@ namespace HS_Communications_Website.Admin
 
         protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
         {
-            schoolAddTxtbox.Text = DropDownList1.SelectedItem.Value;
-
+            if (DropDownList1.Text != "Choose School")
+            {
+                schoolAddTxtbox.Text = DropDownList1.SelectedItem.Value;
+            }
 
 
 
