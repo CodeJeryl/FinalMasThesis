@@ -36,6 +36,20 @@ namespace HS_Communications_Website.Portal
                     if(!rd.IsDBNull(0) && !rd.IsDBNull(1) && !rd.IsDBNull(2) && !rd.IsDBNull(3))
                         genAve.Text = ((rd.GetDecimal(0) + rd.GetDecimal(1) + rd.GetDecimal(2) + rd.GetDecimal(3)) / 4).ToString("#.##");
                 }
+
+                con1.Close();
+
+
+                //con1.Open();
+                //SqlCommand check = new SqlCommand("Select d1,d2,d3,d4 from smtr", con1);
+                //SqlDataReader er = check.ExecuteReader();
+
+                //if (er.Read())
+                //{
+
+
+
+                //}
                 
             }
             catch (Exception ex)
@@ -66,11 +80,28 @@ namespace HS_Communications_Website.Portal
                     Label lab2 = (Label)(e.Item.FindControl("secondLabel"));
                     Label lab3 = (Label)(e.Item.FindControl("thirdLabel"));
                     Label lab4 = (Label)(e.Item.FindControl("fourthLabel"));
+                    Label lab5 = (Label)(e.Item.FindControl("Label1"));
 
+                    
+                    
                     lab1.Visible = Convert.ToBoolean(er.GetString(0));
                     lab2.Visible = Convert.ToBoolean(er.GetString(1));
                     lab3.Visible = Convert.ToBoolean(er.GetString(2));
                     lab4.Visible = Convert.ToBoolean(er.GetString(3));
+                    lab5.Visible = Convert.ToBoolean(er.GetString(3));
+
+                    q.Visible =Convert.ToBoolean(er.GetString(0));
+                    w.Visible = Convert.ToBoolean(er.GetString(1));
+                    ee.Visible = Convert.ToBoolean(er.GetString(2));
+                    r.Visible = Convert.ToBoolean(er.GetString(3));
+                    t.Visible = Convert.ToBoolean(er.GetString(3));
+
+                    firstAve.Visible = Convert.ToBoolean(er.GetString(0));
+                    secondAve.Visible = Convert.ToBoolean(er.GetString(1));
+                    thirdAve.Visible = Convert.ToBoolean(er.GetString(2));
+                    fourthAve.Visible = Convert.ToBoolean(er.GetString(3));
+                    genAve.Visible = Convert.ToBoolean(er.GetString(3)); 
+
                 }
 
             }
@@ -80,6 +111,8 @@ namespace HS_Communications_Website.Portal
                 ErrorLabel.Text = ee.Message;
             }
         }
+
+
 
 
     }

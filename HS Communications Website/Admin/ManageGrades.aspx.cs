@@ -32,6 +32,7 @@ namespace HS_Communications_Website.Admin
 
                     DropDownList drop = (DropDownList)(e.Item.FindControl("DropDownList1"));
                     SqlCommand en = new SqlCommand("update smtr set " + drop.SelectedValue + " = 'true'", con);
+                    en.CommandTimeout = 0;
                     en.ExecuteNonQuery();
 
                 }
@@ -40,6 +41,7 @@ namespace HS_Communications_Website.Admin
 
                     DropDownList drop = (DropDownList)(e.Item.FindControl("DropDownList1"));
                     SqlCommand en1 = new SqlCommand("update smtr set " + drop.SelectedValue + " = 'false'", con);
+                    en1.CommandTimeout = 0;
                     en1.ExecuteNonQuery();
                 }
 
@@ -48,6 +50,7 @@ namespace HS_Communications_Website.Admin
 
                 Panel1.Visible = true;
                 Label1.Text = "Visibility of grades is successfully updated!";
+                ErrorPanel.Visible = false;
             }
             catch (Exception ee)
             {

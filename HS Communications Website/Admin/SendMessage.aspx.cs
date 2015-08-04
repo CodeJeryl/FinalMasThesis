@@ -89,6 +89,7 @@ namespace HS_Communications_Website.Admin
                 DropDownList2.Visible = false;
                 titleTxtbox.Text = "";
                 messageTxtbox.Text = "";
+                CheckBox1.Checked = false;
             }
             else if (DropDownList1.Text == "parents")
             {
@@ -125,6 +126,7 @@ namespace HS_Communications_Website.Admin
                 DropDownList2.Visible = false;
                 titleTxtbox.Text = "";
                 messageTxtbox.Text = "";
+                CheckBox1.Checked = false;
             }
             else if (DropDownList1.Text == "faculty")
             {
@@ -144,6 +146,7 @@ namespace HS_Communications_Website.Admin
                 DropDownList2.Visible = false;
                 titleTxtbox.Text = "";
                 messageTxtbox.Text = "";
+               
             }
             }
             catch (Exception ex)
@@ -167,12 +170,16 @@ namespace HS_Communications_Website.Admin
             else if(DropDownList1.Text == "students")
             {
                 CheckBox1.Visible = true;
+                CheckBox1.Checked = false;
+                //    DropDownList2.Visible = true;
+                //   seclbl.Visible = true;
             }
             else if(DropDownList1.Text == "parents")
             {
                 CheckBox1.Visible = true;
-                //DropDownList2.Visible = true;
-                //seclbl.Visible = true;
+                CheckBox1.Checked = false;
+              //  DropDownList2.Visible = true;
+             //   seclbl.Visible = true;
             }
             else if (DropDownList1.Text == "faculty")
             {
@@ -183,7 +190,7 @@ namespace HS_Communications_Website.Admin
             }
             else
             {
-              CheckBox1.Checked = true;
+              CheckBox1.Checked = false;
             }
         }
 

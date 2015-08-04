@@ -131,7 +131,7 @@
                                         <asp:Label ID="fourthLabel" runat="server" Text='<%# Eval("fourth") %>' />
                                     </td>
                                      <td  style="background-color: #ffeaaa; text-align: center">
-                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Ave") %>' />
+                                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Ave", "{0:F2}") %>' />
                                     </td>
                                  <%--   <td>
                                         <asp:Label ID="d1Label" runat="server" Text='<%# Eval("d1") %>' />
@@ -209,11 +209,11 @@
                 
                 <br /> 
                 <div style="font-weight: 700; font-size: 15px">
-                    First Quarter Average : <asp:Label ID="firstAve" runat="server" Text=""></asp:Label> <br/>
-                      Second Quarter Average : <asp:Label ID="secondAve" runat="server" Text=""></asp:Label> <br/>
-                      Third Quarter Average : <asp:Label ID="thirdAve" runat="server" Text=""></asp:Label> <br/>
-                      Fourth Quarter Average : <asp:Label ID="fourthAve" runat="server" Text=""></asp:Label> <br/>
-                      General Weighted Average : <asp:Label ID="genAve" runat="server" Text=""></asp:Label> 
+                    <asp:Label ID="q" runat="server" Text="First Quarter Average : "></asp:Label>     <asp:Label ID="firstAve" runat="server" Text=""></asp:Label> <br/>
+                    <asp:Label ID="w" runat="server" Text="Second Quarter Average : "></asp:Label>     <asp:Label ID="secondAve" runat="server" Text=""></asp:Label> <br/>
+                    <asp:Label ID="ee" runat="server" Text="Third Quarter Average : "></asp:Label>     <asp:Label ID="thirdAve" runat="server" Text=""></asp:Label> <br/>
+                     <asp:Label ID="r" runat="server" Text="Fourth Quarter Average : "></asp:Label>    <asp:Label ID="fourthAve" runat="server" Text=""></asp:Label> <br/>
+                     <asp:Label ID="t" runat="server" Text="General Weighted Average : "></asp:Label>    <asp:Label ID="genAve" runat="server" Text=""></asp:Label> 
                 </div>
                     </div>
                  

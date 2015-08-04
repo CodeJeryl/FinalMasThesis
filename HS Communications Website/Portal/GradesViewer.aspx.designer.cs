@@ -49,6 +49,15 @@ namespace HS_Communications_Website.Portal {
         protected global::System.Web.UI.WebControls.ListView ListView1;
         
         /// <summary>
+        /// q control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label q;
+        
+        /// <summary>
         /// firstAve control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace HS_Communications_Website.Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label firstAve;
+        
+        /// <summary>
+        /// w control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label w;
         
         /// <summary>
         /// secondAve control.
@@ -67,6 +85,15 @@ namespace HS_Communications_Website.Portal {
         protected global::System.Web.UI.WebControls.Label secondAve;
         
         /// <summary>
+        /// ee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ee;
+        
+        /// <summary>
         /// thirdAve control.
         /// </summary>
         /// <remarks>
@@ -76,6 +103,15 @@ namespace HS_Communications_Website.Portal {
         protected global::System.Web.UI.WebControls.Label thirdAve;
         
         /// <summary>
+        /// r control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label r;
+        
+        /// <summary>
         /// fourthAve control.
         /// </summary>
         /// <remarks>
@@ -83,6 +119,15 @@ namespace HS_Communications_Website.Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label fourthAve;
+        
+        /// <summary>
+        /// t control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label t;
         
         /// <summary>
         /// genAve control.

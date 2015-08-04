@@ -185,12 +185,11 @@
 
         <ul class="ei-slider-thumbs">
             <li class="ei-slider-element">Current</li>
-         <li><a href="#">Slide 1</a><img src="images/newsbanner/banner2.jpg" class="slideshowthumb" alt="thumb01" /></li>
+            <li><a href="#">Slide 1</a><img src="images/newsbanner/banner2.jpg" class="slideshowthumb" alt="thumb01" /></li>
             <li><a href="#">Slide 2</a><img src="images/newsbanner/1.jpg" class="slideshowthumb" alt="thumb02" /></li>
         
-  <li><a href="#">Slide 3</a><img src="images/newsbanner/banner1.jpg" class="slideshowthumb" alt="thumb01" /></li>
+            <li><a href="#">Slide 3</a><img src="images/newsbanner/banner1.jpg" class="slideshowthumb" alt="thumb01" /></li>
             <li><a href="#">Slide 4</a><img src="images/newsbanner/4.jpg" class="slideshowthumb" alt="thumb04" /></li>
-            
         </ul>
     </div>
 
@@ -202,7 +201,7 @@
         <div class="row">
             <div class="twelve columns">
                 <div class="text-center">
-                    <p>To all candidates for graduation, Batch 2015; Deadline of submission of the exit clearance to the <br/> Office of the Registrar is on March 20, 2015 </p>
+                    <p> </p>
                 </div>
             </div>
         </div>

@@ -28,8 +28,7 @@
                         <asp:ListItem Value="512">2012-2013</asp:ListItem>
                         <asp:ListItem Value="513">2013-2014</asp:ListItem>
                         <asp:ListItem Value="514">2014-2015</asp:ListItem>
-                        <asp:ListItem Value="515">2015-2016</asp:ListItem>
-                    </asp:DropDownList>
+                      </asp:DropDownList>
                 </p>
                 <span style="position: relative; left: 60%">
                  <asp:Button ID="Button1" runat="server" Text="Update Dashboard" CssClass="buttonn" OnClick="Button1_Click" /></span>
