@@ -30,18 +30,19 @@
 
             <asp:Panel ID="Panel2" runat="server">
                 <div class="four columns">
-                    <p>Last Name: 
+                    <p>Last Name:  <span style="color: red">*</span>
                         <asp:TextBox ID="lastnameTxtbox" runat="server"></asp:TextBox>
                     </p>
                 </div>
                 <div class="four columns">
-
-                    <p>First Name: 
-                        <asp:TextBox ID="firstnameTxtbox" runat="server"></asp:TextBox></p>
+                    <p>First Name: <span style="color: red">*</span>
+                        &nbsp;<asp:TextBox ID="firstnameTxtbox" runat="server"></asp:TextBox>
+                    </p>
                 </div>
                 <div class="four columns">
-                    <p>Middle Name: 
-                        <asp:TextBox ID="midnametxtbox" runat="server"></asp:TextBox></p>
+                    <p>Middle Name: <span style="color: red">*</span>
+                        <asp:TextBox ID="midnametxtbox" runat="server"></asp:TextBox>
+                    </p>
                 </div>
 
                 <div class="six columns">
@@ -53,7 +54,7 @@
                        </p>
                 </div>
                 <div class="six columns">
-                    <p>School Address: 
+                    <p>School Address: <span style="color: red">*</span>
                         <asp:TextBox ID="schoolAddTxtbox" runat="server" ReadOnly="True"></asp:TextBox></p>
                 </div>
         </asp:Panel>
@@ -67,12 +68,12 @@
         </div>
 
         <div class="six columns">
-            <p>Town
+            <p>Town <span style="color: red">*</span>
                 <asp:TextBox ID="townAddTxtbox" runat="server"></asp:TextBox></p>
         </div>
 
         <div class="six columns">
-            <p>Province
+            <p>Province <span style="color: red">*</span>
                 <asp:TextBox ID="provinceAddTxtbox" runat="server"></asp:TextBox></p>
         </div>
         <div class="four columns">
@@ -101,7 +102,7 @@
         </div>
 
         <div class="six columns">
-            <p>Email Address :
+            <p>Email Address : <span style="color: red">*</span>
                 <asp:TextBox ID="emailAddTxtbox" runat="server"></asp:TextBox></p>
 
         </div>
@@ -112,34 +113,34 @@
           
            <div class="twelve columns">         <br /><br /><h2> Parent/Guardian Information</h2></div>
             <div class="four columns">        
-                <p>Mothers's Name: 
+                <p>Mothers's Name: <span style="color: red">*</span>
                     <asp:TextBox ID="MnameTxtbox" runat="server"></asp:TextBox>
                 </p>
             </div>
             <div class="four columns">
 
-                <p>Tel. no: 
+                <p>Tel. no:
                     <asp:TextBox ID="MtelNoTxtbox" runat="server"></asp:TextBox></p>
             </div>
             <div class="four columns">
-                <p>Mobile no.: 
+                <p>Mobile no.: <span style="color: red">*</span>
                     <asp:TextBox ID="MMobileTxtbox" runat="server"></asp:TextBox></p>
             </div>
 
             <div class="six columns">
-                <p>Occupation: 
+                <p>Occupation:
                     <asp:TextBox ID="MoccuTxtbox" runat="server"></asp:TextBox></p>
 
             </div>
             <div class="six columns">
-                <p>Address: 
+                <p>Address: <span style="color: red">*</span>
                     <asp:TextBox ID="MaddressTxtbox" runat="server" TextMode="MultiLine"></asp:TextBox></p>
 
             </div>
 
 
             <div class="four columns">
-                <p>Fathers's Name: 
+                <p>Fathers's Name: <span style="color: red">*</span>
                     <asp:TextBox ID="FnameTxtbox" runat="server"></asp:TextBox>
                 </p>
             </div>
@@ -149,7 +150,7 @@
                     <asp:TextBox ID="FtelTxtbox" runat="server"></asp:TextBox></p>
             </div>
             <div class="four columns">
-                <p>Mobile no.: 
+                <p>Mobile no.: <span style="color: red">*</span>
                     <asp:TextBox ID="FmobTxtbox" runat="server"></asp:TextBox></p>
             </div>
 
@@ -159,13 +160,13 @@
 
             </div>
             <div class="six columns">
-                <p>Address: 
+                <p>Address: <span style="color: red">*</span>
                     <asp:TextBox ID="FaddressTxtbox" runat="server" TextMode="MultiLine"></asp:TextBox></p>
 
             </div>
             
              <div class="four columns">
-                <p>Guardian's Name: 
+                <p>Guardian's Name: <span style="color: red">*</span>
                     <asp:TextBox ID="GnameTxtbox" runat="server"></asp:TextBox>
                 </p>
             </div>
@@ -175,7 +176,7 @@
                     <asp:TextBox ID="GtelnoTxtbox" runat="server"></asp:TextBox></p>
             </div>
             <div class="four columns">
-                <p>Mobile no.: 
+                <p>Mobile no.: <span style="color: red">*</span>
                     <asp:TextBox ID="GmobileTxtbox" runat="server"></asp:TextBox></p>
             </div>
 
@@ -185,7 +186,7 @@
 
             </div>
             <div class="six columns">
-                <p>Address: 
+                <p>Address: <span style="color: red">*</span>
                     <asp:TextBox ID="GaddressTxtbox" runat="server" TextMode="MultiLine"></asp:TextBox></p>
 
             </div>

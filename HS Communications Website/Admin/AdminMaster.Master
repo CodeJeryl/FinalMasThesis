@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="../stylesheets/style.css">
     <link rel="stylesheet" href="../stylesheets/homepage.css">
+
     <link href="../stylesheets/letran/Subhead.css" rel="stylesheet" />
     <!-- homepage stylesheet -->
     <link rel="stylesheet" href="../stylesheets/skins/teal.css">
@@ -105,15 +106,18 @@
         .bgbg1 {
             background-image: url('<%# Page.ResolveUrl("../images/masterpage/menuBack.png") %>');border-radius: 10px;background-size: cover;
         }
-        .bgbg {
+        .bgbg 
+        {
             background-color: white;border-radius: 10px;
         }
-        .bgrow {
+        .bgrow 
+        {
             background-image: url('<%# Page.ResolveUrl("../images/masterpage/bannerPic.png")%>'); background-repeat: no-repeat;background-size: cover;
         }
-        .contain-to-grid .top-bar {
-    max-width: 85rem !important;
-    }
+        .contain-to-grid .top-bar 
+        {
+            max-width: 85rem !important;
+        }
 
       
     </style>
@@ -206,7 +210,7 @@
 
 
                                 <li class="has-dropdown">
-                                    <a>Managements</a>
+                                    <a>Management</a>
                                     <ul class="dropdown">
                                         <li><a href="Profile.aspx">Edit Student Profile</a></li>
                                         <li><a href="AssignT.aspx">Assign Subject Teacher</a></li>

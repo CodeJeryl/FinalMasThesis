@@ -86,22 +86,21 @@
                 </asp:RadioButtonList>
             </p>
         </div>
+
             <asp:Panel ID="studPanel" runat="server">
         <div class="six columns">
             <p>Mobile No. :
-                <asp:TextBox ID="mobileTxtbox" runat="server"></asp:TextBox></p>
+            <asp:TextBox ID="mobileTxtbox" runat="server"></asp:TextBox></p>
         </div>
 
         <div class="six columns">
             <p>Email Address :
                 <asp:TextBox ID="emailAddTxtbox" runat="server"></asp:TextBox></p>
-
-        </div>
+            </div>
                 </asp:Panel>
         <br />
         <span style="margin: 80%">
             <asp:Button ID="studentBtn" runat="server" Text="Update Profile" CssClass="buttonn" OnClick="studentBtn_Click" Visible="False" /></span><br />
-
         <asp:Panel ID="parentsPanel" runat="server" Enabled="False">
             <h2>Parent/Guardian Information</h2>
             <div class="four columns">
@@ -110,7 +109,6 @@
                 </p>
             </div>
             <div class="four columns">
-
                 <p>Tel. no: 
                     <asp:TextBox ID="MtelNoTxtbox" runat="server"></asp:TextBox></p>
             </div>
@@ -122,8 +120,7 @@
             <div class="six columns">
                 <p>Occupation: 
                     <asp:TextBox ID="MoccuTxtbox" runat="server"></asp:TextBox></p>
-
-            </div>
+                </div>
             <div class="six columns">
                 <p>Address: 
                     <asp:TextBox ID="MaddressTxtbox" runat="server" TextMode="MultiLine"></asp:TextBox></p>

@@ -445,10 +445,12 @@ namespace HS_Communications_Website.Admin
             this.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.Letter;
             reportParameter1.AllowNull = true;
             reportParameter1.Name = "studno";
+            reportParameter1.Text = "Student No.";
             reportParameter1.Type = Telerik.Reporting.ReportParameterType.Integer;
             reportParameter1.Visible = true;
             reportParameter2.AllowNull = true;
             reportParameter2.Name = "lastn";
+            reportParameter2.Text = "Last Name";
             reportParameter2.Visible = true;
             this.ReportParameters.Add(reportParameter1);
             this.ReportParameters.Add(reportParameter2);

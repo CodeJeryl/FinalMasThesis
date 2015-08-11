@@ -26,128 +26,118 @@ namespace HS_Communications_Website.Admin
             try
             {
 
-           
-            Panel1.Visible = false;
-            ErrorPanel.Visible = false;
-            var strcon = ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
-            string conString = strcon.ConnectionString;
+
+                Panel1.Visible = false;
+                ErrorPanel.Visible = false;
+                var strcon = ConfigurationManager.ConnectionStrings["HsDbConnectionString"];
+                string conString = strcon.ConnectionString;
 
 
-            SqlConnection con = new SqlConnection(conString);
+                SqlConnection con = new SqlConnection(conString);
 
-            if (DropDownList1.Text == "all")
-            {
-              con.Close();
-                con.Open();
-
-                //insert all parent/student
-                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"] + "','true','all','false',@datee),('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','all','false',@datee),('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','faculty','false',@datee)", con);
-                ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
-                ins.ExecuteNonQuery();
-
-                con.Close();
-
-                Panel1.Visible = true;
-
-                
-                DropDownList2.Visible = false;
-                titleTxtbox.Text = "";
-                messageTxtbox.Text = "";
-
-            }
-            else if (DropDownList1.Text == "students")
-            {
-                if(CheckBox1.Checked)
-                {
-                 con.Close();
-                con.Open();
-
-                //insert all parent/student
-                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','" + DropDownList2.Text + "','false',@datee)", con);
-                ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
-                    ins.ExecuteNonQuery();
-
-                con.Close();
-                }
-                else
+                if (DropDownList1.Text == "all")
                 {
                     con.Close();
                     con.Open();
 
                     //insert all parent/student
-                    SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','all','false',@datee)", con);
+                    SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"] + "','true','all','false',@datee),('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','all','false',@datee),('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','faculty','false',@datee)", con);
                     ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
                     ins.ExecuteNonQuery();
 
                     con.Close();
-                }
 
-
-                Panel1.Visible = true;
-
-              
-                DropDownList2.Visible = false;
-                titleTxtbox.Text = "";
-                messageTxtbox.Text = "";
-                CheckBox1.Checked = false;
-            }
-            else if (DropDownList1.Text == "parents")
-            {
-                if (CheckBox1.Checked)
-                {
-                    con.Close();
-                    con.Open();
-
-                    //insert all parent/student
-                    SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','true','" + DropDownList2.Text + "','false',@datee)", con);
-                    ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
-                    ins.ExecuteNonQuery();
-
-                    con.Close();
-                }
-                else
-                {
-
-                    con.Close();
-                    con.Open();
-
-                    //insert all parent/student
-                    SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','true','all','false',@datee)", con);
-                    ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now; 
-                    ins.ExecuteNonQuery();
-
-                    con.Close();
+                    Panel1.Visible = true;
                     
+                    DropDownList2.Visible = false;
+                    titleTxtbox.Text = "";
+                    messageTxtbox.Text = "";
+
                 }
+                else if (DropDownList1.Text == "students")
+                {
+                    if (CheckBox1.Checked)
+                    {
+                        con.Close();
+                        con.Open();
 
-                Panel1.Visible = true;
+                        //insert all parent/student
+                        SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','" + DropDownList2.Text + "','false',@datee)", con);
+                        ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
+                        ins.ExecuteNonQuery();
 
-                
-                DropDownList2.Visible = false;
-                titleTxtbox.Text = "";
-                messageTxtbox.Text = "";
-                CheckBox1.Checked = false;
-            }
-            else if (DropDownList1.Text == "faculty")
-            {
-                con.Close();
-                con.Open();
+                        con.Close();
+                    }
+                    else
+                    {
+                        con.Close();
+                        con.Open();
 
-                //insert all parent/student
-                SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','faculty','false',@datee)", con);
-                ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
-                ins.ExecuteNonQuery();
+                        //insert all parent/student
+                        SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','all','false',@datee)", con);
+                        ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
+                        ins.ExecuteNonQuery();
 
-                con.Close();
+                        con.Close();
+                    }
 
-                Panel1.Visible = true;
+                    Panel1.Visible = true;
 
-             
-                DropDownList2.Visible = false;
-                titleTxtbox.Text = "";
-                messageTxtbox.Text = "";
-               
-            }
+                    DropDownList2.Visible = false;
+                    titleTxtbox.Text = "";
+                    messageTxtbox.Text = "";
+                    CheckBox1.Checked = false;
+                }
+                else if (DropDownList1.Text == "parents")
+                {
+                    if (CheckBox1.Checked)
+                    {
+                        con.Close();
+                        con.Open();
+
+                        //insert all parent/student
+                        SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','true','" + DropDownList2.Text + "','false',@datee)", con);
+                        ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
+                        ins.ExecuteNonQuery();
+
+                        con.Close();
+                    }
+                    else
+                    {
+                        con.Close();
+                        con.Open();
+
+                        //insert all parent/student
+                        SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','true','all','false',@datee)", con);
+                        ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
+                        ins.ExecuteNonQuery();
+
+                        con.Close();
+                    }
+
+                    Panel1.Visible = true;
+
+                    DropDownList2.Visible = false;
+                    titleTxtbox.Text = "";
+                    messageTxtbox.Text = "";
+                    CheckBox1.Checked = false;
+                }
+                else if (DropDownList1.Text == "faculty")
+                {
+                    con.Close();
+                    con.Open();
+                    //insert all parent/student
+                    SqlCommand ins = new SqlCommand("Insert into msgTbl values('" + titleTxtbox.Text + "','" + messageTxtbox.Text + "','" + Session["name"] + "','" + Session["level"].ToString() + "','false','faculty','false',@datee)", con);
+                    ins.Parameters.Add("@datee", SqlDbType.DateTime).Value = DateTime.Now;
+                    ins.ExecuteNonQuery();
+
+                    con.Close();
+
+                    Panel1.Visible = true;
+                    DropDownList2.Visible = false;
+                    titleTxtbox.Text = "";
+                    messageTxtbox.Text = "";
+                }
             }
             catch (Exception ex)
             {
@@ -160,26 +150,26 @@ namespace HS_Communications_Website.Admin
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(DropDownList1.Text == "all")
+            if (DropDownList1.Text == "all")
             {
                 DropDownList2.Visible = false;
                 seclbl.Visible = false;
                 CheckBox1.Visible = false;
                 CheckBox1.Checked = false;
             }
-            else if(DropDownList1.Text == "students")
+            else if (DropDownList1.Text == "students")
             {
                 CheckBox1.Visible = true;
                 CheckBox1.Checked = false;
-                //    DropDownList2.Visible = true;
+                //   DropDownList2.Visible = true;
                 //   seclbl.Visible = true;
             }
-            else if(DropDownList1.Text == "parents")
+            else if (DropDownList1.Text == "parents")
             {
                 CheckBox1.Visible = true;
                 CheckBox1.Checked = false;
-              //  DropDownList2.Visible = true;
-             //   seclbl.Visible = true;
+                //  DropDownList2.Visible = true;
+                //  seclbl.Visible = true;
             }
             else if (DropDownList1.Text == "faculty")
             {
@@ -190,16 +180,16 @@ namespace HS_Communications_Website.Admin
             }
             else
             {
-              CheckBox1.Checked = false;
+                CheckBox1.Checked = false;
             }
         }
 
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(CheckBox1.Checked)
+            if (CheckBox1.Checked)
             {
-            DropDownList2.Visible = true;
-            seclbl.Visible = true;
+                DropDownList2.Visible = true;
+                seclbl.Visible = true;
             }
             else
             {
@@ -207,6 +197,6 @@ namespace HS_Communications_Website.Admin
                 seclbl.Visible = false;
             }
         }
-        
+
     }
 }
