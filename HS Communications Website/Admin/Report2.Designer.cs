@@ -19,6 +19,7 @@ namespace HS_Communications_Website.Admin
             this.labelsGroupHeaderSection = new Telerik.Reporting.GroupHeaderSection();
             this.lNameCaptionTextBox = new Telerik.Reporting.TextBox();
             this.fNameCaptionTextBox = new Telerik.Reporting.TextBox();
+            this.textBox1 = new Telerik.Reporting.TextBox();
             this.sqlDataSource1 = new Telerik.Reporting.SqlDataSource();
             this.pageFooter = new Telerik.Reporting.PageFooterSection();
             this.currentTimeTextBox = new Telerik.Reporting.TextBox();
@@ -35,7 +36,6 @@ namespace HS_Communications_Website.Admin
             this.detail = new Telerik.Reporting.DetailSection();
             this.lNameDataTextBox = new Telerik.Reporting.TextBox();
             this.fNameDataTextBox = new Telerik.Reporting.TextBox();
-            this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBox2 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -77,12 +77,23 @@ namespace HS_Communications_Website.Admin
             this.fNameCaptionTextBox.StyleName = "Caption";
             this.fNameCaptionTextBox.Value = "First Name";
             // 
+            // textBox1
+            // 
+            this.textBox1.CanGrow = true;
+            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(10.600200653076172D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.1610503196716309D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
+            this.textBox1.Style.Font.Name = "Arial Black";
+            this.textBox1.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.textBox1.StyleName = "Caption";
+            this.textBox1.Value = "Middle Name";
+            // 
             // sqlDataSource1
             // 
             this.sqlDataSource1.ConnectionString = "HsDbConnectionString";
             this.sqlDataSource1.Name = "sqlDataSource1";
-            this.sqlDataSource1.SelectCommand = "SELECT        LName, FName, Section, GR_YR, SY\r\nFROM            BLHD\r\nORDER BY LN" +
-    "ame";
+            this.sqlDataSource1.SelectCommand = "SELECT        LName,Mname, FName, Section, GR_YR, SY\r\nFROM            BLHD\r\nORDER" +
+    " BY LName";
             // 
             // pageFooter
             // 
@@ -225,17 +236,6 @@ namespace HS_Communications_Website.Admin
             this.fNameDataTextBox.StyleName = "Data";
             this.fNameDataTextBox.Value = "=Fields.FName";
             // 
-            // textBox1
-            // 
-            this.textBox1.CanGrow = true;
-            this.textBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(10.600200653076172D), Telerik.Reporting.Drawing.Unit.Cm(0.052916664630174637D));
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.1610503196716309D), Telerik.Reporting.Drawing.Unit.Cm(0.99999988079071045D));
-            this.textBox1.Style.Font.Name = "Arial Black";
-            this.textBox1.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-            this.textBox1.StyleName = "Caption";
-            this.textBox1.Value = "Middle Name";
-            // 
             // textBox2
             // 
             this.textBox2.CanGrow = true;
@@ -244,7 +244,7 @@ namespace HS_Communications_Website.Admin
             this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(5.1610503196716309D), Telerik.Reporting.Drawing.Unit.Cm(1.0529165267944336D));
             this.textBox2.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox2.StyleName = "Data";
-            this.textBox2.Value = "=Fields.FName";
+            this.textBox2.Value = "=Fields.MName";
             // 
             // Report2
             // 
