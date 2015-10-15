@@ -13,29 +13,29 @@ namespace HS_Communications_Website.Portal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
 
 
-                SqlConnection con = new SqlConnection(conString);
-                con.Close();
-                con.Open();
-                SqlCommand se = new SqlCommand("SELECT Data,status FROM headerTbl WHERE status = 'active'", con);
+            //    SqlConnection con = new SqlConnection(conString);
+            //    con.Close();
+            //    con.Open();
+            //    SqlCommand se = new SqlCommand("SELECT Data,status FROM headerTbl WHERE status = 'active'", con);
 
-                SqlDataReader rd = se.ExecuteReader();
+            //    SqlDataReader rd = se.ExecuteReader();
 
-                if (rd.Read())
-                {
-                    byte[] bytes = (byte[])rd.GetSqlBinary(0);
-                    string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
-                    Image1.ImageUrl = "data:image/png;base64," + base64String;
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
+            //    if (rd.Read())
+            //    {
+            //        byte[] bytes = (byte[])rd.GetSqlBinary(0);
+            //        string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
+            //        Image1.ImageUrl = "data:image/png;base64," + base64String;
+            //    }
+            //    con.Close();
+            //}
+            //catch (Exception ex)
+            //{
                 
-            }
+            //}
         }
         string conString = ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace HS_Communications_Website.Portal
             Session.Clear();
             System.Web.Security.FormsAuthentication.SignOut();
 
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/Home.aspx");
         }
     }
 }

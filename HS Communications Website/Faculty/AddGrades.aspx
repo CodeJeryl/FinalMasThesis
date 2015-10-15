@@ -28,8 +28,8 @@
                     Section:  <asp:Label ID="secLbl" runat="server" Text="Label"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
              
-                <span style="position: absolute;left:83%">   <asp:Button ID="InsertEqui" runat="server" Text="Insert Equivalent" CssClass="buttonn alert" OnClick="InsertEqui_Click" BackColor="Red"/>
-                    <asp:Button ID="UpdateButton" runat="server" Text="Save Grades" CssClass="buttonn" OnClick="UpdateButton_Click" Visible="False"/></span>
+                <span style="position: absolute;left:83%">   <asp:Button ID="InsertEqui" runat="server" Text="Insert Equivalent" CssClass="buttonn alert" OnClick="InsertEqui_Click" BackColor="Red" Visible="False"/>
+                    <asp:Button ID="UpdateButton" runat="server" Text="Save Grades" CssClass="buttonn" OnClick="UpdateButton_Click"/></span>
             
            <br/><br/>
               <span style="font-size: 18px"> <a href="Grades.aspx">Back to list of grades</a> </span>

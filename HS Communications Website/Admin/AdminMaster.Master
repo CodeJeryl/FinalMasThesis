@@ -30,10 +30,7 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
-    <script src="../Foundation/js/vendor/jquery.js"></script>
-    <script src="../Foundation/js/foundation.min.js"></script>
-    <script src="../Foundation/js/foundation/foundation.topbar.js"></script>
+    <%--<script src="../Foundation/js/vendor/modernizr.js"></script>--%>
 
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 
@@ -45,34 +42,29 @@
             font-family: 'Old English Text MT';
             color: #dddddd !important;
         }
-
         a.header2
         {
             font-size: 60px !important;
             font-family: 'Old English Text MT';
             color: #dddddd !important;
         }
-
         a.letran
         {
             font-size: 43px !important;
             font-family: 'Old English Text MT';
             color: #dddddd !important;
         }
-
         a.bataan
         {
             font-size: 30px !important;
             font-family: Arial;
             color: #dddddd !important;
         }
-
         b.footer2
         {
             font-size: 20px !important;
             font-family: Arial;
         }
-
         ul.about
         {
             top: -2px !important;
@@ -89,7 +81,6 @@
         {
             height: 100% !important;
         }
-
         body
         {
             min-height: 100% !important;
@@ -118,10 +109,7 @@
         {
             max-width: 85rem !important;
         }
-
-      
     </style>
-
 </head>
 <body>
 
@@ -135,8 +123,7 @@
             <div class="row">
                 <div class="twelve columns">
                     <div class="infotext">
-                        Login here
-		
+                        Login here		
                     </div>
                 </div>
             </div>
@@ -152,8 +139,8 @@
                 <div class="four columns">
                     <a href="<%= Page.ResolveUrl("~/Home.aspx") %>">
                         <span>
-                            <%--<img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />--%>
-                             <asp:Image ID="Image1" runat="server" />
+                   <%--         <img src="<%= Page.ResolveUrl("../images/masterpage/Name.png") %>" />--%>
+                            <img src="../images/masterpage/Name.png" style="max-width: none !important;" /> <%--<asp:Image ID="Image1" runat="server" />--%>
                         </span>
                     </a>
                 </div>
@@ -187,7 +174,7 @@
                                         <li><a href="Upload.aspx">Memo/Class Schedule</a></li>
                                         <%--         <li><a href="AddStudents.aspx">Upload New Students</a></li>--%>
                                         <li><a href="ManageGrades.aspx">Grades</a></li>
-                                            <li><a href="updateHeader.aspx">Upload Header Logo</a></li>
+                                          <%--  <li><a href="updateHeader.aspx">Upload Header Logo</a></li>--%>
                                     </ul>
                                 </li>
 
@@ -219,7 +206,7 @@
                                         <li><a href="AddTeachers.aspx">Add Teachers</a></li>
                                         <li><a href="ManageDashboard.aspx">Manage Dashboard</a></li>
                                            <li><a href="ManageSchools.aspx">Manage Schools</a></li>
-                                          <li><a href="GradeRange.aspx">Manage Range of Grades</a></li>
+                                          <li><a href="ManageEmail.aspx">Send New Password to Students</a></li>
                                         <li><a href="ManageAccnt.aspx">Enable/Disable Accounts</a></li>
                                     </ul>
                                 </li>
@@ -258,8 +245,8 @@
                         <a href="#top"><span></span></a>
                     </p>
                        <div class="four columns">
-                        <h1><a class="bataan">Student Portal</a></h1>                  
-                        <%--   <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>--%>
+                         
+                           <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>
                       
                         <p></p>
                     </div>
@@ -312,6 +299,10 @@
         </div>
 
     </form>
+    
+    <script src="../Foundation/js/vendor/jquery.js"></script>
+    <script src="../Foundation/js/foundation.min.js"></script>
+    
 
     <script>
         $(document).foundation();

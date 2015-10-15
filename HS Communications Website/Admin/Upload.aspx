@@ -12,7 +12,7 @@
 	    <div class="sectiontitle">
 			<h4><strong class="colhead">Upload Page</strong></h4>
 		</div>
-       
+     
         <div class="three columns">
                   <asp:Panel ID="Panel1" runat="server" CssClass="alert-box" Visible="False" ><h4 style="text-align: center">
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h4></asp:Panel>

@@ -21,7 +21,7 @@ namespace HS_Communications_Website
 
             if (Request.IsAuthenticated)
             {
-               FormsAuthentication.SignOut();
+                FormsAuthentication.SignOut();
             }
 
             errorPanel.Visible = false;
@@ -61,7 +61,7 @@ namespace HS_Communications_Website
 
                     try
                     {
-                        if (studNumberTxtbox.Text.StartsWith("5"))
+                        if (TextBox1.Text.StartsWith("5"))
                         {
                             //hs
                             SqlConnection conek1 = new SqlConnection(hsSql);
@@ -71,84 +71,91 @@ namespace HS_Communications_Website
 
                             SqlCommand comsearch1 =
                                 new SqlCommand(
-                                    "Select * From LoginView where username = @userName and password = @password and activated = 1",
+                                    "Select * From LoginView where username = @userName and activated = 1",
                                     conek1);
                             comsearch1.Parameters.Add("@userName", SqlDbType.VarChar, 50);
                             comsearch1.Parameters["@userName"].Value = TextBox1.Text;
-                            comsearch1.Parameters.Add("@password", SqlDbType.VarChar, 50);
-                            comsearch1.Parameters["@password"].Value = TextBox2.Text;
+                            //   comsearch1.Parameters.Add("@password", SqlDbType.VarChar, 50); and password = @password
+                          //  comsearch1.Parameters["@password"].Value = TextBox2.Text;
 
                             SqlDataReader rd1 = comsearch1.ExecuteReader();
                             if (rd1.Read())
                             {
-                                char last = TextBox1.Text[TextBox1.Text.Length - 1];
-                                if (last.ToString().ToUpper() == "P")
+                                has = rd1.GetString(3);
+
+                                if (ValidatePassword(TextBox2.Text, has))
                                 {
-                                    //parent code here
+                                    char last = TextBox1.Text[TextBox1.Text.Length - 1];
+                                    if (last.ToString().ToUpper() == "P")
+                                    {
+                                        //parent code here
 
-                                    Session["studno"] = rd1.GetInt32(0);
-                                    Session["name"] = rd1.GetString(1);
-                                    Session["username"] = rd1.GetString(2);
-                                    Session["section"] = rd1.GetString(4);
-                                    Session["year"] = rd1.GetInt32(5);
-                                    Session["parent"] = "true";
+                                        Session["studno"] = rd1.GetInt32(0);
+                                        Session["name"] = rd1.GetString(1);
+                                        Session["username"] = rd1.GetString(2);
+                                        Session["section"] = rd1.GetString(4);
+                                        Session["year"] = rd1.GetInt32(5);
+                                        Session["parent"] = "true";
 
-                                    //conek1.Close();
-                                    //conek1.Open();
-                                    //SqlCommand com = new SqlCommand("update adminol set online = '" + 1 + "'", conek1);
+                                        //conek1.Close();
+                                        //conek1.Open();
+                                        //SqlCommand com = new SqlCommand("update adminol set online = '" + 1 + "'", conek1);
+                                        // com.ExecuteNonQuery();
 
-                                    // com.ExecuteNonQuery();
+                                        tkt = new FormsAuthenticationTicket(1, TextBox1.Text, DateTime.Now,
+                                                                            DateTime.Now.AddMinutes(60), false, "");
+                                        cookiestr = FormsAuthentication.Encrypt(tkt);
+                                        ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
+                                        ck.Expires = tkt.Expiration;
+                                        ck.Path = FormsAuthentication.FormsCookiePath;
+                                        Response.Cookies.Add(ck);
 
-                                    tkt = new FormsAuthenticationTicket(1, TextBox1.Text, DateTime.Now,
-                                                                        DateTime.Now.AddMinutes(60), false, "");
-                                    cookiestr = FormsAuthentication.Encrypt(tkt);
-                                    ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
-                                    ck.Expires = tkt.Expiration;
-                                    ck.Path = FormsAuthentication.FormsCookiePath;
-                                    Response.Cookies.Add(ck);
+                                        string strRedirect;
+                                        strRedirect = "~/Portal/Phomepage.aspx";
+                                        Response.Redirect(strRedirect, true);
 
-                                    string strRedirect;
-                                    strRedirect = "~/Portal/Phomepage.aspx";
-                                    Response.Redirect(strRedirect, true);
+                                        //System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
+                                        //System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
+                                        //System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+                                        //Response.Redirect("~/Portal/Phomepage.aspx", false);
+                                    }
+                                    else
+                                    {
+                                        //student code here
 
-                                    //System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
-                                    //System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
-                                    //System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+                                        Session["studno"] = rd1.GetInt32(0);
+                                        Session["name"] = rd1.GetString(1);
+                                        Session["username"] = rd1.GetString(2);
+                                        Session["section"] = rd1.GetString(4);
+                                        Session["year"] = rd1.GetInt32(5);
+                                        Session["Parent"] = "false";
 
-                                    //Response.Redirect("~/Portal/Phomepage.aspx", false);
+                                        //conek1.Close();
+                                        //conek1.Open();
+                                        //SqlCommand com = new SqlCommand("update adminol set online = '" + 1 + "'", conek1);
+
+                                        // com.ExecuteNonQuery();
+                                        tkt = new FormsAuthenticationTicket(1, TextBox1.Text, DateTime.Now,
+                                                                            DateTime.Now.AddMinutes(60), false, "");
+                                        cookiestr = FormsAuthentication.Encrypt(tkt);
+                                        ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
+                                        ck.Expires = tkt.Expiration;
+                                        ck.Path = FormsAuthentication.FormsCookiePath;
+                                        Response.Cookies.Add(ck);
+
+                                        string strRedirect;
+                                        strRedirect = "~/Portal/Phomepage.aspx";
+                                        Response.Redirect(strRedirect, true);
+                                        //System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
+                                        //System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
+                                        //System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
+                                        //Response.Redirect("~/Portal/Phomepage.aspx", false);
+                                    }
                                 }
                                 else
                                 {
-                                    //student code here
-
-                                    Session["studno"] = rd1.GetInt32(0);
-                                    Session["name"] = rd1.GetString(1);
-                                    Session["username"] = rd1.GetString(2);
-                                    Session["section"] = rd1.GetString(4);
-                                    Session["year"] = rd1.GetInt32(5);
-                                    Session["Parent"] = "false";
-
-                                    //conek1.Close();
-                                    //conek1.Open();
-                                    //SqlCommand com = new SqlCommand("update adminol set online = '" + 1 + "'", conek1);
-
-                                    // com.ExecuteNonQuery();
-                                    tkt = new FormsAuthenticationTicket(1, TextBox1.Text, DateTime.Now,
-                                                                        DateTime.Now.AddMinutes(60), false, "");
-                                    cookiestr = FormsAuthentication.Encrypt(tkt);
-                                    ck = new HttpCookie(FormsAuthentication.FormsCookieName, cookiestr);
-                                    ck.Expires = tkt.Expiration;
-                                    ck.Path = FormsAuthentication.FormsCookiePath;
-                                    Response.Cookies.Add(ck);
-
-                                    string strRedirect;
-                                    strRedirect = "~/Portal/Phomepage.aspx";
-                                    Response.Redirect(strRedirect, true);
-                                    //System.Web.Security.FormsAuthentication.RedirectFromLoginPage(usernameTxtbox.Text, false);
-                                    //System.Web.Security.FormsAuthentication.SetAuthCookie(usernameTxtbox.Text, false);
-                                    //System.Web.Security.FormsAuthentication.GetAuthCookie(usernameTxtbox.Text, false);
-
-                                    //Response.Redirect("~/Portal/Phomepage.aspx", false);
+                                    errorPanel.Visible = true;
+                                    ErrorLbl.Text = "Incorrect Username/Password";
                                 }
                             }
                             else
@@ -161,7 +168,7 @@ namespace HS_Communications_Website
                             rd1.Close();
 
                         }
-                        else if (studNumberTxtbox.Text.StartsWith("4"))
+                        else if (TextBox1.Text.StartsWith("4"))
                         {
                             SqlCommand studsearch = new SqlCommand("Select * from userAccounts where studno = @studno",
                                                                    con);
@@ -206,10 +213,10 @@ namespace HS_Communications_Website
 
                                     Session["Stud"] = read.GetInt32(0).ToString();
                                     System.Web.Security.FormsAuthentication.SetAuthCookie(TextBox1.Text, false);
-                                    url = "Student/Student.aspx";
+                                    url = "College/StudentPage.aspx";
                                     // url = "Student.aspx";
-                                    Response.Redirect(url);
-                                }
+                                    Response.Redirect(url,true);
+                                   }
                                 else
                                 {
                                     errorPanel.Visible = true;
@@ -228,7 +235,7 @@ namespace HS_Communications_Website
                             ErrorLbl.Text = "Student ID is not valid, Please try Again.";
                         }
 
-                    }
+                    }                
                     catch (Exception ex)
                     {
                         errorPanel.Visible = true;
@@ -249,8 +256,6 @@ namespace HS_Communications_Website
                 //{
                 if (studNumberTxtbox.Text.StartsWith("5"))
                 {
-
-                  
                     errorPanel1.Visible = false;
                     SqlConnection con = new SqlConnection(hsSql);
                     SqlConnection con1 = new SqlConnection(hsSql);
@@ -266,9 +271,13 @@ namespace HS_Communications_Website
 
                     if (red.Read())
                     {
+                        string midname = red.GetString(5) + red.GetString(6)[0];
                         Random x = new Random();
                         int y = x.Next();
                         int z = x.Next();
+
+                        string hashed = CreateHash(y.ToString());
+                        string hashed1 = CreateHash(z.ToString());
                         // password = "123";
                         // send password to email and insert into useraccounts
                         con1.Close();
@@ -276,23 +285,22 @@ namespace HS_Communications_Website
                         string fulln = red.GetString(4) + " " + red.GetString(6);
                         string lastn = red.GetString(6);
                         string ParentName = "Mr./Mrs. " + red.GetString(6);
-                        SqlCommand ins = new SqlCommand("Insert into useraccounts values('" + studNumberTxtbox.Text + "','" + fulln + "','" + y.ToString() + "','" + studNumberTxtbox.Text + "'), ('" + studNumberTxtbox.Text + "P" + "','" + ParentName + "','" + z.ToString() + "','" + studNumberTxtbox.Text + "')", con1);
+                        SqlCommand ins = new SqlCommand("Insert into useraccounts values('" + studNumberTxtbox.Text + "','" + fulln + "','" + hashed + "','" + studNumberTxtbox.Text + "','" + midname + "'), ('" + studNumberTxtbox.Text + "P" + "','" + ParentName + "','" + hashed1 + "','" + studNumberTxtbox.Text + "','" + midname + "')", con1);
                         ins.ExecuteNonQuery();
 
                         conP.Close();
                         conP.Open();
 
-
-                        SqlCommand upd = new SqlCommand("update students set activated = '1' and email = '" + emailAddTxtb.Text + "' where StudentNo = '" + studNumberTxtbox.Text + "'", conP);
+                        SqlCommand upd = new SqlCommand("update students set activated = '1',email = '" + emailAddTxtb.Text + "' where StudentNo = '" + studNumberTxtbox.Text + "'", conP);
                         upd.ExecuteNonQuery();
                         conP.Close();
 
                         //insert to pdetails table
-                        //conPins.Close();
-                        //conPins.Open();
-                        //SqlCommand ins2 = new SqlCommand("Insert into pDetailsTbl(studno) values('" + userTxtbox.Text + "')", conPins);
-                        //ins2.ExecuteNonQuery();
-                        //conPins.Close();
+                        conPins.Close();
+                        conPins.Open();
+                        SqlCommand ins2 = new SqlCommand("Insert into pDetailsTbl(studno) values('" + studNumberTxtbox.Text + "')", conPins);
+                        ins2.ExecuteNonQuery();
+                        conPins.Close();
 
                         string mess = this.PopulateBodyHS(fulln, y.ToString(), studNumberTxtbox.Text, z.ToString());
                         // string mess = "Your Password: " + y.ToString() + "<br/> you can change your password after logging in.";
@@ -300,8 +308,7 @@ namespace HS_Communications_Website
                         sendEmail("JerylSuarez@letranbataan.edu.ph", emailAddTxtb.Text, "", "", "Letran Bataan Student Portal Account Activation", mess);
 
                         errorPanel1.Visible = true;
-                        Label1.Text ="Your Password has been sent to your email. If you did not receive any email, Use the Forgot Password. Thank you!";
-                                   
+                        Label1.Text = "Your Password has been sent to your email. If you did not receive any email, Use the Forgot Password. Thank you!";
                         //   SucLbl.Text = "Student Account and Parent Account is Successfully Activated";
                     }
                     else
@@ -310,7 +317,7 @@ namespace HS_Communications_Website
                         Label1.Text = "Incorrect StudentID or already Activated!";
                     }
                 }
-                else if (studNumberTxtbox.Text.StartsWith("4")) 
+                else if (studNumberTxtbox.Text.StartsWith("4"))
                 {
 
                     using (SqlConnection con = new SqlConnection(sql))
@@ -327,7 +334,6 @@ namespace HS_Communications_Website
 
                         //newcom.Parameters.Add("@bday", SqlDbType.Date);
                         //newcom.Parameters["@bday"].Value = Convert.ToDateTime(bdayTxtbox.Text);
-
                         SqlDataReader red = newcom.ExecuteReader();
 
                         if (red.Read())
@@ -451,83 +457,140 @@ namespace HS_Communications_Website
         {
             try
             {
-                 if (studNumberTxtbox.Text.StartsWith("5"))
-                 {
-                     
+                if (studNumberTxtbox.Text.StartsWith("5"))
+                {
+                    //di pa gawa,, ayusin to..
+                    using (SqlConnection con = new SqlConnection(hsSql))
+                    {
+                        Random x = new Random();
+                        int y = x.Next();
 
-                 }
-                 else if (studNumberTxtbox.Text.StartsWith("4"))
-                 {
-                     using (SqlConnection con = new SqlConnection(sql))
-                     {
-                         Random x = new Random();
-                         int y = x.Next();
+                        con.Close();
+                        con.Open();
 
-                         con.Close();
-                         con.Open();
+                        SqlCommand newcom =
+                            new SqlCommand("Select * from userAccounts where username =  @studno and forgotp = @midname", con);
+                        newcom.Parameters.Add("@studno", SqlDbType.Int, 10);
+                        newcom.Parameters["@studno"].Value = studTxt3.Text;
 
-                         SqlCommand newcom =
-                             new SqlCommand("Select * from userAccounts where studno =  @studno and forgotpass = @midname", con);
-                         newcom.Parameters.Add("@studno", SqlDbType.Int, 10);
-                         newcom.Parameters["@studno"].Value = studTxt3.Text;
+                        newcom.Parameters.Add("@midname", SqlDbType.VarChar);
+                        newcom.Parameters["@midname"].Value = midnameTxtbox.Text;
 
-                         newcom.Parameters.Add("@midname", SqlDbType.VarChar);
-                         newcom.Parameters["@midname"].Value = midnameTxtbox.Text;
+                        SqlDataReader red1 = newcom.ExecuteReader();
 
-                         SqlDataReader red1 = newcom.ExecuteReader();
+                        if (red1.Read())
+                        {
+                            //bool val = red1[41] as bool? ?? default(bool);
+                            //if (val)
+                            //{
+                            errorPanelForgot.Visible = true;
 
-                         if (red1.Read())
-                         {
-                             //bool val = red1[41] as bool? ?? default(bool);
-                             //if (val)
-                             //{
-                             errorPanelForgot.Visible = true;
+                            Button3.Enabled = false;
+                            SqlConnection con1 = new SqlConnection(hsSql);
+                            con1.Close();
+                            con1.Open();
+                            string hashed = CreateHash(y.ToString());
+                            SqlCommand up1 =
+                                new SqlCommand(
+                                    "update userAccounts set password = '" + hashed + "' where username = '" + Convert.ToInt32(studTxt3.Text) + "'", con1);
+                            up1.ExecuteNonQuery();
+                            string mess = this.PopulateBody(red1.GetInt32(0).ToString(), y.ToString());
+                            //  string mess = "Your New Password: " + y.ToString() + "<br/> you can change your password after logging in.";
 
-                             Button3.Enabled = false;
-                             SqlConnection con1 = new SqlConnection(sql);
-                             con1.Close();
-                             con1.Open();
-                             string hashed = CreateHash(y.ToString());
-                             SqlCommand up1 =
-                                 new SqlCommand(
-                                     "update userAccounts set password = '" + hashed + "' where studno = '" +
-                                     Convert.ToInt32(studTxt3.Text) + "'", con1);
-                             up1.ExecuteNonQuery();
-                             string mess = this.PopulateBody(red1.GetInt32(0).ToString(), y.ToString());
-                             //  string mess = "Your New Password: " + y.ToString() + "<br/> you can change your password after logging in.";
+                            sendEmail("JerylSuarez@letranbataan.edu.ph", red1.GetString(2), "", "", "Letran Bataan Student Portal: Forgot Password", mess);
+                            errorPanelForgot.Visible = true;
+                            Label2.Text = "Your New Password has been sent to your email. Email will arrive within 24 hours. Thank you!";
+                            con1.Close();
+                            //jerylsuarez@gmail.com
+                            //}
+                            //else
+                            //{
+                            //    errorPanelForgot.Visible = true;
+                            //    Label2.Text = "Validate your Account First!";
+                            //}
+                        }
+                        else
+                        {
+                            errorPanelForgot.Visible = true;
+                            Label2.Text = "Student Number & Middle Name did not Match!";
+                        }
 
-                             sendEmail("JerylSuarez@letranbataan.edu.ph", red1.GetString(2), "", "",
-                                       "Letran Bataan Student Portal: Forgot Password", mess);
-                             errorPanelForgot.Visible = true;
-                             Label2.Text =
-                                 "Your New Password has been sent to your email. Email will arrive within 24 hours. Thank you!";
-                             con1.Close();
-                             //jerylsuarez@gmail.com
-                             //}
-                             //else
-                             //{
-                             //    errorPanelForgot.Visible = true;
-                             //    Label2.Text = "Validate your Account First!";
+                        con.Close();
+                    }
 
-                             //}
-                         }
-                         else
-                         {
-                             errorPanelForgot.Visible = true;
-                             Label2.Text = "Student Number & Middle Name did not Match!";
-                         }
 
-                         con.Close();
-                     }
+                }
+                else if (studNumberTxtbox.Text.StartsWith("4"))
+                {
+                    using (SqlConnection con = new SqlConnection(sql))
+                    {
+                        Random x = new Random();
+                        int y = x.Next();
 
-                 }
+                        con.Close();
+                        con.Open();
+
+                        SqlCommand newcom =
+                            new SqlCommand("Select * from userAccounts where studno =  @studno and forgotpass = @midname", con);
+                        newcom.Parameters.Add("@studno", SqlDbType.Int, 10);
+                        newcom.Parameters["@studno"].Value = studTxt3.Text;
+
+                        newcom.Parameters.Add("@midname", SqlDbType.VarChar);
+                        newcom.Parameters["@midname"].Value = midnameTxtbox.Text;
+
+                        SqlDataReader red1 = newcom.ExecuteReader();
+
+                        if (red1.Read())
+                        {
+                            //bool val = red1[41] as bool? ?? default(bool);
+                            //if (val)
+                            //{
+                            errorPanelForgot.Visible = true;
+
+                            Button3.Enabled = false;
+                            SqlConnection con1 = new SqlConnection(sql);
+                            con1.Close();
+                            con1.Open();
+                            string hashed = CreateHash(y.ToString());
+                            SqlCommand up1 =
+                                new SqlCommand(
+                                    "update userAccounts set password = '" + hashed + "' where studno = '" +
+                                    Convert.ToInt32(studTxt3.Text) + "'", con1);
+                            up1.ExecuteNonQuery();
+                            string mess = this.PopulateBody(red1.GetInt32(0).ToString(), y.ToString());
+                            //  string mess = "Your New Password: " + y.ToString() + "<br/> you can change your password after logging in.";
+
+                            sendEmail("JerylSuarez@letranbataan.edu.ph", red1.GetString(2), "", "", "Letran Bataan Student Portal: Forgot Password", mess);
+                            errorPanelForgot.Visible = true;
+                            Label2.Text =
+                                "Your New Password has been sent to your email. Email will arrive within 24 hours. Thank you!";
+                            con1.Close();
+                            //jerylsuarez@gmail.com
+                            //}
+                            //else
+                            //{
+                            //    errorPanelForgot.Visible = true;
+                            //    Label2.Text = "Validate your Account First!";
+
+                            //}
+                        }
+                        else
+                        {
+                            errorPanelForgot.Visible = true;
+                            Label2.Text = "Student Number & Middle Name did not Match!";
+                        }
+
+                        con.Close();
+                    }
+
+                }
             }
             catch (Exception ex1)
             {
                 errorPanelForgot.Visible = true;
                 Label2.Text = ex1.Message;
             }
-           
+
 
         }
 
@@ -554,7 +617,6 @@ namespace HS_Communications_Website
             //client.Port = 587;
             //client.Host = "smtp.gmail.com";
             //client.Send(email);
-
         }
 
         // The following constants may be changed without breaking existing hashes.

@@ -72,11 +72,11 @@ platform = navigator.platform.toLowerCase();
        
     <div class="large-9 columns large-offset-3 columns" >
         <h3>
-            Welcome Letranites!
+            Welcome Squires & Knights!
         </h3>
        
-        <p>Encoding for summer class Grades are still in progress. Please wait for further announcement.</p>
-        <p>Grades for SY. 2014-2015 are now available for viewing. Log-in using your Student ID and Password <br />
+        <p></p>
+        <p>Log-in using your Student ID/Parent ID and Password <br />
       Activate your account now to get your system generated password.   <span style="color: red !important"> <a href="#" data-reveal-id="ActivateModal" style="color: #000080">Activate now!</a></span><br />
        </p>
         <br />
@@ -96,7 +96,7 @@ platform = navigator.platform.toLowerCase();
  <strong> <asp:Label ID="ErrorLbl" runat="server" Text="" ForeColor="darkblue"  ></asp:Label></strong>
 </div>
          <div class="row">
-   <div class="large-5 columns">  <label>Student ID <asp:TextBox ID="TextBox1" runat="server" onkeypress="return isNumberKey(event)"></asp:TextBox> </label> </div>    
+   <div class="large-5 columns">  <label>Student ID / Parent ID <asp:TextBox ID="TextBox1" runat="server" onkeypress="return isNumberKey(event)"></asp:TextBox> </label> </div>    
         <div class="large-5 columns"> <label>Password <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"> </asp:TextBox> </label> </div>    
         <div class="large-2 columns">
      <span> <asp:Button ID="Button1" runat="server" Text="Log in" CssClass="button radius" OnClick="Button1_Click" /></span> 
@@ -149,7 +149,7 @@ platform = navigator.platform.toLowerCase();
              <label>Email Address </label>  <span style="font-size: 11px">Important: Use a valid and working email address. Your password will be sent to your email. </span>
      <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Required." ControlToValidate="emailAddTxtb" ValidationGroup="d" ForeColor="red" Display="Dynamic"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Please Input Valid Email Address" ControlToValidate="emailAddTxtb" ValidationGroup="d" ForeColor="red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
-             <asp:TextBox ID="emailAddTxtb" runat="server"></asp:TextBox>
+             <asp:TextBox ID="emailAddTxtb" runat="server"></asp:TextBox><span style="font-size: 12px">Recommended Email: Gmail Account </span>
     <asp:Button ID="Button2" runat="server"  Text="Activate Account" CssClass="button right" OnClick="Button2_Click" ValidationGroup="d" />
   <a class="close-reveal-modal">&#215;</a>
             </ContentTemplate>

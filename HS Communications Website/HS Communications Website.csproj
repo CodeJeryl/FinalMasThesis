@@ -68,6 +68,7 @@
     <Content Include="Admin\AddAdviser.aspx" />
     <Content Include="Admin\GradeRange.aspx" />
     <Content Include="Admin\ManageDashboard.aspx" />
+    <Content Include="Admin\ManageEmail.aspx" />
     <Content Include="Admin\ManageSchools.aspx" />
     <Content Include="Admin\updateHeader.aspx" />
     <Content Include="Colegio\AboutUs\CoreValues.aspx" />
@@ -101,7 +102,10 @@
       <DependentUpon>HSdB.mdf</DependentUpon>
     </Content>
     <Content Include="Calendar.aspx" />
-    <Content Include="Default.aspx" />
+    <Content Include="College\StudentPage.aspx" />
+    <Content Include="images\College\listen.jpg" />
+    <Content Include="images\College\studentBackON.jpg" />
+    <Content Include="xDefault.aspx" />
     <Content Include="Faculty\AddGrades.aspx" />
     <Content Include="Faculty\ChangePassword.aspx" />
     <Content Include="Faculty\Fhomepage.aspx" />
@@ -402,7 +406,7 @@
     <Content Include="javascripts\slidepanel.js" />
     <Content Include="javascripts\superfish.js" />
     <Content Include="javascripts\twitterusername.js" />
-    <Content Include="log.aspx" />
+    <Content Include="xlog.aspx" />
     <Content Include="Mail\CollegeSend.html" />
     <Content Include="Mail\Send.html" />
     <Content Include="Portal\ChangePassword.aspx" />
@@ -623,6 +627,13 @@
     <Compile Include="Admin\ManageDashboard.aspx.designer.cs">
       <DependentUpon>ManageDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ManageEmail.aspx.cs">
+      <DependentUpon>ManageEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageEmail.aspx.designer.cs">
+      <DependentUpon>ManageEmail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ManageSchools.aspx.cs">
       <DependentUpon>ManageSchools.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -838,12 +849,26 @@
     <Compile Include="Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="College\College.Master.cs">
+      <DependentUpon>College.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="College\College.Master.designer.cs">
+      <DependentUpon>College.Master</DependentUpon>
+    </Compile>
+    <Compile Include="College\StudentPage.aspx.cs">
+      <DependentUpon>StudentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="College\StudentPage.aspx.designer.cs">
+      <DependentUpon>StudentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xDefault.aspx.cs">
+      <DependentUpon>xDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xDefault.aspx.designer.cs">
+      <DependentUpon>xDefault.aspx</DependentUpon>
     </Compile>
     <Compile Include="Faculty\AddGrades.aspx.cs">
       <DependentUpon>AddGrades.aspx</DependentUpon>
@@ -915,19 +940,19 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="log.aspx.cs">
-      <DependentUpon>log.aspx</DependentUpon>
+    <Compile Include="xlog.aspx.cs">
+      <DependentUpon>xlog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="log.aspx.designer.cs">
-      <DependentUpon>log.aspx</DependentUpon>
+    <Compile Include="xlog.aspx.designer.cs">
+      <DependentUpon>xlog.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MainMaster.Master.cs">
-      <DependentUpon>MainMaster.Master</DependentUpon>
+    <Compile Include="xMainMaster.Master.cs">
+      <DependentUpon>xMainMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MainMaster.Master.designer.cs">
-      <DependentUpon>MainMaster.Master</DependentUpon>
+    <Compile Include="xMainMaster.Master.designer.cs">
+      <DependentUpon>xMainMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="My.Master.cs">
       <DependentUpon>My.Master</DependentUpon>
@@ -1016,7 +1041,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MainMaster.Master" />
+    <Content Include="xMainMaster.Master" />
     <Content Include="Faculty\FacuMaster.Master" />
     <Content Include="Portal\PortMaster.Master" />
     <Content Include="Admin\AdminMaster.Master" />
@@ -1058,10 +1083,13 @@
     <Content Include="template\stylesheets\websymbols\websymbols-regular-webfont.eot" />
     <Content Include="template\stylesheets\websymbols\websymbols-regular-webfont.ttf" />
     <Content Include="template\stylesheets\websymbols\websymbols-regular-webfont.woff" />
-    <Content Include="Admin\Web.config" />
+    <Content Include="Admin\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Faculty\Web.config" />
     <Content Include="Portal\Web.config" />
     <Content Include="My.Master" />
+    <Content Include="College\College.Master" />
     <None Include="Properties\PublishProfiles\arvixe.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1080,7 +1108,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\AddedStudents\" />
-    <Folder Include="College\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

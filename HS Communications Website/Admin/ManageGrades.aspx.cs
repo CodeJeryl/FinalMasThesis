@@ -19,8 +19,6 @@ namespace HS_Communications_Website.Admin
         {
             try
             {
-
-
                 var constr =
                     System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
 

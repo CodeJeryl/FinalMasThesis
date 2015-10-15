@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="College.master.cs" Inherits="HS_Communications_Website.College.College" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+   
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+     <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Letran Bataan</title>
+    <link href="../Foundation/css/foundation.css" rel="stylesheet" />
+    <%--<link href="../Foundation/css/foundation.min.css" rel="stylesheet" />--%>
+    <link href="../Foundation/css/normalize.css" rel="stylesheet" />
+    <%--<link rel="stylesheet" href="../Foundation/css/app.css" />--%>
+
+    <script src="../Foundation/js/vendor/custom.modernizr.js"></script>
+   
+      <script src="../Foundation/js/jquery-1.9.1.js"></script>
+    <script src="../Foundation/js/jquery-ui.custom.js"></script>
+     
+       
+    <style>
+       body { 
+    background: url(../images/College/studentBackON.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* IE */
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/College/studentBackON.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/College/studentBackON.jpg', sizingMethod='scale')";
+
+}
+         </style>
+</head>
+<body style="color: black;">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    
+  <%-- <script>
+       document.write('<script src=' +
+       ('__proto__' in {} ? '../Foundation/js/vendor/zepto' : '../Foundation/js/vendor/jquery') +
+       '.js><\/script>')
+  </script>--%>
+     <script src="../Foundation/js/oldRevealHome/foundation.js"></script>
+    <script src="../Foundation/js/oldRevealHome/foundation.reveal.js"></script>
+
+ <%-- <script src="../Foundation/js/foundation/foundation.js"></script>
+  <script src="../Foundation/js/foundation/foundation.alerts.js"></script>
+  <script src="../Foundation/js/foundation/foundation.clearing.js"></script>
+  <script src="../Foundation/js/foundation/foundation.cookie.js"></script>
+  <script src="../Foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="../Foundation/js/foundation/foundation.forms.js"></script>
+  <script src="../Foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="../Foundation/js/foundation/foundation.magellan.js"></script>
+  <script src="../Foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="../Foundation/js/foundation/foundation.placeholder.js"></script>
+  <script src="../Foundation/js/foundation/foundation.reveal.js"></script>
+  <script src="../Foundation/js/foundation/foundation.section.js"></script>
+  <script src="../Foundation/js/foundation/foundation.tooltips.js"></script>
+  <script src="../Foundation/js/foundation/foundation.topbar.js"></script>--%>
+  <script>
+      $(document).foundation();
+  </script>
+</body>
+</html>

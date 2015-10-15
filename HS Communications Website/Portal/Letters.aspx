@@ -30,7 +30,7 @@
             </asp:SqlDataSource>
             <div class="ten columns centered">
 
-                <div class="seven columns centered">
+             <%--   <div class="seven columns centered">--%>
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
                             <div class="row collapse prefix-radius">
@@ -155,7 +155,7 @@
                             <asp:PostBackTrigger ControlID="ListView1" />
                         </Triggers>
                     </asp:UpdatePanel>
-                </div>
+             
             </div>
 
 

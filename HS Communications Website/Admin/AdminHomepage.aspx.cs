@@ -7,20 +7,64 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.DataVisualization.Charting;
+using System.Web.Security;
 
 namespace HS_Communications_Website.Admin
 {
     public partial class AdminHomepage : System.Web.UI.Page
     {
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-           if (!IsPostBack)
+
+
+            using (SqlConnection HScon = new SqlConnection(conss))
             {
-                DropDownList1.SelectedValue = "2014-2015";
-                GetChartData();
-                GetChartDataSc();
+
+                try
+                {
+                    HScon.Close();
+                    HScon.Open();
+
+
+                    SqlCommand comsearch =
+                        new SqlCommand(
+                            "Select * From facTbl where empID = '" + User.Identity.Name + "' and admin = 'True'", HScon);
+
+                    SqlDataReader rd = comsearch.ExecuteReader();
+
+                    if (rd.Read())
+                    {
+                        Session["fcode"] = rd.GetInt32(0);
+                        Session["level"] = rd.GetString(3);
+                        Session["name"] = rd.GetString(4);
+                        Session["admin"] = rd.GetBoolean(5);
+                        Session["adviser"] = rd.GetBoolean(7);
+                        Session["advisory"] = rd.GetString(8);
+                        Session["section"] = "faculty";
+                    }
+                    else
+                    {
+                        Session.Abandon();
+                        Session.Clear();
+                        System.Web.Security.FormsAuthentication.SignOut();
+
+                        Response.Redirect("http://Workforce.LetranBataan.edu.ph/Homepage.aspx");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = ex.Message;
+                }
+                //if (!IsPostBack)
+                // {
+                //     DropDownList1.SelectedValue = "2014-2015";
+                //     GetChartData();
+                //     GetChartDataSc();
+                // }
             }
         }
 
@@ -48,8 +92,6 @@ namespace HS_Communications_Website.Admin
             }
             else
             {
-
-
                 con = new SqlConnection(conss);
                 SqlCommand cmd = new SqlCommand("Select town,tCount from dashboard where SY = '" + DropDownList1.Text + "' and category ='town' order by tcount", con);
                 con.Open();
@@ -102,7 +144,7 @@ namespace HS_Communications_Website.Admin
             }
         }
 
-      
+
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetChartData();

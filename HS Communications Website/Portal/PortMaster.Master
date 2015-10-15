@@ -148,7 +148,7 @@
                     <a href="<%= Page.ResolveUrl("~/Home.aspx") %>">
                         <span>
                             <%--<img src="<%= Page.ResolveUrl("~/images/masterpage/Name.png") %>" style="max-width: none !important;" />--%>
-                             <asp:Image ID="Image1" runat="server" />
+                              <img src="../images/masterpage/Name.png" style="max-width: none !important;" /><%--<asp:Image ID="Image1" runat="server" />--%>
                         </span>
                         </a>
                     </div>
@@ -169,7 +169,6 @@
                         <ul class="title-area">
                             <li class="name">
                                 <%-- <span style="position: fixed; top: 3px;left: 5px">  </span> --%>
-                                    
                             </li>
                             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
                             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -187,14 +186,12 @@
                                 </li>
                               
                                <li><a href="Profile.aspx">Profile</a></li>
-                                
-                                  <li><a href="GradesViewer.aspx">Grades</a></li>
+                                <li><a href="GradesViewer.aspx">Grades</a></li>
                                    <li><a href="Schedule.aspx">Schedule</a></li>
-      <li><a href="ChangePassword.aspx">Change Password</a>
-       </li>
+                                   <li><a href="ChangePassword.aspx">Change Password</a></li>
                                 <li><a href="ContactUs.aspx">Contact Us</a></li>
-      <li>
-          <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>
+                          <li>
+                               <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></li>
 
                             </ul>
 
@@ -224,8 +221,7 @@
                         <a href="#top"><span></span></a>
                     </p>
                      <div class="four columns">
-                        <h1><a class="bataan">Student Portal</a></h1>                  
-                        <%--   <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>--%>
+                       <h1><a class="letran">Letran</a><a class="bataan"> BATAAN</a></h1>
                       
                         <p></p>
                     </div>

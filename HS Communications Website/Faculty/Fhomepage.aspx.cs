@@ -12,7 +12,50 @@ namespace HS_Communications_Website.Faculty
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Label1.Text = Session["name"].ToString();
+            string conss =
+                     System.Configuration.ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;
+      
+            using (SqlConnection HScon = new SqlConnection(conss))
+            {
+
+                try
+                {
+                    HScon.Close();
+                    HScon.Open();
+
+
+                    SqlCommand comsearch =
+                        new SqlCommand(
+                            "Select * From facTbl where empID = '" + User.Identity.Name + "'", HScon);
+
+                    SqlDataReader rd = comsearch.ExecuteReader();
+
+                    if (rd.Read())
+                    {
+                        Session["fcode"] = rd.GetInt32(0);
+                        Session["level"] = rd.GetString(3);
+                        Session["name"] = rd.GetString(4);
+                        Session["admin"] = rd.GetBoolean(5);
+                        Session["adviser"] = rd.GetBoolean(7);
+                        Session["advisory"] = rd.GetString(8);
+                        Session["section"] = "faculty";
+                    }
+                    else
+                    {
+                        Session.Abandon();
+                        Session.Clear();
+                        System.Web.Security.FormsAuthentication.SignOut();
+
+                        Response.Redirect("http://Workforce.LetranBataan.edu.ph/Homepage.aspx");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    ErrorPanel.Visible = true;
+                    ErrorLabel.Text = ex.Message;
+                }
+            }
 
         }
 

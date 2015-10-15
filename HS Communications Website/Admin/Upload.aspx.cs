@@ -15,7 +15,7 @@ namespace HS_Communications_Website.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         string conString = ConfigurationManager.ConnectionStrings["HsDbConnectionString"].ConnectionString;

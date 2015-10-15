@@ -59,13 +59,14 @@ namespace HS_Communications_Website.Admin
         protected void UpdateButton_Click(object sender, EventArgs e)
         {
             ErrorPanel.Visible = false;
-            InsertEqui.Visible = true;
-            UpdateButton.Visible = false;
+           // InsertEqui.Visible = true;
+        //    UpdateButton.Visible = false;
             updatebtn();
         }
 
         private void updatebtn()
         {
+            Panel1.Visible = true;
             originalDataTable = (System.Data.DataTable) ViewState["originalValuesDataTable"];
 
             foreach (GridViewRow r in GridView1.Rows)
@@ -77,6 +78,9 @@ namespace HS_Communications_Website.Admin
             // Rebind the Grid to repopulate the original values table.
             tableCopied = false;
             GridView1.DataBind();
+
+
+          
         }
 
 
@@ -133,172 +137,164 @@ namespace HS_Communications_Website.Admin
                 if (a > 1 && a < 70)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
-                    InsertEqui.Visible = true;
-                    UpdateButton.Visible = false;
+                    ErrorLabel.Text = "Check inputted Grades. Grades between 70-100 only are allowed. ";
+                    Panel1.Visible = false;
                     return;
                 }
                 else if (a > 100)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
-                    InsertEqui.Visible = true;
-                    UpdateButton.Visible = false;
+                    ErrorLabel.Text = "Check inputted Grades. Grades between 70-100 only are allowed. ";
+                    Panel1.Visible = false;
                     return;
                 }
                 
-                if (isNumeric)
-                {
-                    if (a >= codeA)
-                    {
-                        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(A)";
-                    }
-                    else if (a >= codeB)
-                    {
-                        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(P)";
-                    }
-                    else if (a >= codeC)
-                    {
-                        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(AP)";
-                    }
-                    else if (a >= codeD)
-                    {
-                        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(D)";
-                    }
-                    else
-                    {
-                        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(B)";
-                    }
-                }
+                //if (isNumeric)
+                //{
+                //    if (a >= codeA)
+                //    {
+                //        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(A)";
+                //    }
+                //    else if (a >= codeB)
+                //    {
+                //        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(P)";
+                //    }
+                //    else if (a >= codeC)
+                //    {
+                //        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(AP)";
+                //    }
+                //    else if (a >= codeD)
+                //    {
+                //        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(D)";
+                //    }
+                //    else
+                //    {
+                //        ((TextBox)e.Row.FindControl("firstTxtbox")).Text = dr["first"] + "(B)";
+                //    }
+                //}
 
                 int b;
                 bool isNumeric2 = int.TryParse(dr["second"].ToString(), out b);
                 if (b > 1 && b < 70)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
-                    InsertEqui.Visible = true;
-                    UpdateButton.Visible = false;
+                    ErrorLabel.Text = "Check inputted Grades. Grades between 70-100 only are allowed. ";
+                    Panel1.Visible = false;
                     return;
                 }
                 else if (b > 100)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
-                    InsertEqui.Visible = true;
-                    UpdateButton.Visible = false;
+                    ErrorLabel.Text = "Check inputted Grades. Grades between 70-100 only are allowed. ";
+                    Panel1.Visible = false;
                     return;
                 }
                
-                if (isNumeric2)
-                {
-                    if (b >= codeA)
-                    {
-                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(A)";
-                    }
-                    else if (b >= codeB)
-                    {
-                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(P)";
-                    }
-                    else if (b >= codeC)
-                    {
-                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(AP)";
-                    }
-                    else if (b >= codeD)
-                    {
-                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(D)";
-                    }
-                    else
-                    {
-                        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(B)";
-                    }
-                }
+                //if (isNumeric2)
+                //{
+                //    if (b >= codeA)
+                //    {
+                //        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(A)";
+                //    }
+                //    else if (b >= codeB)
+                //    {
+                //        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(P)";
+                //    }
+                //    else if (b >= codeC)
+                //    {
+                //        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(AP)";
+                //    }
+                //    else if (b >= codeD)
+                //    {
+                //        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(D)";
+                //    }
+                //    else
+                //    {
+                //        ((TextBox)e.Row.FindControl("secondTxtbox")).Text = dr["second"] + "(B)";
+                //    }
+                //}
 
                 int c;
                 bool isNumeric3 = int.TryParse(dr["third"].ToString(), out c);
                 if (c > 1 && c < 70)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
-                    InsertEqui.Visible = true;
-                    UpdateButton.Visible = false;
+                    ErrorLabel.Text = "Check inputted Grades. Grades between 70-100 only are allowed. ";
+                    Panel1.Visible = false;
                     return;
                 }
                 else if (c > 100)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
-                    InsertEqui.Visible = true;
-                    UpdateButton.Visible = false;
+                    ErrorLabel.Text = "Check inputted Grades. Grades between 70-100 only are allowed. ";
+                    Panel1.Visible = false;
                     return;
                 }
                 
-                if (isNumeric3)
-                {
-                    if (c >= codeA)
-                    {
-                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(A)";
-                    }
-                    else if (c >= codeB)
-                    {
-                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(P)";
-                    }
-                    else if (c >= codeC)
-                    {
-                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(AP)";
-                    }
-                    else if (c >= codeD)
-                    {
-                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(D)";
-                    }
-                    else
-                    {
-                        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(B)";
-                    }
-                }
+                //if (isNumeric3)
+                //{
+                //    if (c >= codeA)
+                //    {
+                //        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(A)";
+                //    }
+                //    else if (c >= codeB)
+                //    {
+                //        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(P)";
+                //    }
+                //    else if (c >= codeC)
+                //    {
+                //        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(AP)";
+                //    }
+                //    else if (c >= codeD)
+                //    {
+                //        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(D)";
+                //    }
+                //    else
+                //    {
+                //        ((TextBox)e.Row.FindControl("thirdTxtbox")).Text = dr["third"] + "(B)";
+                //    }
+                //}
 
                 int d;
                 bool isNumeric4 = int.TryParse(dr["fourth"].ToString(), out d);
                 if (d > 1 && d < 70)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
-                    InsertEqui.Visible = true;
-                    UpdateButton.Visible = false;
+                    ErrorLabel.Text = "Check inputted Grades. Grades between 70-100 only are allowed. ";
+                    Panel1.Visible = false;
                     return;
                 }
                 else if (d > 100)
                 {
                     ErrorPanel.Visible = true;
-                    ErrorLabel.Text = "Enter grades between 70-100 only. ";
-                    InsertEqui.Visible = true;
-                    UpdateButton.Visible = false;
+                    ErrorLabel.Text = "Check inputted Grades. Grades between 70-100 only are allowed. ";
+                    Panel1.Visible = false;
                     return;
                 }
                 
-                if (isNumeric4)
-                {
-                    if (d >= codeA)
-                    {
-                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(A)";
-                    }
-                    else if (d >= codeB)
-                    {
-                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(P)";
-                    }
-                    else if (d >= codeC)
-                    {
-                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(AP)";
-                    }
-                    else if (d >= codeD)
-                    {
-                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(D)";
-                    }
-                    else
-                    {
-                        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(B)";
-                    }
-                }
+                //if (isNumeric4)
+                //{
+                //    if (d >= codeA)
+                //    {
+                //        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(A)";
+                //    }
+                //    else if (d >= codeB)
+                //    {
+                //        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(P)";
+                //    }
+                //    else if (d >= codeC)
+                //    {
+                //        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(AP)";
+                //    }
+                //    else if (d >= codeD)
+                //    {
+                //        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(D)";
+                //    }
+                //    else
+                //    {
+                //        ((TextBox)e.Row.FindControl("fourthTxtbox")).Text = dr["fourth"] + "(B)";
+                //    }
+                //}
             }
         }
 

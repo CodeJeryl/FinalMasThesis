@@ -26,7 +26,6 @@
                     </asp:SqlDataSource>
         	<div class="ten columns centered">
                         <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCreated="ListView1_ItemCreated">
-                            
                             <EditItemTemplate>
                                 <tr style="background-color: #FFCC66;color: #000080;">
                                     <td>
@@ -208,13 +207,14 @@
                         </asp:ListView>
                 
                 <br /> 
-                <div style="font-weight: 700; font-size: 15px">
+
+            <!--    <div style="font-weight: 700; font-size: 15px; visibility: hidden">
                     <asp:Label ID="q" runat="server" Text="First Quarter Average : "></asp:Label>     <asp:Label ID="firstAve" runat="server" Text=""></asp:Label> <br/>
                     <asp:Label ID="w" runat="server" Text="Second Quarter Average : "></asp:Label>     <asp:Label ID="secondAve" runat="server" Text=""></asp:Label> <br/>
                     <asp:Label ID="ee" runat="server" Text="Third Quarter Average : "></asp:Label>     <asp:Label ID="thirdAve" runat="server" Text=""></asp:Label> <br/>
                      <asp:Label ID="r" runat="server" Text="Fourth Quarter Average : "></asp:Label>    <asp:Label ID="fourthAve" runat="server" Text=""></asp:Label> <br/>
                      <asp:Label ID="t" runat="server" Text="General Weighted Average : "></asp:Label>    <asp:Label ID="genAve" runat="server" Text=""></asp:Label> 
-                </div>
+                </div> -->
                     </div>
                  
                 

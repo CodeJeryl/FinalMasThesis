@@ -26,8 +26,7 @@
                 <h4>Title: <asp:Label ID="titleLbl" runat="server" Text="Label"></asp:Label></h4>
                 <br />
                   
-
-               <h5>Message:</h5>
+                <h5>Message:</h5>
                 <div style="background-color: #d7d7d7; padding: 15px">    <p ><asp:Label ID="bodyLbl" runat="server" Text="Label" Font-Size="Larger"></asp:Label></p> 
                 </div> 
                 <br/>
@@ -36,10 +35,8 @@
                 Reply: <asp:TextBox ID="repTxtbox" runat="server" TextMode="MultiLine" Height="140px"></asp:TextBox> <br />
              <span style="left:87%; position: relative">       <asp:Button ID="Button1" runat="server" Text="Send Reply" CssClass="buttonn" OnClick="Button1_Click"/></span>
                
-
              <h5>   <a href="Inbox.aspx">Go back to Inbox</a></h5>
            
-
 	</div><!-- end main content-->
 
 	<!--

@@ -31,9 +31,11 @@
                     </p>
                 </div>
             </div>
+           
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div class="six columns">
+                       
                         <strong class="colhead" style="color: darkblue;">Town Feeder: Chart</strong>
                         <asp:Chart ID="Chart1" runat="server">
                             <Series>
